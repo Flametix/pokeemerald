@@ -5081,9 +5081,13 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
             if ((itemEffect[cmdIndex] & 0xF) //+atk (X Attack) (reminder: bitwise and)
              && gBattleMons[gActiveBattler].statStages[STAT_ATK] < 12)
             {
+			
                 gBattleMons[gActiveBattler].statStages[STAT_ATK] += itemEffect[cmdIndex] & 0xF;
                 if (gBattleMons[gActiveBattler].statStages[STAT_ATK] > 12)
                     gBattleMons[gActiveBattler].statStages[STAT_ATK] = 12;
+				gStatuses3[gActiveBattler] |= STATUS3_PERISH_SONG; //test
+                gDisableStructs[gActiveBattler].perishSongTimer = 3;
+                gDisableStructs[gActiveBattler].perishSongTimerStartValue = 3;
                 retVal = FALSE;
             }
             break;
