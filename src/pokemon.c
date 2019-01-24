@@ -5085,10 +5085,13 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                 gBattleMons[gActiveBattler].statStages[STAT_ATK] += itemEffect[cmdIndex] & 0xF;
                 if (gBattleMons[gActiveBattler].statStages[STAT_ATK] > 12)
                     gBattleMons[gActiveBattler].statStages[STAT_ATK] = 12;
-				gStatuses3[gActiveBattler] |= STATUS3_PERISH_SONG; //test
-                gDisableStructs[gActiveBattler].perishSongTimer = 3;
-                gDisableStructs[gActiveBattler].perishSongTimerStartValue = 3;
+					
+				gStatuses3[gActiveBattler] |= STATUS3_PERISH_SONG; //testing Perish
+                gDisableStructs[gActiveBattler].perishSongTimer = 3; //resets every time 
+                gDisableStructs[gActiveBattler].perishSongTimerStartValue = 3; //they need to get their fix
+				
                 retVal = FALSE;
+		
             }
             break;
         // in-battle stat boosting effects?
@@ -5096,9 +5099,12 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
             if ((itemEffect[cmdIndex] & 0xF0) //(X Defend)
              && gBattleMons[gActiveBattler].statStages[STAT_DEF] < 12)
             {
-                gBattleMons[gActiveBattler].statStages[STAT_DEF] += (itemEffect[cmdIndex] & 0xF0) >> 4;
+                gBattleMons[gActiveBattler].statStages[STAT_DEF] += (itemEffect[cmdIndex] & 0xF0) >> 4; //right shift by 4
                 if (gBattleMons[gActiveBattler].statStages[STAT_DEF] > 12)
                     gBattleMons[gActiveBattler].statStages[STAT_DEF] = 12;
+				gStatuses3[gActiveBattler] |= STATUS3_PERISH_SONG;
+                gDisableStructs[gActiveBattler].perishSongTimer = 3; 
+                gDisableStructs[gActiveBattler].perishSongTimerStartValue = 3; 
                 retVal = FALSE;
             }
             if ((itemEffect[cmdIndex] & 0xF) //(X Speed)
@@ -5107,6 +5113,9 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                 gBattleMons[gActiveBattler].statStages[STAT_SPEED] += itemEffect[cmdIndex] & 0xF;
                 if (gBattleMons[gActiveBattler].statStages[STAT_SPEED] > 12)
                     gBattleMons[gActiveBattler].statStages[STAT_SPEED] = 12;
+				gStatuses3[gActiveBattler] |= STATUS3_PERISH_SONG;
+                gDisableStructs[gActiveBattler].perishSongTimer = 3; 
+                gDisableStructs[gActiveBattler].perishSongTimerStartValue = 3; 
                 retVal = FALSE;
             }
             break;
@@ -5118,6 +5127,9 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                 gBattleMons[gActiveBattler].statStages[STAT_ACC] += (itemEffect[cmdIndex] & 0xF0) >> 4;
                 if (gBattleMons[gActiveBattler].statStages[STAT_ACC] > 12)
                     gBattleMons[gActiveBattler].statStages[STAT_ACC] = 12;
+				gStatuses3[gActiveBattler] |= STATUS3_PERISH_SONG;
+                gDisableStructs[gActiveBattler].perishSongTimer = 3; 
+                gDisableStructs[gActiveBattler].perishSongTimerStartValue = 3; 
                 retVal = FALSE;
             }
             if ((itemEffect[cmdIndex] & 0xF) //(X Special)
@@ -5126,6 +5138,9 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                 gBattleMons[gActiveBattler].statStages[STAT_SPATK] += itemEffect[cmdIndex] & 0xF;
                 if (gBattleMons[gActiveBattler].statStages[STAT_SPATK] > 12)
                     gBattleMons[gActiveBattler].statStages[STAT_SPATK] = 12;
+				gStatuses3[gActiveBattler] |= STATUS3_PERISH_SONG;
+                gDisableStructs[gActiveBattler].perishSongTimer = 3; 
+                gDisableStructs[gActiveBattler].perishSongTimerStartValue = 3; 
                 retVal = FALSE;
             }
             break;
