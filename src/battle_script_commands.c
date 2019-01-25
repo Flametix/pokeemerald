@@ -8937,6 +8937,7 @@ static void atkB9_magnitudedamagecalculation(void)
 
 static void atkBA_jumpifnopursuitswitchdmg(void)
 {
+
     if (gMultiHitCounter == 1)
     {
         if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
@@ -8957,9 +8958,14 @@ static void atkBA_jumpifnopursuitswitchdmg(void)
         && !(gBattleMons[gBattlerTarget].status1 & (STATUS1_SLEEP | STATUS1_FREEZE))
         && gBattleMons[gBattlerAttacker].hp
         && !gDisableStructs[gBattlerTarget].truantCounter
-        && gChosenMoveByBattler[gBattlerTarget] == MOVE_PURSUIT)
+        && (gChosenMoveByBattler[gBattlerTarget] == MOVE_PURSUIT
+		|| gChosenMoveByBattler[gBattlerTarget] == MOVE_EXPLOSION
+		 ||gChosenMoveByBattler[gBattlerTarget] == MOVE_SELF_DESTRUCT))
+		 //this is the pursuit check on switch
+		 //Probably a more efficient way to do this
     {
         s32 i;
+
 
         for (i = 0; i < gBattlersCount; i++)
         {
@@ -8967,7 +8973,10 @@ static void atkBA_jumpifnopursuitswitchdmg(void)
                 gActionsByTurnOrder[i] = 11;
         }
 
-        gCurrentMove = MOVE_PURSUIT;
+        gCurrentMove = gChosenMoveByBattler[gBattlerTarget]; 
+		//Fast fact: If pursuit calls explosion it does not go through the secondary effects script on its own like explosion self kill. For honor
+		//Fast fact 2: If you just put gChosenMove here it calls the last move used.
+		//Fast fact 3: Damn I forgot to capitalize "By" this whole time.
         gCurrMovePos = gChosenMovePos = *(gBattleStruct->chosenMovePositions + gBattlerTarget);
         gBattlescriptCurrInstr += 5;
         gBattleScripting.animTurn = 1;
