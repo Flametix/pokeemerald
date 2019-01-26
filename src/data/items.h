@@ -6819,7 +6819,7 @@ const struct Item gItems[] =
 
     [ITEM_X_SPECIAL_DEFENSE] =
     {
-        .name = _("X SPECIALDEF"),
+        .name = _("X SP. DEF"),
         .itemId = ITEM_X_SPECIAL_DEFENSE,
         .price = 5000,
         .holdEffect = HOLD_EFFECT_NONE,

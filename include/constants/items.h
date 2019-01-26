@@ -464,7 +464,7 @@
 
 //new
 #define ITEM_X_SPECIAL_DEFENSE 377
-#define ITEM_DAMN 378
+#define ITEM_DAMN 378 //the last item doesnt WORK
 
 #define ITEMS_COUNT 379 //End
 #define ITEM_FIELD_ARROW ITEMS_COUNT
