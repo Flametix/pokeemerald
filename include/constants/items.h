@@ -462,9 +462,10 @@
 #define ITEM_MAGMA_EMBLEM 375
 #define ITEM_OLD_SEA_MAP 376
 
-//new
+//new Items
+//new Usable items
 #define ITEM_X_SPECIAL_DEFENSE 377
-#define ITEM_DAMN 378 //the last item doesnt WORK
+#define ITEM_DAMN 378 //the last item doesnt Work so you need placeholder
 
 #define ITEMS_COUNT 379 //End
 #define ITEM_FIELD_ARROW ITEMS_COUNT
@@ -477,6 +478,7 @@
 #define NUM_HIDDEN_MACHINES     8
 
 // Check if the item is one that can be used on a Pokemon.
-#define IS_POKEMON_ITEM(item) ((item) >= ITEM_POTION && (item) <= ITEM_0B2)
+#define IS_POKEMON_ITEM(item) (((item) >= ITEM_POTION && (item) <= ITEM_0B2) || ((item) >= ITEM_X_SPECIAL_DEFENSE && (item) <= ITEM_X_SPECIAL_DEFENSE))
+//Old usables || New Usables
 
 #endif  // GUARD_CONSTANTS_ITEMS_H
