@@ -6835,4 +6835,22 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },	
 	
+    [ITEM_DAMN] = //test
+    {
+        .name = _("DAMN"),
+        .itemId = ITEM_DAMN,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_NONE,
+        .holdEffectParam = 0,
+        .description = gDummyItemDescription,
+        .importance = 0,
+        .unk19 = 0,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .battleUsage = 0,
+        .battleUseFunc = NULL,
+        .secondaryId = 0,
+    },	
+	
 };
