@@ -71,6 +71,7 @@ const u8 gXDefendItemDescription[] = _("Raises the stat\nDEFENSE during one\nbat
 const u8 gXSpeedItemDescription[] = _("Raises the stat\nSPEED during one\nbattle.");
 const u8 gXAccuracyItemDescription[] = _("Raises accuracy\nof attack moves\nduring one battle.");
 const u8 gXSpecialItemDescription[] = _("Raises the stat\nSP. ATK during one\nbattle.");
+const u8 gXSpecialDefenseItemDescription[] = _("Raises the stat\nSP.DEF during one\nbattle.");
 const u8 gPokeDollItemDescription[] = _("Use to flee from\nany battle with\na wild POKéMON.");
 const u8 gFluffyTailItemDescription[] = _("Use to flee from\nany battle with\na wild POKéMON.");
 // Field items

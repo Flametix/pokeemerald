@@ -1449,6 +1449,8 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_StatIncrease,
         .secondaryId = 0,
     },
+	
+
 
     [ITEM_POKE_DOLL] =
     {
@@ -6814,4 +6816,23 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
     },
+	
+	  [ITEM_X_SPECIAL_DEFENSE] =
+    {
+        .name = _("X SPECIALDEF"),
+        .itemId = ITEM_X_SPECIAL_DEFENSE,
+        .price = 5000,
+        .holdEffect = HOLD_EFFECT_NONE,
+        .holdEffectParam = 0,
+        .description = gXSpecialDefenseItemDescription,
+        .importance = 0,
+        .unk19 = 0,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .battleUsage = 2,
+        .battleUseFunc = ItemUseInBattle_StatIncrease,
+        .secondaryId = 0,
+    },	
+	
 };

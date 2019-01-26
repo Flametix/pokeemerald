@@ -3467,6 +3467,7 @@ extern const u32 gItemIconPalette_XDefend[];
 extern const u32 gItemIconPalette_XSpeed[];
 extern const u32 gItemIconPalette_XAccuracy[];
 extern const u32 gItemIconPalette_XSpecial[];
+extern const u32 gItemIconPalette_XSpecialDefense[];
 extern const u32 gItemIcon_PokeDoll[];
 extern const u32 gItemIconPalette_PokeDoll[];
 extern const u32 gItemIcon_FluffyTail[];
