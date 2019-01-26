@@ -6816,8 +6816,8 @@ const struct Item gItems[] =
         .battleUseFunc = NULL,
         .secondaryId = 0,
     },
-	
-	  [ITEM_X_SPECIAL_DEFENSE] =
+
+    [ITEM_X_SPECIAL_DEFENSE] =
     {
         .name = _("X SPECIALDEF"),
         .itemId = ITEM_X_SPECIAL_DEFENSE,
