@@ -95,7 +95,7 @@ void PressurePPLose(u8 defender, u8 attacker, u16 move)
         return;
 
     if (gBattleMons[attacker].pp[i] != 0)
-        gBattleMons[attacker].pp[i]--;
+        gBattleMons[attacker].pp[i] -= 2; //pressure -2 doesnt work?
 
     if (!(gBattleMons[attacker].status2 & STATUS2_TRANSFORMED)
         && !(gDisableStructs[attacker].unk18_b & gBitTable[i]))
@@ -106,7 +106,7 @@ void PressurePPLose(u8 defender, u8 attacker, u16 move)
     }
 }
 
-void PressurePPLoseOnUsingImprision(u8 attacker)
+void PressurePPLoseOnUsingImprision(u8 attacker) 
 {
     s32 i, j;
     s32 imprisionPos = 4;
@@ -125,7 +125,7 @@ void PressurePPLoseOnUsingImprision(u8 attacker)
             {
                 imprisionPos = j;
                 if (gBattleMons[attacker].pp[j] != 0)
-                    gBattleMons[attacker].pp[j]--;
+                    gBattleMons[attacker].pp[j]-=2;
             }
         }
     }
@@ -158,7 +158,7 @@ void PressurePPLoseOnUsingPerishSong(u8 attacker)
             {
                 perishSongPos = j;
                 if (gBattleMons[attacker].pp[j] != 0)
-                    gBattleMons[attacker].pp[j]--;
+                    gBattleMons[attacker].pp[j]-=2;
             }
         }
     }
