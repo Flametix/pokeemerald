@@ -3544,6 +3544,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
+	if (type == TYPE_WATER && attacker->ability == ABILITY_WATER_VEIL)
+		gBattleMovePower = (200 * gBattleMovePower) / 100;
+    if (defender->ability == ABILITY_WATER_VEIL && (type == TYPE_FIRE))
+        spAttack /= 2;
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
         defense /= 2;
 
