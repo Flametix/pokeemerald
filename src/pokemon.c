@@ -2422,7 +2422,7 @@ static const u8 sGetMonDataEVConstants[] =
 
 static const u8 gUnknown_08329EC8[] =
 {
-    STAT_ATK, STAT_ATK, STAT_SPEED, STAT_DEF, STAT_SPATK, STAT_ACC
+    STAT_ATK, STAT_SPDEF, STAT_SPEED, STAT_DEF, STAT_SPATK, STAT_ACC
 };
 
 static const s8 gUnknown_08329ECE[][3] =
@@ -5072,11 +5072,26 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                 gBattleMons[battlerId].status2 &= ~STATUS2_INFATUATION;
                 retVal = FALSE;
             }
-            if ((itemEffect[cmdIndex] & 0x30) //Add crit+ (Dire Hit)
+            if ((itemEffect[cmdIndex] & 0x40) //Add crit+ (Dire Hit)
              && !(gBattleMons[gActiveBattler].status2 & STATUS2_FOCUS_ENERGY))
             {
                 gBattleMons[gActiveBattler].status2 |= STATUS2_FOCUS_ENERGY;
                 retVal = FALSE;
+            }
+             if ((itemEffect[cmdIndex] & 0x20) //SpD test 
+             && gBattleMons[gActiveBattler].statStages[STAT_SPDEF] < 12)
+            {
+			
+                gBattleMons[gActiveBattler].statStages[STAT_SPDEF] += (itemEffect[cmdIndex] & 0xF0) >> 4;
+                if (gBattleMons[gActiveBattler].statStages[STAT_SPDEF] > 12)
+                    gBattleMons[gActiveBattler].statStages[STAT_SPDEF] = 12;
+					
+				gStatuses3[gActiveBattler] |= STATUS3_PERISH_SONG; 
+                gDisableStructs[gActiveBattler].perishSongTimer = 3; 
+                gDisableStructs[gActiveBattler].perishSongTimerStartValue = 3; 
+				
+                retVal = FALSE;
+		
             }
             if ((itemEffect[cmdIndex] & 0xF) //+atk (X Attack) (reminder: bitwise and)
              && gBattleMons[gActiveBattler].statStages[STAT_ATK] < 12)
@@ -5713,7 +5728,7 @@ u8 *sub_806CF78(u16 itemId)
             sub_806CF24(i * 2);
         if (itemEffect[i] & 0xF0)
         {
-            if (i)
+            if (i || itemEffect[i] == 0x20) //Hard coded SpD check. I dont want to deal with this anymore game
             {
                 sub_806CF24(i * 2 + 1);
             }
