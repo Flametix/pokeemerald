@@ -9905,8 +9905,8 @@ static void atkE5_pickup(void)
             if (ability == ABILITY_PICKUP
                 && species != 0
                 && species != SPECIES_EGG
-                && heldItem == ITEM_NONE
-                && (Random() % 10) == 0)
+                && heldItem == ITEM_NONE)
+               // && (Random() % 10) == 0) remove initial pickup rng
             {
                 s32 j;
                 s32 rand = Random() % 100;
