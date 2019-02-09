@@ -8,6 +8,6 @@ SkyPillar_5F_MapScript1_2396A8: @ 82396A8
 	return
 
 SkyPillar_5F_EventScript_2396B4:: @ 82396B4
-	setmaplayoutindex 437
+	setmaplayoutindex LAYOUT_SKY_PILLAR_5F_CLEAN
 	return
 

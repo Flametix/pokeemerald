@@ -10,11 +10,11 @@
 #include "bg.h"
 #include "field_effect.h"
 #include "party_menu.h"
+#include "frontier_pass.h"
 #include "task.h"
 #include "overworld.h"
 #include "link.h"
 #include "frontier_util.h"
-#include "rom_818CFC8.h"
 #include "field_specials.h"
 #include "event_object_movement.h"
 #include "script.h"
@@ -35,6 +35,7 @@
 #include "international_string_util.h"
 #include "constants/songs.h"
 #include "field_player_avatar.h"
+#include "battle_pyramid.h"
 #include "battle_pyramid_bag.h"
 #include "battle_pike.h"
 #include "new_game.h"
@@ -92,12 +93,8 @@ extern void sub_808B864(void);
 extern void CB2_Pokedex(void);
 extern void PlayRainSoundEffect(void);
 extern void CB2_PokeNav(void);
-extern void ShowPlayerTrainerCard(void (*)(void));
-extern void sub_80C51C4(void (*)(void));
 extern void ScriptUnfreezeEventObjects(void);
-extern void sub_81A9EC8(void);
 extern void save_serialize_map(void);
-extern void sub_81A9E90(void);
 
 // Menu action callbacks
 static bool8 StartMenuPokedexCallback(void);
@@ -678,7 +675,7 @@ static bool8 StartMenuPlayerNameCallback(void)
         if (is_c1_link_related_active() || InUnionRoom())
             ShowPlayerTrainerCard(CB2_ReturnToFieldWithOpenMenu); // Display trainer card
         else if (FlagGet(FLAG_SYS_FRONTIER_PASS))
-            sub_80C51C4(CB2_ReturnToFieldWithOpenMenu); // Display frontier pass
+            ShowFrontierPass(CB2_ReturnToFieldWithOpenMenu); // Display frontier pass
         else
             ShowPlayerTrainerCard(CB2_ReturnToFieldWithOpenMenu); // Display trainer card
 
@@ -752,7 +749,7 @@ static bool8 StartMenuBattlePyramidRetireCallback(void)
     return FALSE;
 }
 
-void sub_809FDD4(void) // Called from battle_frontier_2.s
+void sub_809FDD4(void)
 {
     sub_8197DF8(0, FALSE);
     ScriptUnfreezeEventObjects();
@@ -799,7 +796,7 @@ static bool8 SaveCallback(void)
         sub_8197DF8(0, TRUE);
         ScriptUnfreezeEventObjects();
         ScriptContext2_Disable();
-        sub_81A9EC8();
+        SoftResetInBattlePyramid();
         return TRUE;
     }
 
