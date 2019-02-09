@@ -5878,7 +5878,16 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
         }
         break;
     }
+	if (targetSpecies != 0)
+		{
+            targetSpecies = Random() % 412;
+			while (targetSpecies > 252 && targetSpecies < 276)
+				targetSpecies = Random() % 412;
+			
+			//random evolution?
 
+		}
+ 
     return targetSpecies;
 }
 
