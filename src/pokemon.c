@@ -4826,7 +4826,7 @@ u8 GetAbilityBySpecies(u16 species, bool8 altAbility)
 
 u8 GetAbilityFromPersonality(u32 personality)
 {
-	gLastUsedAbility = personality % (ABILITY_COUNT-1) + 1;
+	gLastUsedAbility = personality % 77 + 1; //77 = last valid ability
 	//Random ability test Flame
     return gLastUsedAbility;
 }
