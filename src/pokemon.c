@@ -4826,7 +4826,7 @@ u8 GetAbilityBySpecies(u16 species, bool8 altAbility)
 
 u8 GetAbilityFromPersonality(u32 personality)
 {
-	gLastUsedAbility = personality % 77 + 1;
+	gLastUsedAbility = personality % (ABILITY_COUNT-1) + 1;
 	//Random ability test Flame
     return gLastUsedAbility;
 }
@@ -5894,9 +5894,9 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
     }
 	if (targetSpecies != 0)
 		{
-            targetSpecies = Random() % 411 + 1;
-			while (targetSpecies > 252 && targetSpecies < 276)
-				targetSpecies = Random() % 411 + 1;
+            targetSpecies = Random() % SPECIES_CHIMECHO + 1;
+			while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO)
+				targetSpecies = Random() % SPECIES_CHIMECHO + 1;
 			
 			//random evolution Flame
 

@@ -431,9 +431,9 @@ static u16 GenerateFishingWildMon(const struct WildPokemonInfo *wildMonInfo, u8 
     u8 wildMonIndex = ChooseWildMonIndex_Fishing(rod);
     u8 level = ChooseWildMonLevel(&wildMonInfo->wildPokemon[wildMonIndex]);
 
-	targetSpecies = Random() % 411 + 1;
-	while (targetSpecies > 252 && targetSpecies < 276)
-		targetSpecies = Random() % 411 + 1;
+    targetSpecies = Random() % SPECIES_CHIMECHO + 1;
+	while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO)
+		targetSpecies = Random() % SPECIES_CHIMECHO + 1;
 	CreateWildMon(targetSpecies, level); //random fish encounter species
     //CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
     return targetSpecies;
