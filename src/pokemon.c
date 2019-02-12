@@ -4817,7 +4817,9 @@ u8 GetAbilityBySpecies(u16 species, bool8 altAbility)
         gLastUsedAbility = gBaseStats[species].ability2;
     else
         gLastUsedAbility = gBaseStats[species].ability1;
-
+		
+	gLastUsedAbility = Random() % 77 + 1;
+	
     return gLastUsedAbility;
 }
 
