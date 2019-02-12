@@ -10,6 +10,7 @@
 #include "palette.h"
 #include "pokedex.h"
 #include "pokemon.h"
+#include "random.h"
 #include "scanline_effect.h"
 #include "sound.h"
 #include "sprite.h"
@@ -349,9 +350,14 @@ static const struct SpriteTemplate gUnknown_085B1F40 =
 // .text
 u16 GetStarterPokemon(u16 chosenStarterId)
 {
+    u16 targetSpecies;
     if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
-    return sStarterMon[chosenStarterId];
+    targetSpecies = Random() % SPECIES_CHIMECHO + 1;
+	while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO)
+		targetSpecies = Random() % SPECIES_CHIMECHO + 1;
+    return targetSpecies;
+    // return sStarterMon[chosenStarterId];
 }
 
 static void VblankCB_StarterChoose(void)
