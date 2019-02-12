@@ -3010,13 +3010,15 @@ static void PrintMonOTID(void)
 
 static void PrintMonAbilityName(void)
 {
-    u8 ability = GetAbilityBySpecies(pssData->summary.species, pssData->summary.altAbility);
+	u8 ability = GetAbilityFromPersonality(pssData->summary.pid);
+    //u8 ability = GetAbilityBySpecies(pssData->summary.species, pssData->summary.altAbility);
     SummaryScreen_PrintTextOnWindow(AddWindowFromTemplateList(gUnknown_0861CCCC, 2), gAbilityNames[ability], 0, 1, 0, 1);
 }
 
 static void PrintMonAbilityDescription(void)
 {
-    u8 ability = GetAbilityBySpecies(pssData->summary.species, pssData->summary.altAbility);
+	u8 ability = GetAbilityFromPersonality(pssData->summary.pid);
+    //u8 ability = GetAbilityBySpecies(pssData->summary.species, pssData->summary.altAbility);
     SummaryScreen_PrintTextOnWindow(AddWindowFromTemplateList(gUnknown_0861CCCC, 2), gAbilityDescriptionPointers[ability], 0, 17, 0, 0);
 }
 

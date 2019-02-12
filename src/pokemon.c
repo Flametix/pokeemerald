@@ -4818,8 +4818,16 @@ u8 GetAbilityBySpecies(u16 species, bool8 altAbility)
     else
         gLastUsedAbility = gBaseStats[species].ability1;
 		
-	gLastUsedAbility = Random() % 77 + 1;
-	
+	//gLastUsedAbility = GetMonData(mon, MON_DATA_PERSONALITY, NULL) % 77 + 1;
+	//gLastUsedAbility = Random() % 77 + 1;
+	//Random ability test Flame
+    return gLastUsedAbility;
+}
+
+u8 GetAbilityFromPersonality(u32 personality)
+{
+	gLastUsedAbility = personality % 77 + 1;
+	//Random ability test Flame
     return gLastUsedAbility;
 }
 
@@ -4827,7 +4835,10 @@ u8 GetMonAbility(struct Pokemon *mon)
 {
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
     u8 altAbility = GetMonData(mon, MON_DATA_ALT_ABILITY, NULL);
-    return GetAbilityBySpecies(species, altAbility);
+	u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, NULL);
+	return GetAbilityFromPersonality(personality);
+
+    //return GetAbilityBySpecies(species, altAbility);
 }
 
 void CreateSecretBaseEnemyParty(struct SecretBaseRecord *secretBaseRecord)
