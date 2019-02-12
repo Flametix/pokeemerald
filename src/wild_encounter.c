@@ -388,7 +388,7 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
 {
     u8 wildMonIndex = 0;
     u8 level;
-
+	u16 targetSpecies;
     switch (area)
     {
     case WILD_AREA_LAND:
@@ -415,18 +415,28 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
         return FALSE;
     if (gMapHeader.mapLayoutId != LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_RANDOM_ROOM3 && flags & WILD_CHECK_KEEN_EYE && !IsAbilityAllowingEncounter(level))
         return FALSE;
+	
 
-    CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
+    targetSpecies = Random() % 411 + 1;
+	while (targetSpecies > 252 && targetSpecies < 276)
+		targetSpecies = Random() % 411 + 1;
+	CreateWildMon(targetSpecies, level); //random wild encounter species
+    //CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
     return TRUE;
 }
 
 static u16 GenerateFishingWildMon(const struct WildPokemonInfo *wildMonInfo, u8 rod)
 {
+	u16 targetSpecies;
     u8 wildMonIndex = ChooseWildMonIndex_Fishing(rod);
     u8 level = ChooseWildMonLevel(&wildMonInfo->wildPokemon[wildMonIndex]);
 
-    CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
-    return wildMonInfo->wildPokemon[wildMonIndex].species;
+	targetSpecies = Random() % 411 + 1;
+	while (targetSpecies > 252 && targetSpecies < 276)
+		targetSpecies = Random() % 411 + 1;
+	CreateWildMon(targetSpecies, level); //random fish encounter species
+    //CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
+    return targetSpecies;
 }
 
 static bool8 SetUpMassOutbreakEncounter(u8 flags)
