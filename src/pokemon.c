@@ -6147,11 +6147,11 @@ u16 ModifyStatByNature(u8 nature, u16 n, u8 statIndex)
     }
 
     switch (gNatureStatTable[nature][statIndex - 1])
-    {
+    { //Nature stat boosts
     case 1:
-        return (u16)(n * 110) / 100;
+        return (u16)(n * 111) / 100;
     case -1:
-        return (u16)(n * 90) / 100;
+        return (u16)(n * 91) / 100;
     }
 
     return n;
