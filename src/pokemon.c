@@ -3266,13 +3266,16 @@ u16 GiveMoveToMon(struct Pokemon *mon, u16 move)
 u16 GiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 move)
 {
     s32 i;
+    move = Random() % (MOVES_COUNT-1)+1;
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
+
         u16 existingMove = GetBoxMonData(boxMon, MON_DATA_MOVE1 + i, NULL);
         if (!existingMove)
         {
             SetBoxMonData(boxMon, MON_DATA_MOVE1 + i, &move);
             SetBoxMonData(boxMon, MON_DATA_PP1 + i, &gBattleMoves[move].pp);
+            
             return move;
         }
         if (existingMove == move)
