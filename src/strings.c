@@ -1506,6 +1506,7 @@ const u8 gUnknown_085EE69D[] = _("Time:");
 const u8 gUnknown_085EE6A3[] = _("Game time");
 const u8 gUnknown_085EE6AD[] = _("RTC time");
 const u8 gUnknown_085EE6B6[] = _("Updated time");
+const u8 gText_MenuRandom[] = _("RANDOM");
 const u8 gText_MenuPokedex[] = _("POKéDEX");
 const u8 gText_MenuPokemon[] = _("POKéMON");
 const u8 gText_MenuBag[] = _("BAG");
