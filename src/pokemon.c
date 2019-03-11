@@ -4847,7 +4847,7 @@ u8 GetAbilityBySpeciesAndSeed(u16 species, bool8 altAbility, u8 seedSum)
 
 u8 GetAbilityFromPersonality(u32 personality, u8 seedSum)
 {
-	gLastUsedAbility = personality * species * seedSum % 77 + 1; //77 = last valid ability
+	gLastUsedAbility = personality * seedSum % 77 + 1; //77 = last valid ability
 	//Random ability test Flame
     return gLastUsedAbility;
 }

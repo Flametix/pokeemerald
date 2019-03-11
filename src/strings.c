@@ -1507,7 +1507,7 @@ const u8 gText_RandomEvolveSeed[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SEED");
 const u8 gText_RandomEvolveOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
 const u8 gText_RandomAbilityOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
 const u8 gText_RandomAbilitySpecies[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SPECIES");
-const u8 gText_RandomAbilityPersonality[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}FULL");
+const u8 gText_RandomAbilityPersonality[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}PID");
 
 
 
