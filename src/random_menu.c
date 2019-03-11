@@ -24,12 +24,12 @@ enum
     TD_EVOLVE,
     TD_ABILITY,
     TD_SEED,
-    TD_TEXTSPEED,
-    TD_BATTLESCENE,
-    TD_BATTLESTYLE,
-    TD_SOUND,
-    TD_BUTTONMODE,
-    TD_FRAMETYPE,
+    // TD_TEXTSPEED,
+    // TD_BATTLESCENE,
+    // TD_BATTLESTYLE,
+    // TD_SOUND,
+    // TD_BUTTONMODE,
+    // TD_FRAMETYPE,
 };
 
 // Menu items
@@ -297,6 +297,11 @@ static void Task_OptionMenuProcessInput(u8 taskId)
     {
         if (gTasks[taskId].data[TD_MENUSELECTION] == MENUITEM_CANCEL)
             gTasks[taskId].func = Task_OptionMenuSave;
+        else if (gTasks[taskId].data[TD_MENUSELECTION] == MENUITEM_SEED)
+        {
+            gTasks[taskId].func = Task_OptionMenuSave;
+        }
+
     }
     else if (gMain.newKeys & B_BUTTON)
     {
