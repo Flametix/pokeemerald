@@ -4886,8 +4886,7 @@ u8 GetMonAbility(struct Pokemon *mon)
 
 u8 GetBattleMonAbility(u16 species, bool8 altAbility, u32 personality)
 {
-    u8 seedSum;
-    seedSum = 0;
+    u8 seedSum = 0;
     int i;
     // u16 species = mon.species;
     // u8 altAbility = mon.altAbility;
