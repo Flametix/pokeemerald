@@ -96,6 +96,11 @@ static void InitPlayerTrainerId(void)
 // L=A isnt set here for some reason.
 static void SetDefaultOptions(void)
 {
+    gSaveBlock2Ptr->randomEvolveSetting = RANDOM_EVOLVE_VANILLA;
+    gSaveBlock2Ptr->randomEncounterSetting = RANDOM_ENCOUNTER_VANILLA;
+    gSaveBlock2Ptr->randomAbilitySetting = RANDOM_ABILITY_VANILLA;
+    // gSaveBlock2Ptr->randomCustomSeed; just set in new game/options
+
     gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
     gSaveBlock2Ptr->optionsWindowFrameType = 0;
     gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_MONO;

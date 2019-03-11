@@ -24,12 +24,12 @@ enum
     TD_EVOLVE,
     TD_ABILITY,
     TD_SEED,
-    // TD_TEXTSPEED,
-    // TD_BATTLESCENE,
-    // TD_BATTLESTYLE,
-    // TD_SOUND,
-    // TD_BUTTONMODE,
-    // TD_FRAMETYPE,
+    TD_TEXTSPEED,
+    TD_BATTLESCENE,
+    TD_BATTLESTYLE,
+    TD_SOUND,
+    TD_BUTTONMODE,
+    TD_FRAMETYPE,
 };
 
 // Menu items
@@ -83,6 +83,8 @@ static u8   RandomEncounter_ProcessInput(u8 selection);
 static void RandomEncounter_DrawChoices(u8 selection);
 static u8   RandomAbility_ProcessInput(u8 selection);
 static void RandomAbility_DrawChoices(u8 selection);
+static void RandomSeed_DrawSeed(void);
+static void Task_DoSeedNamingScreen(u8 taskId);
 
 
 // EWRAM vars
@@ -265,6 +267,7 @@ void CB2_InitRandomMenu(void)
         RandomEncounter_DrawChoices(gTasks[taskId].data[TD_ENCOUNTER]);
         RandomEvolve_DrawChoices(gTasks[taskId].data[TD_EVOLVE]);
         RandomAbility_DrawChoices(gTasks[taskId].data[TD_ABILITY]);
+        RandomSeed_DrawSeed();
         // TextSpeed_DrawChoices(gTasks[taskId].data[TD_TEXTSPEED]);
         // BattleScene_DrawChoices(gTasks[taskId].data[TD_BATTLESCENE]);
         // BattleStyle_DrawChoices(gTasks[taskId].data[TD_BATTLESTYLE]);
@@ -299,7 +302,9 @@ static void Task_OptionMenuProcessInput(u8 taskId)
             gTasks[taskId].func = Task_OptionMenuSave;
         else if (gTasks[taskId].data[TD_MENUSELECTION] == MENUITEM_SEED)
         {
-            gTasks[taskId].func = Task_OptionMenuSave;
+            BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, 0);
+            gTasks[taskId].func = Task_DoSeedNamingScreen;
+
         }
 
     }
@@ -349,6 +354,13 @@ static void Task_OptionMenuProcessInput(u8 taskId)
 
             if (previousOption != gTasks[taskId].data[TD_EVOLVE])
                 RandomEvolve_DrawChoices(gTasks[taskId].data[TD_EVOLVE]);
+            break;
+        case MENUITEM_SEED:
+            previousOption = gTasks[taskId].data[TD_EVOLVE];
+            gTasks[taskId].data[TD_EVOLVE] = RandomEvolve_ProcessInput(gTasks[taskId].data[TD_EVOLVE]);
+
+            if (previousOption != gTasks[taskId].data[TD_EVOLVE])
+                RandomSeed_DrawSeed();
             break;
         
         // case MENUITEM_TEXTSPEED:
@@ -419,6 +431,15 @@ static void Task_OptionMenuSave(u8 taskId)
 
     BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, 0);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
+}
+
+static void Task_DoSeedNamingScreen(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        DestroyTask(taskId);
+        FreeAllWindowBuffers();
+        DoNamingScreen(NAMING_SCREEN_WALDA, gSaveBlock2Ptr->randomCustomSeed, 0, 0, 0, CB2_InitRandomMenu);    }
 }
 
 static void Task_OptionMenuFadeOut(u8 taskId)
@@ -594,6 +615,19 @@ static void RandomEvolve_DrawChoices(u8 selection)
 
     DrawOptionMenuChoice(gText_RandomEvolvePure, GetStringRightAlignXOffset(1, gText_RandomEvolvePure, 198), 16, styles[2]);
 }
+
+static void RandomSeed_DrawSeed(void)
+{
+    u8 styles[1];
+
+    styles[0] = 0;
+    // styles[1] = 0;
+    // styles[selection] = 1;
+
+    // DrawOptionMenuChoice(gText_BattleSceneOn, 104, 48, styles[0]);
+    DrawOptionMenuChoice(gSaveBlock2Ptr->randomCustomSeed, GetStringRightAlignXOffset(1, gSaveBlock2Ptr->randomCustomSeed, 198), 48, styles[0]);
+}
+
 
 static u8 TextSpeed_ProcessInput(u8 selection)
 {
