@@ -389,8 +389,9 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
     u8 wildMonIndex = 0;
     u8 level;
 	u16 targetSpecies;
-    u8 seedSum;
+    u8 seedSum = 0;
     int i;
+
     switch (area)
     {
     case WILD_AREA_LAND:

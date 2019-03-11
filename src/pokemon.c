@@ -4859,6 +4859,8 @@ u8 GetMonAbility(struct Pokemon *mon)
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
     u8 altAbility = GetMonData(mon, MON_DATA_ALT_ABILITY, NULL);
 	u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, NULL);
+
+    seedSum = 0;
     if (gSaveBlock2Ptr->randomAbilitySetting == RANDOM_ABILITY_VANILLA)
         return GetAbilityBySpecies(species, altAbility);
     else
@@ -4885,6 +4887,7 @@ u8 GetMonAbility(struct Pokemon *mon)
 u8 GetBattleMonAbility(u16 species, bool8 altAbility, u32 personality)
 {
     u8 seedSum;
+    seedSum = 0;
     int i;
     // u16 species = mon.species;
     // u8 altAbility = mon.altAbility;
@@ -5860,7 +5863,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
     u8 beauty = GetMonData(mon, MON_DATA_BEAUTY, 0);
     u16 upperPersonality = personality >> 16;
     u8 holdEffect;
-    u8 seedSum;
+    u8 seedSum = 0;
 
     if (heldItem == ITEM_ENIGMA_BERRY)
         holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;

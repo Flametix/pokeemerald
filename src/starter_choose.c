@@ -353,6 +353,7 @@ u16 GetStarterPokemon(u16 chosenStarterId)
     u8 seedSum;
     int i;
     u16 targetSpecies;
+    seedSum = 0;
     if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
     if (gSaveBlock2Ptr->randomEncounterSetting != RANDOM_ENCOUNTER_VANILLA)
@@ -371,9 +372,13 @@ u16 GetStarterPokemon(u16 chosenStarterId)
                 seedSum += gSaveBlock2Ptr->randomCustomSeed[i];
                 i++;
             }
-            targetSpecies = seedSum * chosenStarterId % SPECIES_CHIMECHO + 1;
+            targetSpecies = (seedSum * chosenStarterId + seedSum) % SPECIES_CHIMECHO + 1;
             while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO)
-                targetSpecies = seedSum * chosenStarterId % SPECIES_CHIMECHO + 1;
+            {
+                seedSum++;
+                targetSpecies = (seedSum * chosenStarterId + seedSum) % SPECIES_CHIMECHO + 1;
+            }
+                
             return targetSpecies;
         }
     }else
