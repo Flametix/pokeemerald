@@ -285,6 +285,20 @@ extern const u8 gText_YesNo[];
 //random menu
 
 extern const u8 gText_RandomHeader[];
+extern const u8 gText_RandomEvolve[];
+extern const u8 gText_RandomAbility[];
+extern const u8 gText_RandomSeed[];
+extern const u8 gText_RandomEncounter[];
+extern const u8 gText_RandomEncounterOff[];
+extern const u8 gText_RandomEncounterSeed[];
+extern const u8 gText_RandomEncounterPure[];
+extern const u8 gText_RandomEvolvePure[];
+extern const u8 gText_RandomEvolveSeed[];
+extern const u8 gText_RandomEvolveOff[];
+extern const u8 gText_RandomAbilityOff[];
+extern const u8 gText_RandomAbilitySpecies[];
+extern const u8 gText_RandomAbilityPersonality[];
+
 
 // main menu/birch speech text
 extern const u8 gText_SaveFileErased[];

@@ -459,11 +459,10 @@ struct SaveBlock2
     /*0x64C*/ struct BattleFrontier frontier;
     // sizeof=0xF2C
 
-    /*0x65C*/ u8 customSeed[CUSTOM_SEED_LENGTH];
-    /*0x65D*/ u16 abilityRandomSetting:3; //No randomization, per species, per personality
-              u16 encounterRandomSetting:3; //No randomization, route shuffle, seed based, full random?
-              u16 evolveRandomSetting:1; //random or not
-              u16 trainerRandomSetting:1;
+    /*0x65C*/ u8 randomCustomSeed[CUSTOM_SEED_LENGTH];
+    /*0x65D*/ u16 randomAbilitySetting:3; //No randomization, per species, per personality
+              u16 randomEncounterSetting:3; //No randomization, route shuffle/seed based, full random?
+              u16 randomEvolveSetting:3; //no, seed, full random
 
 };
 

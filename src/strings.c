@@ -1495,6 +1495,21 @@ const u8 gText_ButtonTypeLR[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}LR");
 const u8 gText_ButtonTypeLEqualsA[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}L=A");
 
 const u8 gText_RandomHeader[] = _("RANDOM SETTINGS");
+const u8 gText_RandomEvolve[] = _("EVOLUTION");
+const u8 gText_RandomAbility[] = _("ABILITY");
+const u8 gText_RandomSeed[] = _("SEED");
+const u8 gText_RandomEncounter[] = _("WILDS");
+const u8 gText_RandomEncounterOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
+const u8 gText_RandomEncounterSeed[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SEED");
+const u8 gText_RandomEncounterPure[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}FULL");
+const u8 gText_RandomEvolvePure[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}FULL");
+const u8 gText_RandomEvolveSeed[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SEED");
+const u8 gText_RandomEvolveOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
+const u8 gText_RandomAbilityOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
+const u8 gText_RandomAbilitySpecies[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SEED");
+const u8 gText_RandomAbilityPersonality[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}FULL");
+
+
 
 const u8 gText_XPLink[] = _("{STR_VAR_1}P LINK");
 const u8 gText_BronzeCard[] = _("BRONZE");

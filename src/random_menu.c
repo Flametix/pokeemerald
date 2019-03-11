@@ -1,5 +1,6 @@
 #include "global.h"
 #include "random_menu.h"
+#include "naming_screen.h"
 #include "main.h"
 #include "menu.h"
 #include "scanline_effect.h"
@@ -19,6 +20,10 @@
 enum
 {
     TD_MENUSELECTION,
+    TD_ENCOUNTER,
+    TD_EVOLVE,
+    TD_ABILITY,
+    TD_SEED,
     TD_TEXTSPEED,
     TD_BATTLESCENE,
     TD_BATTLESTYLE,
@@ -30,12 +35,16 @@ enum
 // Menu items
 enum
 {
-    MENUITEM_TEXTSPEED,
-    MENUITEM_BATTLESCENE,
-    MENUITEM_BATTLESTYLE,
-    MENUITEM_SOUND,
-    MENUITEM_BUTTONMODE,
-    MENUITEM_FRAMETYPE,
+    MENUITEM_ENCOUNTER,
+    MENUITEM_EVOLVE,
+    MENUITEM_ABILITY,
+    MENUITEM_SEED,
+    // MENUITEM_TEXTSPEED,
+    // MENUITEM_BATTLESCENE,
+    // MENUITEM_BATTLESTYLE,
+    // MENUITEM_SOUND,
+    // MENUITEM_BUTTONMODE,
+    // MENUITEM_FRAMETYPE,
     MENUITEM_CANCEL,
     MENUITEM_COUNT,
 };
@@ -68,6 +77,13 @@ static void ButtonMode_DrawChoices(u8 selection);
 static void DrawTextOption(void);
 static void DrawOptionMenuTexts(void);
 static void sub_80BB154(void);
+static u8   RandomEvolve_ProcessInput(u8 selection);
+static void RandomEvolve_DrawChoices(u8 selection);
+static u8   RandomEncounter_ProcessInput(u8 selection);
+static void RandomEncounter_DrawChoices(u8 selection);
+static u8   RandomAbility_ProcessInput(u8 selection);
+static void RandomAbility_DrawChoices(u8 selection);
+
 
 // EWRAM vars
 EWRAM_DATA static bool8 sArrowPressed = FALSE;
@@ -79,12 +95,16 @@ static const u8 sEqualSignGfx[] = INCBIN_U8("graphics/misc/option_menu_equals_si
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
-    gText_TextSpeed,
-    gText_BattleScene,
-    gText_BattleStyle,
-    gText_Sound,
-    gText_ButtonMode,
-    gText_Frame,
+    gText_RandomEncounter,
+    gText_RandomEvolve,
+    gText_RandomAbility,
+    gText_RandomSeed,
+    // gText_TextSpeed,
+    // gText_BattleScene,
+    // gText_BattleStyle,
+    // gText_Sound,
+    // gText_ButtonMode,
+    // gText_Frame,
     gText_OptionMenuCancel,
 };
 
@@ -229,7 +249,12 @@ void CB2_InitRandomMenu(void)
     {
         u8 taskId = CreateTask(Task_OptionMenuFadeIn, 0);
 
+
         gTasks[taskId].data[TD_MENUSELECTION] = 0;
+        gTasks[taskId].data[TD_ENCOUNTER] = gSaveBlock2Ptr->randomEncounterSetting;
+        gTasks[taskId].data[TD_ABILITY] = gSaveBlock2Ptr->randomAbilitySetting;
+        gTasks[taskId].data[TD_EVOLVE] = gSaveBlock2Ptr->randomEvolveSetting;
+        // gTasks[taskId].data[TD_SEED] = gSaveBlock2Ptr->randomCustomSeed; - cant assign string, this is the different one
         gTasks[taskId].data[TD_TEXTSPEED] = gSaveBlock2Ptr->optionsTextSpeed;
         gTasks[taskId].data[TD_BATTLESCENE] = gSaveBlock2Ptr->optionsBattleSceneOff;
         gTasks[taskId].data[TD_BATTLESTYLE] = gSaveBlock2Ptr->optionsBattleStyle;
@@ -237,12 +262,15 @@ void CB2_InitRandomMenu(void)
         gTasks[taskId].data[TD_BUTTONMODE] = gSaveBlock2Ptr->optionsButtonMode;
         gTasks[taskId].data[TD_FRAMETYPE] = gSaveBlock2Ptr->optionsWindowFrameType;
 
-        TextSpeed_DrawChoices(gTasks[taskId].data[TD_TEXTSPEED]);
-        BattleScene_DrawChoices(gTasks[taskId].data[TD_BATTLESCENE]);
-        BattleStyle_DrawChoices(gTasks[taskId].data[TD_BATTLESTYLE]);
-        Sound_DrawChoices(gTasks[taskId].data[TD_SOUND]);
-        ButtonMode_DrawChoices(gTasks[taskId].data[TD_BUTTONMODE]);
-        FrameType_DrawChoices(gTasks[taskId].data[TD_FRAMETYPE]);
+        RandomEncounter_DrawChoices(gTasks[taskId].data[TD_ENCOUNTER]);
+        RandomEvolve_DrawChoices(gTasks[taskId].data[TD_EVOLVE]);
+        RandomAbility_DrawChoices(gTasks[taskId].data[TD_ABILITY]);
+        // TextSpeed_DrawChoices(gTasks[taskId].data[TD_TEXTSPEED]);
+        // BattleScene_DrawChoices(gTasks[taskId].data[TD_BATTLESCENE]);
+        // BattleStyle_DrawChoices(gTasks[taskId].data[TD_BATTLESTYLE]);
+        // Sound_DrawChoices(gTasks[taskId].data[TD_SOUND]);
+        // ButtonMode_DrawChoices(gTasks[taskId].data[TD_BUTTONMODE]);
+        // FrameType_DrawChoices(gTasks[taskId].data[TD_FRAMETYPE]);
         HighlightOptionMenuItem(gTasks[taskId].data[TD_MENUSELECTION]);
 
         CopyWindowToVram(WIN_OPTIONS, 3);
@@ -296,48 +324,70 @@ static void Task_OptionMenuProcessInput(u8 taskId)
 
         switch (gTasks[taskId].data[TD_MENUSELECTION])
         {
-        case MENUITEM_TEXTSPEED:
-            previousOption = gTasks[taskId].data[TD_TEXTSPEED];
-            gTasks[taskId].data[TD_TEXTSPEED] = TextSpeed_ProcessInput(gTasks[taskId].data[TD_TEXTSPEED]);
+        case MENUITEM_ENCOUNTER:
+            previousOption = gTasks[taskId].data[TD_ENCOUNTER];
+            gTasks[taskId].data[TD_ENCOUNTER] = RandomEncounter_ProcessInput(gTasks[taskId].data[TD_ENCOUNTER]);
 
-            if (previousOption != gTasks[taskId].data[TD_TEXTSPEED])
-                TextSpeed_DrawChoices(gTasks[taskId].data[TD_TEXTSPEED]);
+            if (previousOption != gTasks[taskId].data[TD_ENCOUNTER])
+                RandomEncounter_DrawChoices(gTasks[taskId].data[TD_ENCOUNTER]);
             break;
-        case MENUITEM_BATTLESCENE:
-            previousOption = gTasks[taskId].data[TD_BATTLESCENE];
-            gTasks[taskId].data[TD_BATTLESCENE] = BattleScene_ProcessInput(gTasks[taskId].data[TD_BATTLESCENE]);
+        case MENUITEM_ABILITY:
+            previousOption = gTasks[taskId].data[TD_ABILITY];
+            gTasks[taskId].data[TD_ABILITY] = RandomAbility_ProcessInput(gTasks[taskId].data[TD_ABILITY]);
 
-            if (previousOption != gTasks[taskId].data[TD_BATTLESCENE])
-                BattleScene_DrawChoices(gTasks[taskId].data[TD_BATTLESCENE]);
+            if (previousOption != gTasks[taskId].data[TD_ABILITY])
+                RandomAbility_DrawChoices(gTasks[taskId].data[TD_ABILITY]);
             break;
-        case MENUITEM_BATTLESTYLE:
-            previousOption = gTasks[taskId].data[TD_BATTLESTYLE];
-            gTasks[taskId].data[TD_BATTLESTYLE] = BattleStyle_ProcessInput(gTasks[taskId].data[TD_BATTLESTYLE]);
+        case MENUITEM_EVOLVE:
+            previousOption = gTasks[taskId].data[TD_EVOLVE];
+            gTasks[taskId].data[TD_EVOLVE] = RandomEvolve_ProcessInput(gTasks[taskId].data[TD_EVOLVE]);
 
-            if (previousOption != gTasks[taskId].data[TD_BATTLESTYLE])
-                BattleStyle_DrawChoices(gTasks[taskId].data[TD_BATTLESTYLE]);
+            if (previousOption != gTasks[taskId].data[TD_EVOLVE])
+                RandomEvolve_DrawChoices(gTasks[taskId].data[TD_EVOLVE]);
             break;
-        case MENUITEM_SOUND:
-            previousOption = gTasks[taskId].data[TD_SOUND];
-            gTasks[taskId].data[TD_SOUND] = Sound_ProcessInput(gTasks[taskId].data[TD_SOUND]);
+        
+        // case MENUITEM_TEXTSPEED:
+        //     previousOption = gTasks[taskId].data[TD_TEXTSPEED];
+        //     gTasks[taskId].data[TD_TEXTSPEED] = TextSpeed_ProcessInput(gTasks[taskId].data[TD_TEXTSPEED]);
 
-            if (previousOption != gTasks[taskId].data[TD_SOUND])
-                Sound_DrawChoices(gTasks[taskId].data[TD_SOUND]);
-            break;
-        case MENUITEM_BUTTONMODE:
-            previousOption = gTasks[taskId].data[TD_BUTTONMODE];
-            gTasks[taskId].data[TD_BUTTONMODE] = ButtonMode_ProcessInput(gTasks[taskId].data[TD_BUTTONMODE]);
+        //     if (previousOption != gTasks[taskId].data[TD_TEXTSPEED])
+        //         TextSpeed_DrawChoices(gTasks[taskId].data[TD_TEXTSPEED]);
+        //     break;
+        // case MENUITEM_BATTLESCENE:
+        //     previousOption = gTasks[taskId].data[TD_BATTLESCENE];
+        //     gTasks[taskId].data[TD_BATTLESCENE] = BattleScene_ProcessInput(gTasks[taskId].data[TD_BATTLESCENE]);
 
-            if (previousOption != gTasks[taskId].data[TD_BUTTONMODE])
-                ButtonMode_DrawChoices(gTasks[taskId].data[TD_BUTTONMODE]);
-            break;
-        case MENUITEM_FRAMETYPE:
-            previousOption = gTasks[taskId].data[TD_FRAMETYPE];
-            gTasks[taskId].data[TD_FRAMETYPE] = FrameType_ProcessInput(gTasks[taskId].data[TD_FRAMETYPE]);
+        //     if (previousOption != gTasks[taskId].data[TD_BATTLESCENE])
+        //         BattleScene_DrawChoices(gTasks[taskId].data[TD_BATTLESCENE]);
+        //     break;
+        // case MENUITEM_BATTLESTYLE:
+        //     previousOption = gTasks[taskId].data[TD_BATTLESTYLE];
+        //     gTasks[taskId].data[TD_BATTLESTYLE] = BattleStyle_ProcessInput(gTasks[taskId].data[TD_BATTLESTYLE]);
 
-            if (previousOption != gTasks[taskId].data[TD_FRAMETYPE])
-                FrameType_DrawChoices(gTasks[taskId].data[TD_FRAMETYPE]);
-            break;
+        //     if (previousOption != gTasks[taskId].data[TD_BATTLESTYLE])
+        //         BattleStyle_DrawChoices(gTasks[taskId].data[TD_BATTLESTYLE]);
+        //     break;
+        // case MENUITEM_SOUND:
+        //     previousOption = gTasks[taskId].data[TD_SOUND];
+        //     gTasks[taskId].data[TD_SOUND] = Sound_ProcessInput(gTasks[taskId].data[TD_SOUND]);
+
+        //     if (previousOption != gTasks[taskId].data[TD_SOUND])
+        //         Sound_DrawChoices(gTasks[taskId].data[TD_SOUND]);
+        //     break;
+        // case MENUITEM_BUTTONMODE:
+        //     previousOption = gTasks[taskId].data[TD_BUTTONMODE];
+        //     gTasks[taskId].data[TD_BUTTONMODE] = ButtonMode_ProcessInput(gTasks[taskId].data[TD_BUTTONMODE]);
+
+        //     if (previousOption != gTasks[taskId].data[TD_BUTTONMODE])
+        //         ButtonMode_DrawChoices(gTasks[taskId].data[TD_BUTTONMODE]);
+        //     break;
+        // case MENUITEM_FRAMETYPE:
+        //     previousOption = gTasks[taskId].data[TD_FRAMETYPE];
+        //     gTasks[taskId].data[TD_FRAMETYPE] = FrameType_ProcessInput(gTasks[taskId].data[TD_FRAMETYPE]);
+
+        //     if (previousOption != gTasks[taskId].data[TD_FRAMETYPE])
+        //         FrameType_DrawChoices(gTasks[taskId].data[TD_FRAMETYPE]);
+        //     break;
         default:
             return;
         }
@@ -352,6 +402,9 @@ static void Task_OptionMenuProcessInput(u8 taskId)
 
 static void Task_OptionMenuSave(u8 taskId)
 {
+    gSaveBlock2Ptr->randomEvolveSetting = gTasks[taskId].data[TD_EVOLVE];
+    gSaveBlock2Ptr->randomEncounterSetting = gTasks[taskId].data[TD_ENCOUNTER];
+    gSaveBlock2Ptr->randomAbilitySetting = gTasks[taskId].data[TD_ABILITY];
     gSaveBlock2Ptr->optionsTextSpeed = gTasks[taskId].data[TD_TEXTSPEED];
     gSaveBlock2Ptr->optionsBattleSceneOff = gTasks[taskId].data[TD_BATTLESCENE];
     gSaveBlock2Ptr->optionsBattleStyle = gTasks[taskId].data[TD_BATTLESTYLE];
@@ -395,6 +448,146 @@ static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style)
 
     dst[i] = EOS;
     AddTextPrinterParameterized(WIN_OPTIONS, 1, dst, x, y + 1, TEXT_SPEED_FF, NULL);
+}
+
+static u8 RandomEncounter_ProcessInput(u8 selection)
+{
+    if (gMain.newKeys & DPAD_RIGHT)
+    {
+        if (selection <= 1)
+            selection++;
+        else
+            selection = 0;
+
+        sArrowPressed = TRUE;
+    }
+    if (gMain.newKeys & DPAD_LEFT)
+    {
+        if (selection != 0)
+            selection--;
+        else
+            selection = 2;
+
+        sArrowPressed = TRUE;
+    }
+    return selection;
+}
+
+static void RandomEncounter_DrawChoices(u8 selection)
+{
+    u8 styles[3];
+    s32 widthOff, widthSeed, widthPure, xMid;
+
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[2] = 0;
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_RandomEncounterOff, 104, 0, styles[0]);
+
+    widthOff = GetStringWidth(1, gText_RandomEncounterOff, 0);
+    widthSeed = GetStringWidth(1, gText_RandomEncounterSeed, 0);
+    widthPure = GetStringWidth(1, gText_RandomEncounterPure, 0);
+
+    widthSeed -= 94;
+    xMid = (widthOff - widthSeed - widthPure) / 2 + 104;
+    DrawOptionMenuChoice(gText_RandomEncounterSeed, xMid, 0, styles[1]);
+
+    DrawOptionMenuChoice(gText_RandomEncounterPure, GetStringRightAlignXOffset(1, gText_RandomEncounterPure, 198), 0, styles[2]);
+}
+
+
+
+static u8 RandomAbility_ProcessInput(u8 selection)
+{
+    if (gMain.newKeys & DPAD_RIGHT)
+    {
+        if (selection <= 1)
+            selection++;
+        else
+            selection = 0;
+
+        sArrowPressed = TRUE;
+    }
+    if (gMain.newKeys & DPAD_LEFT)
+    {
+        if (selection != 0)
+            selection--;
+        else
+            selection = 2;
+
+        sArrowPressed = TRUE;
+    }
+    return selection;
+}
+
+static void RandomAbility_DrawChoices(u8 selection)
+{
+    u8 styles[3];
+    s32 widthSlow, widthMid, widthFast, xMid;
+
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[2] = 0;
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_RandomAbilityOff, 104, 32, styles[0]);
+
+    widthSlow = GetStringWidth(1, gText_RandomAbilityOff, 0);
+    widthMid = GetStringWidth(1, gText_RandomAbilitySpecies, 0);
+    widthFast = GetStringWidth(1, gText_RandomAbilityPersonality, 0);
+
+    widthMid -= 94;
+    xMid = (widthSlow - widthMid - widthFast) / 2 + 104;
+    DrawOptionMenuChoice(gText_RandomAbilitySpecies, xMid, 32, styles[1]);
+
+    DrawOptionMenuChoice(gText_RandomAbilityPersonality, GetStringRightAlignXOffset(1, gText_RandomAbilityPersonality, 198), 32, styles[2]);
+}
+
+static u8 RandomEvolve_ProcessInput(u8 selection)
+{
+    if (gMain.newKeys & DPAD_RIGHT)
+    {
+        if (selection <= 1)
+            selection++;
+        else
+            selection = 0;
+
+        sArrowPressed = TRUE;
+    }
+    if (gMain.newKeys & DPAD_LEFT)
+    {
+        if (selection != 0)
+            selection--;
+        else
+            selection = 2;
+
+        sArrowPressed = TRUE;
+    }
+    return selection;
+}
+
+static void RandomEvolve_DrawChoices(u8 selection)
+{
+    u8 styles[3];
+    s32 widthSlow, widthMid, widthFast, xMid;
+
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[2] = 0;
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_RandomEvolveOff, 104, 16, styles[0]);
+//16 because 2nd option - spacing
+    widthSlow = GetStringWidth(1, gText_RandomEvolveOff, 0);
+    widthMid = GetStringWidth(1, gText_RandomEvolveSeed, 0);
+    widthFast = GetStringWidth(1, gText_RandomEvolvePure, 0);
+
+    widthMid -= 94;
+    xMid = (widthSlow - widthMid - widthFast) / 2 + 104;
+    DrawOptionMenuChoice(gText_RandomEvolveSeed, xMid, 16, styles[1]);
+
+    DrawOptionMenuChoice(gText_RandomEvolvePure, GetStringRightAlignXOffset(1, gText_RandomEvolvePure, 198), 16, styles[2]);
 }
 
 static u8 TextSpeed_ProcessInput(u8 selection)
