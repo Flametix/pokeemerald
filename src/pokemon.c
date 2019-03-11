@@ -3263,7 +3263,7 @@ u16 GiveMoveToMon(struct Pokemon *mon, u16 move)
 u16 GiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 move)
 {
     s32 i;
-    move = Random() % (MOVES_COUNT-1)+1;
+    // move = Random() % (MOVES_COUNT-1)+1;
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
 
