@@ -4824,21 +4824,92 @@ u8 GetAbilityBySpecies(u16 species, bool8 altAbility)
     return gLastUsedAbility;
 }
 
-u8 GetAbilityFromPersonality(u32 personality)
+u8 GetAbilityBySpeciesAndSeed(u16 species, bool8 altAbility, u8 seedSum)
 {
-	gLastUsedAbility = personality % 77 + 1; //77 = last valid ability
+    // if (altAbility)
+    //     gLastUsedAbility = gBaseStats[species].ability2;
+    // else
+    //     gLastUsedAbility = gBaseStats[species].ability1;
+		
+	// gLastUsedAbility = GetMonData(mon, MON_DATA_PERSONALITY, NULL) % 77 + 1;
+    if (altAbility)
+    {
+	    gLastUsedAbility = (species * seedSum + gBaseStats[species].ability2) % 77 + 1;
+    }
+    else
+    {
+        gLastUsedAbility = (species * seedSum + gBaseStats[species].ability1) % 77 + 1;
+    }
+    
+	//Random ability test Flame
+    return gLastUsedAbility;
+}
+
+u8 GetAbilityFromPersonality(u32 personality, u8 seedSum)
+{
+	gLastUsedAbility = personality * species * seedSum % 77 + 1; //77 = last valid ability
 	//Random ability test Flame
     return gLastUsedAbility;
 }
 
 u8 GetMonAbility(struct Pokemon *mon)
 {
+    u8 seedSum;
+    int i;
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
     u8 altAbility = GetMonData(mon, MON_DATA_ALT_ABILITY, NULL);
 	u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, NULL);
-	return GetAbilityFromPersonality(personality);
+    if (gSaveBlock2Ptr->randomAbilitySetting == RANDOM_ABILITY_VANILLA)
+        return GetAbilityBySpecies(species, altAbility);
+    else
+    {
+        i = 0;
+        while (gSaveBlock2Ptr->randomCustomSeed[i] != 0xFF)
+        {
+            seedSum += gSaveBlock2Ptr->randomCustomSeed[i];
+            i++;
+        }
 
-    //return GetAbilityBySpecies(species, altAbility);
+        if (gSaveBlock2Ptr->randomAbilitySetting == RANDOM_ABILITY_SPECIES)
+        {
+            return GetAbilityBySpeciesAndSeed(species, altAbility, seedSum);
+        }
+
+        else if (gSaveBlock2Ptr->randomAbilitySetting == RANDOM_ABILITY_SEED)
+            return GetAbilityFromPersonality(personality, seedSum);
+    }
+    
+
+}
+
+u8 GetBattleMonAbility(u16 species, bool8 altAbility, u32 personality)
+{
+    u8 seedSum;
+    int i;
+    // u16 species = mon.species;
+    // u8 altAbility = mon.altAbility;
+	// u32 personality = mon.personality;
+    if (gSaveBlock2Ptr->randomAbilitySetting == RANDOM_ABILITY_VANILLA)
+        return GetAbilityBySpecies(species, altAbility);
+    else
+    {
+        i = 0;
+        while (gSaveBlock2Ptr->randomCustomSeed[i] != 0xFF)
+        {
+            seedSum += gSaveBlock2Ptr->randomCustomSeed[i];
+            i++;
+        }
+
+        if (gSaveBlock2Ptr->randomAbilitySetting == RANDOM_ABILITY_SPECIES)
+        {
+            return GetAbilityBySpeciesAndSeed(species, altAbility, seedSum);
+        }
+
+        else if (gSaveBlock2Ptr->randomAbilitySetting == RANDOM_ABILITY_SEED)
+            return GetAbilityFromPersonality(personality, seedSum);
+    }
+    
+
 }
 
 void CreateSecretBaseEnemyParty(struct SecretBaseRecord *secretBaseRecord)
@@ -5909,6 +5980,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                     while (gSaveBlock2Ptr->randomCustomSeed[i] != 0xFF)
                     {
                         seedSum += gSaveBlock2Ptr->randomCustomSeed[i];
+                        i++;
                     }
                     targetSpecies = seedSum * species * targetSpecies % SPECIES_CHIMECHO + 1;
                     while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO) //no unowns

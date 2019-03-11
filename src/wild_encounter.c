@@ -389,6 +389,8 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
     u8 wildMonIndex = 0;
     u8 level;
 	u16 targetSpecies;
+    u8 seedSum;
+    int i;
     switch (area)
     {
     case WILD_AREA_LAND:
@@ -416,12 +418,34 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
     if (gMapHeader.mapLayoutId != LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_RANDOM_ROOM3 && flags & WILD_CHECK_KEEN_EYE && !IsAbilityAllowingEncounter(level))
         return FALSE;
 	
-
-    targetSpecies = Random() % 411 + 1;
-	while (targetSpecies > 252 && targetSpecies < 276)
-		targetSpecies = Random() % 411 + 1;
-	CreateWildMon(targetSpecies, level); //random wild encounter species
-    //CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
+    if (gSaveBlock2Ptr->randomEncounterSetting != RANDOM_ENCOUNTER_VANILLA)
+    {
+        if (gSaveBlock2Ptr->randomEncounterSetting == RANDOM_ENCOUNTER_PURE)
+        {
+            targetSpecies = Random() % 411 + 1;
+            while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO)
+                targetSpecies = Random() % 411 + 1;
+            CreateWildMon(targetSpecies, level); //random wild encounter species Flame
+        }else //seed
+        {
+            i = 0;
+            while (gSaveBlock2Ptr->randomCustomSeed[i] != 0xFF)
+            {
+                seedSum += gSaveBlock2Ptr->randomCustomSeed[i];
+                i++;
+            }
+            targetSpecies = seedSum * wildMonInfo->wildPokemon[wildMonIndex].species % 411 + 1;
+            while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO)
+            {   
+                seedSum++;
+                targetSpecies = seedSum * wildMonInfo->wildPokemon[wildMonIndex].species % 411 + 1;
+            }
+            CreateWildMon(targetSpecies, level); //random wild encounter species Flame
+        }
+    }else
+    {
+        CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
+    }
     return TRUE;
 }
 

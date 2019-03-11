@@ -350,14 +350,36 @@ static const struct SpriteTemplate gUnknown_085B1F40 =
 // .text
 u16 GetStarterPokemon(u16 chosenStarterId)
 {
+    u8 seedSum;
+    int i;
     u16 targetSpecies;
     if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
-    targetSpecies = Random() % SPECIES_CHIMECHO + 1;
-	while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO)
-		targetSpecies = Random() % SPECIES_CHIMECHO + 1;
-    return targetSpecies;
-    // return sStarterMon[chosenStarterId];
+    if (gSaveBlock2Ptr->randomEncounterSetting != RANDOM_ENCOUNTER_VANILLA)
+    {
+        if (gSaveBlock2Ptr-> randomEncounterSetting == RANDOM_ENCOUNTER_PURE)
+        {
+            targetSpecies = Random() % SPECIES_CHIMECHO + 1;
+            while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO)
+                targetSpecies = Random() % SPECIES_CHIMECHO + 1;
+            return targetSpecies;
+        }else
+        {
+            i = 0;
+            while (gSaveBlock2Ptr->randomCustomSeed[i] != 0xFF)
+            {
+                seedSum += gSaveBlock2Ptr->randomCustomSeed[i];
+                i++;
+            }
+            targetSpecies = seedSum * chosenStarterId % SPECIES_CHIMECHO + 1;
+            while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO)
+                targetSpecies = seedSum * chosenStarterId % SPECIES_CHIMECHO + 1;
+            return targetSpecies;
+        }
+    }else
+    {
+    return sStarterMon[chosenStarterId];
+    }
 }
 
 static void VblankCB_StarterChoose(void)

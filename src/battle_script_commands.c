@@ -4929,8 +4929,10 @@ static void atk4D_switchindataupdate(void)
 
     gBattleMons[gActiveBattler].type1 = gBaseStats[gBattleMons[gActiveBattler].species].type1;
     gBattleMons[gActiveBattler].type2 = gBaseStats[gBattleMons[gActiveBattler].species].type2;
+    gBattleMons[gActiveBattler].ability = GetBattleMonAbility(gBattleMons[gActiveBattler].species, gBattleMons[gActiveBattler].altAbility, gBattleMons[gActiveBattler].personality);
+
    // gBattleMons[gActiveBattler].ability = GetAbilityBySpecies(gBattleMons[gActiveBattler].species, gBattleMons[gActiveBattler].altAbility);
- gBattleMons[gActiveBattler].ability = GetAbilityFromPersonality(gBattleMons[gActiveBattler].personality);
+//  gBattleMons[gActiveBattler].ability = GetAbilityFromPersonality(gBattleMons[gActiveBattler].personality);
 
 
     // check knocked off item
@@ -8659,8 +8661,10 @@ static void atkAE_healpartystatus(void)
                          && !(gAbsentBattlerFlags & gBitTable[gActiveBattler]))
                     ability = gBattleMons[gActiveBattler].ability;
                 else
+                	ability = GetMonAbility(&party[i]);
+
                     //ability = GetAbilityBySpecies(species, abilityBit);
-					ability = GetAbilityFromPersonality(personality);
+					// ability = GetAbilityFromPersonality(personality);
 
                 if (ability != ABILITY_SOUNDPROOF)
                     toHeal |= (1 << i);
