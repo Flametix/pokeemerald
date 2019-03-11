@@ -10,6 +10,11 @@ It builds the following rom:
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
+Randomizes:
+- Wild encounters based on seed/"pure" random
+- Ability based on original species options/personality
+- Evolution based on seed/"pure" random
+
 
 ## See also
 
