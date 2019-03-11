@@ -56,6 +56,7 @@
 #define PLAYER_NAME_LENGTH 7
 #define MAIL_WORDS_COUNT 9
 #define MOVE_NAME_LENGTH 12
+#define CUSTOM_SEED_LENGTH 16
 
 #define MALE 0
 #define FEMALE 1

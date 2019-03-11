@@ -457,7 +457,16 @@ struct SaveBlock2
     /*0x57C*/ struct RankingHall2P hallRecords2P[2][3]; // From record mixing.
     /*0x624*/ u16 contestLinkResults[5][4]; // 4 positions for 5 categories.
     /*0x64C*/ struct BattleFrontier frontier;
-}; // sizeof=0xF2C
+    // sizeof=0xF2C
+
+    /*0x65C*/ u8 customSeed[CUSTOM_SEED_LENGTH];
+    /*0x65D*/ u16 abilityRandomSetting:3; //No randomization, per species, per personality
+              u16 encounterRandomSetting:3; //No randomization, route shuffle, seed based, full random?
+              u16 evolveRandomSetting:1; //random or not
+              u16 trainerRandomSetting:1;
+
+};
+
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
 
