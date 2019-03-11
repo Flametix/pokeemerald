@@ -298,6 +298,7 @@ SECTIONS {
         src/gym_leader_rematch.o(.text);
         src/unk_transition.o(.text);
         src/international_string_util.o(.text);
+        src/random_menu.o(.text);
     } =0
 
     script_data :
@@ -605,6 +606,7 @@ SECTIONS {
         data/mystery_event_msg.o(.rodata);
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
+        src/random_menu.o(.rodata);
     } =0
 
     song_data :
@@ -1221,6 +1223,6 @@ SECTIONS {
     /* Discard everything not specifically mentioned above. */
     /DISCARD/ :
     {
-        *(*);
+        /* *(*); */
     }
 }

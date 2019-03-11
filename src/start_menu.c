@@ -29,6 +29,7 @@
 #include "party_menu.h"
 #include "pokedex.h"
 #include "pokenav.h"
+#include "random_menu.h"
 #include "safari_zone.h"
 #include "save.h"
 #include "scanline_effect.h"
