@@ -5789,6 +5789,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
     u8 beauty = GetMonData(mon, MON_DATA_BEAUTY, 0);
     u16 upperPersonality = personality >> 16;
     u8 holdEffect;
+    u8 seedSum;
 
     if (heldItem == ITEM_ENIGMA_BERRY)
         holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
@@ -5892,15 +5893,33 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
         }
         break;
     }
-	if (targetSpecies != 0)
-		{
-            targetSpecies = Random() % SPECIES_CHIMECHO + 1;
-			while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO)
-				targetSpecies = Random() % SPECIES_CHIMECHO + 1;
-			
-			//random evolution Flame
 
-		}
+    if (gSaveBlock2Ptr->randomEvolveSetting != RANDOM_EVOLVE_VANILLA)
+    {
+        if (targetSpecies != 0)
+            { //could probably use the switch if i knew how
+                if (gSaveBlock2Ptr->randomEvolveSetting == RANDOM_EVOLVE_PURE)
+                {
+                    targetSpecies = Random() % SPECIES_CHIMECHO + 1;
+                    while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO) //no unowns
+                        targetSpecies = Random() % SPECIES_CHIMECHO + 1;
+                }else
+                {
+                    i = 0;
+                    while (gSaveBlock2Ptr->randomCustomSeed[i] != 0xFF)
+                    {
+                        seedSum += gSaveBlock2Ptr->randomCustomSeed[i];
+                    }
+                    targetSpecies = seedSum * species * targetSpecies % SPECIES_CHIMECHO + 1;
+                    while (targetSpecies > SPECIES_CELEBI && targetSpecies < SPECIES_TREECKO) //no unowns
+                        seedSum++;
+                        targetSpecies = seedSum * species * targetSpecies % SPECIES_CHIMECHO + 1;
+                }
+                
+                //random evolution Flame
+
+            }
+    }
  
     return targetSpecies;
 }
