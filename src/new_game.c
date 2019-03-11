@@ -41,7 +41,7 @@
 #include "secret_base.h"
 #include "player_pc.h"
 #include "field_specials.h"
-
+#include "strings.h"
 
 extern void copy_strings_to_sav1(void);
 extern void sub_801AFD8(void);
@@ -96,11 +96,13 @@ static void InitPlayerTrainerId(void)
 // L=A isnt set here for some reason.
 static void SetDefaultOptions(void)
 {
+    u8 i;
     gSaveBlock2Ptr->randomEvolveSetting = RANDOM_EVOLVE_VANILLA;
     gSaveBlock2Ptr->randomEncounterSetting = RANDOM_ENCOUNTER_VANILLA;
     gSaveBlock2Ptr->randomAbilitySetting = RANDOM_ABILITY_VANILLA;
-    // gSaveBlock2Ptr->randomCustomSeed; just set in new game/options
-
+    for (i = 0; i < 12; i++)
+        gSaveBlock2Ptr->randomCustomSeed[i] =  gText_Tourney_Tree[i];
+    gSaveBlock2Ptr->randomCustomSeed[12] = 0xFF;
     gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
     gSaveBlock2Ptr->optionsWindowFrameType = 0;
     gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_MONO;
