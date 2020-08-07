@@ -130,6 +130,12 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
         input->dpadDirection = DIR_WEST;
     else if (heldKeys & DPAD_RIGHT)
         input->dpadDirection = DIR_EAST;
+	
+/* 	if ((heldKeys & R_BUTTON) && input ->pressedSelectButton) // Sound Test debug input
+	{
+		input->input_field_1_0 = TRUE;
+		input->pressedSelectButton = FALSE;
+	} */
 }
 
 int ProcessPlayerFieldInput(struct FieldInput *input)
@@ -188,7 +194,7 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     }
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
-
+	
     return FALSE;
 }
 

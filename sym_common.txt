@@ -48,6 +48,7 @@ gReservedSpritePaletteCount:
 	.include "sound.o"
 	.include "task.o"
 	.include "trainer_see.o"
+	.include "sound_check_menu.o"
 	.include "pokedex.o"
 	.include "contest.o"
 	.include "tv.o"

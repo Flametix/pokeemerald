@@ -22,6 +22,7 @@
 #include "graphics.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "sound_check_menu.h"
 
 #define VERSION_BANNER_RIGHT_TILEOFFSET 64
 #define VERSION_BANNER_LEFT_X 98
@@ -34,6 +35,7 @@
 #define RESET_RTC_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_LEFT)
 #define BERRY_UPDATE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON)
 #define A_B_START_SELECT (A_BUTTON | B_BUTTON | START_BUTTON | SELECT_BUTTON)
+#define SOUND_CHECK_BUTTON_COMBO (R_BUTTON | DPAD_UP)
 
 extern struct MusicPlayerInfo gMPlayInfo_BGM;
 
@@ -47,6 +49,7 @@ static void CB2_GoToClearSaveDataScreen(void);
 static void CB2_GoToResetRtcScreen(void);
 static void CB2_GoToBerryFixScreen(void);
 static void CB2_GoToCopyrightScreen(void);
+static void CB2_GoToSoundCheck(void);
 static void UpdateLegendaryMarkingColor(u8);
 
 static void SpriteCB_VersionBannerLeft(struct Sprite *sprite);
@@ -750,6 +753,12 @@ static void Task_TitleScreenPhase3(u8 taskId)
         BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
         SetMainCallback2(CB2_GoToBerryFixScreen);
     }   
+	else if ((gMain.heldKeys & SOUND_CHECK_BUTTON_COMBO) == SOUND_CHECK_BUTTON_COMBO)
+    {
+        FadeOutBGM(4);
+        BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
+        SetMainCallback2(CB2_GoToSoundCheck);
+    }   
     else
     {
         SetGpuReg(REG_OFFSET_BG2Y_L, 0);
@@ -800,6 +809,15 @@ static void CB2_GoToBerryFixScreen(void)
     {
         m4aMPlayAllStop();
         SetMainCallback2(CB2_InitBerryFixProgram);
+    }
+}
+
+static void CB2_GoToSoundCheck(void)
+{
+    if (!UpdatePaletteFade())
+    {
+        m4aMPlayAllStop();
+        SetMainCallback2(CB2_StartSoundCheckMenu);
     }
 }
 
