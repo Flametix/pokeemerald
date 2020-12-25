@@ -1938,6 +1938,7 @@ Cry_Deoxys::
 Cry_Chimecho::
 	.incbin "sound/direct_sound_samples/cries/chimecho.bin"
 
+	.align 2
 Cry_Grassduck::
 	.incbin "sound/direct_sound_samples/cries/quack.bin"
 

@@ -128,4 +128,3 @@ voicegroup191::
 	voice_noise_alt 0, 0, 0, 15, 0 
 	voice_noise_alt 0, 0, 1, 7, 1 
 	voice_noise_alt 0, 0, 1, 0, 0  
-	
