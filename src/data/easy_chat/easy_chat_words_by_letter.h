@@ -625,6 +625,7 @@ const u16 gEasyChatWordsByLetter_G[] = {
     EC_WORD_GRANDFATHER,
     EC_WORD_GRANDMOTHER,
     EC_WORD_GRASS,
+    EC_POKEMON2(GRASSDUCK),
     EC_MOVE(GRASS_WHISTLE),
     -1, 2, // Doubled pokemon species name
     EC_POKEMON(GRAVELER),

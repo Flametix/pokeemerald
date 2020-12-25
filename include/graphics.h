@@ -2740,6 +2740,15 @@ extern const u32 gMonShinyPalette_Chimecho[];
 extern const u32 gMonStillFrontPic_Chimecho[];
 extern const u8 gMonIcon_Chimecho[];
 extern const u8 gMonFootprint_Chimecho[];
+
+extern const u32 gMonFrontPic_Grassduck[];
+extern const u32 gMonPalette_Grassduck[];
+extern const u32 gMonBackPic_Grassduck[];
+extern const u32 gMonShinyPalette_Grassduck[];
+extern const u32 gMonStillFrontPic_Grassduck[];
+extern const u8 gMonIcon_Grassduck[];
+extern const u8 gMonFootprint_Grassduck[];
+
 extern const u32 gMonPic_Egg[];
 extern const u32 gMonPalette_Egg[];
 extern const u32 gMonFrontPic_Egg[];

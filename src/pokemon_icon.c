@@ -437,6 +437,9 @@ const u8 *const gMonIconTable[] =
     [SPECIES_JIRACHI] = gMonIcon_Jirachi,
     [SPECIES_DEOXYS] = gMonIcon_Deoxys,
     [SPECIES_CHIMECHO] = gMonIcon_Chimecho,
+
+    [SPECIES_GRASSDUCK] = gMonIcon_Grassduck,
+
     [SPECIES_EGG] = gMonIcon_Egg,
     [SPECIES_UNOWN_B] = gMonIcon_UnownB,
     [SPECIES_UNOWN_C] = gMonIcon_UnownC,
@@ -881,6 +884,7 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_JIRACHI] = 0,
     [SPECIES_DEOXYS] = 0,
     [SPECIES_CHIMECHO] = 0,
+    [SPECIES_GRASSDUCK] = 0,
     [SPECIES_EGG] = 1,
     [SPECIES_UNOWN_B] = 0,
     [SPECIES_UNOWN_C] = 0,

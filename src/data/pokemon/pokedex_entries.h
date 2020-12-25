@@ -4643,4 +4643,16 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
+
+    [NATIONAL_DEX_GRASSDUCK] = 
+    {
+        .categoryName = _("DUCK"),
+        .height = 5,
+        .weight = 12,
+        .description = gGrassduckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
 };
