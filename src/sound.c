@@ -379,7 +379,7 @@ void PlayCryInternal(u16 species, s8 pan, s8 volume, u8 priority, u8 mode)
     u8 table;
 
     species--;
-    length = 140;
+    length = 5700;
     v0 = FALSE;
     release = 0;
     pitch = 15360;
