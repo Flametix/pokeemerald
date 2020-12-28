@@ -33,6 +33,8 @@
 #define tSeIndexOld data[4]
 #define tWhichSubmenu data[14]
 #define tState data[15]
+#define FIRST_SONG MUS_LITTLEROOT_TEST
+#define LAST_SE SE_SUDOWOODO_SHAKE
 
 // wonky dim access macro
 #define MULTI_DIM_ARR(x, dim, y) ((x) * dim + (y))
@@ -301,7 +303,7 @@ static const u8 *const gSENames[];
 static void Task_HandleDrawingSoundCheckMenuText(u8 taskId) // sub_080E85F4
 {
     FillWindowPixelRect(WIN_MUS, PIXEL_FILL(1), 0, 14, 224, 12);
-    PrintSoundNumber(gTasks[taskId].tBgmIndex + (MUS_TETSUJI - 1), WIN_MUS); // print by BGM index
+    PrintSoundNumber(gTasks[taskId].tBgmIndex + (FIRST_SONG - 1), WIN_MUS); // print by BGM index
     PrintPaddedString(gBGMNames[gTasks[taskId].tBgmIndex], WIN_MUS);
     FillWindowPixelRect(WIN_SE, PIXEL_FILL(1), 0, 14, 224, 12);
     PrintSoundNumber(gTasks[taskId].tSeIndex, WIN_SE);
@@ -353,19 +355,19 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
             {
                 if (gTasks[taskId].tBgmIndex != 0)
                 {
-                    m4aSongNumStop(gTasks[taskId].tBgmIndexOld + (MUS_TETSUJI - 1));
-                    m4aSongNumStart(gTasks[taskId].tBgmIndex + (MUS_TETSUJI - 1));
+                    m4aSongNumStop(gTasks[taskId].tBgmIndexOld + (FIRST_SONG - 1));
+                    m4aSongNumStart(gTasks[taskId].tBgmIndex + (FIRST_SONG - 1));
                     gTasks[taskId].tBgmIndexOld = gTasks[taskId].tBgmIndex;
                 }
                 else
                 {
-                    m4aSongNumStop(gTasks[taskId].tBgmIndexOld + (MUS_TETSUJI - 1));
+                    m4aSongNumStop(gTasks[taskId].tBgmIndexOld + (FIRST_SONG - 1));
                     gTasks[taskId].tBgmIndexOld = 0;
                 }
             }
             else if (gTasks[taskId].tBgmIndex != 0)
             {
-                m4aSongNumStart(gTasks[taskId].tBgmIndex + (MUS_TETSUJI - 1));
+                m4aSongNumStart(gTasks[taskId].tBgmIndex + (FIRST_SONG - 1));
                 gTasks[taskId].tBgmIndexOld = gTasks[taskId].tBgmIndex;
             }
         }
@@ -396,7 +398,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
             if (gTasks[taskId].tBgmIndex > 0)
                 gTasks[taskId].tBgmIndex--;
             else
-                gTasks[taskId].tBgmIndex = (MAX_SONGS - (MUS_TETSUJI - 1));
+                gTasks[taskId].tBgmIndex = (MAX_SONGS - (FIRST_SONG - 1));
         }
         return TRUE;
     }
@@ -411,7 +413,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
         }
         else
         {
-            if (gTasks[taskId].tBgmIndex < (MAX_SONGS - (MUS_TETSUJI - 1)))
+            if (gTasks[taskId].tBgmIndex < (MAX_SONGS - (FIRST_SONG - 1)))
                 gTasks[taskId].tBgmIndex++;
             else
                 gTasks[taskId].tBgmIndex = 0;
@@ -893,7 +895,7 @@ static void Task_ProcessPanTestInput(u8 taskId) // sub_080E9284
     if (gMain.newAndRepeatedKeys & DPAD_RIGHT)
     {
         sSoundTestParams[CRY_TEST_VOICE]++;
-        if (sSoundTestParams[CRY_TEST_VOICE] > SE_USSOKI)
+        if (sSoundTestParams[CRY_TEST_VOICE] > LAST_SE)
             sSoundTestParams[CRY_TEST_VOICE] = MUS_DUMMY;
         PrintPanTestMenuText();
     }
@@ -901,7 +903,7 @@ static void Task_ProcessPanTestInput(u8 taskId) // sub_080E9284
     {
         sSoundTestParams[CRY_TEST_VOICE]--;
         if (sSoundTestParams[CRY_TEST_VOICE] < MUS_DUMMY)
-            sSoundTestParams[CRY_TEST_VOICE] = SE_USSOKI;
+            sSoundTestParams[CRY_TEST_VOICE] = LAST_SE;
         PrintPanTestMenuText();
     }
 }
@@ -1025,215 +1027,215 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
 
 #define SOUND_LIST_BGM \
 	X(MUS_STOP, "STOP") \
-    X(MUS_TETSUJI, "MUS-TETSUJI") \
-    X(MUS_FIELD13, "MUS-FIELD13") \
-    X(MUS_KACHI22, "MUS-KACHI22") \
-    X(MUS_KACHI2, "MUS-KACHI2") \
-    X(MUS_KACHI3, "MUS-KACHI3") \
-    X(MUS_KACHI5, "MUS-KACHI5") \
-    X(MUS_PCC, "MUS-PCC") \
-    X(MUS_NIBI, "MUS-NIBI") \
-    X(MUS_SUIKUN, "MUS-SUIKUN") \
-    X(MUS_DOORO1, "MUS-DOORO1") \
-    X(MUS_DOORO_X1, "MUS-DOORO-X1") \
-    X(MUS_DOORO_X3, "MUS-DOORO-X3") \
-    X(MUS_MACHI_S2, "MUS-MACHI-S2") \
-    X(MUS_MACHI_S4, "MUS-MACHI-S4") \
-    X(MUS_GIM, "MUS-GIM") \
-    X(MUS_NAMINORI, "MUS-NAMINORI") \
-    X(MUS_DAN01, "MUS-DAN01") \
-    X(MUS_FANFA1, "MUS-FANFA1") \
-    X(MUS_ME_ASA, "MUS-ME-ASA") \
-    X(MUS_ME_BACHI, "MUS-ME-BACHI") \
-    X(MUS_FANFA4, "MUS-FANFA4") \
-    X(MUS_FANFA5, "MUS-FANFA5") \
-    X(MUS_ME_WAZA, "MUS-ME-WAZA") \
-    X(MUS_BIJYUTU, "MUS-BIJYUTU") \
-    X(MUS_DOORO_X4, "MUS-DOORO-X4") \
-    X(MUS_FUNE_KAN, "MUS-FUNE-KAN") \
-    X(MUS_ME_SHINKA, "MUS-ME-SHINKA") \
-    X(MUS_SHINKA, "MUS-SHINKA") \
-    X(MUS_ME_WASURE, "MUS-ME-WASURE") \
-    X(MUS_SYOUJOEYE, "MUS-SYOUJOEYE") \
-    X(MUS_BOYEYE, "MUS-BOYEYE") \
-    X(MUS_DAN02, "MUS-DAN02") \
-    X(MUS_MACHI_S3, "MUS-MACHI-S3") \
-    X(MUS_ODAMAKI, "MUS-ODAMAKI") \
-    X(MUS_B_TOWER, "MUS-B-TOWER") \
-    X(MUS_SWIMEYE, "MUS-SWIMEYE") \
-    X(MUS_DAN03, "MUS-DAN03") \
-    X(MUS_ME_KINOMI, "MUS-ME-KINOMI") \
-    X(MUS_ME_TAMA, "MUS-ME-TAMA") \
-    X(MUS_ME_B_BIG, "MUS-ME-B-BIG") \
-    X(MUS_ME_B_SMALL, "MUS-ME-B-SMALL") \
-    X(MUS_ME_ZANNEN, "MUS-ME-ZANNEN") \
-    X(MUS_BD_TIME, "MUS-BD-TIME") \
-    X(MUS_TEST1, "MUS-TEST1") \
-    X(MUS_TEST2, "MUS-TEST2") \
-    X(MUS_TEST3, "MUS-TEST3") \
-    X(MUS_TEST4, "MUS-TEST4") \
-    X(MUS_TEST, "MUS-TEST") \
-    X(MUS_GOMACHI0, "MUS-GOMACHI0") \
-    X(MUS_GOTOWN, "MUS-GOTOWN") \
-    X(MUS_POKECEN, "MUS-POKECEN") \
-    X(MUS_NEXTROAD, "MUS-NEXTROAD") \
-    X(MUS_GRANROAD, "MUS-GRANROAD") \
+    X(MUS_LITTLEROOT_TEST, "MUS-TETSUJI") \
+    X(MUS_GSC_ROUTE38, "MUS-FIELD13") \
+    X(MUS_CAUGHT, "MUS-KACHI22") \
+    X(MUS_VICTORY_WILD, "MUS-KACHI2") \
+    X(MUS_VICTORY_GYM_LEADER, "MUS-KACHI3") \
+    X(MUS_VICTORY_LEAGUE, "MUS-KACHI5") \
+    X(MUS_C_COMM_CENTER, "MUS-PCC") \
+    X(MUS_GSC_PEWTER, "MUS-NIBI") \
+    X(MUS_C_VS_LEGEND_BEAST, "MUS-SUIKUN") \
+    X(MUS_ROUTE101, "MUS-DOORO1") \
+    X(MUS_ROUTE110, "MUS-DOORO-X1") \
+    X(MUS_ROUTE120, "MUS-DOORO-X3") \
+    X(MUS_PETALBURG, "MUS-MACHI-S2") \
+    X(MUS_OLDALE, "MUS-MACHI-S4") \
+    X(MUS_GYM, "MUS-GIM") \
+    X(MUS_SURF, "MUS-NAMINORI") \
+    X(MUS_PETALBURG_WOODS, "MUS-DAN01") \
+    X(MUS_LEVEL_UP, "MUS-FANFA1") \
+    X(MUS_HEAL, "MUS-ME-ASA") \
+    X(MUS_OBTAIN_BADGE, "MUS-ME-BACHI") \
+    X(MUS_OBTAIN_ITEM, "MUS-FANFA4") \
+    X(MUS_EVOLVED, "MUS-FANFA5") \
+    X(MUS_OBTAIN_TMHM, "MUS-ME-WAZA") \
+    X(MUS_LILYCOVE_MUSEUM, "MUS-BIJYUTU") \
+    X(MUS_ROUTE122, "MUS-DOORO-X4") \
+    X(MUS_OCEANIC_MUSEUM, "MUS-FUNE-KAN") \
+    X(MUS_EVOLUTION_INTRO, "MUS-ME-SHINKA") \
+    X(MUS_EVOLUTION, "MUS-SHINKA") \
+    X(MUS_MOVE_DELETED, "MUS-ME-WASURE") \
+    X(MUS_ENCOUNTER_GIRL, "MUS-SYOUJOEYE") \
+    X(MUS_ENCOUNTER_MALE, "MUS-BOYEYE") \
+    X(MUS_ABANDONED_SHIP, "MUS-DAN02") \
+    X(MUS_FORTREE, "MUS-MACHI-S3") \
+    X(MUS_BIRCH_LAB, "MUS-ODAMAKI") \
+    X(MUS_B_TOWER_RS, "MUS-B-TOWER") \
+    X(MUS_ENCOUNTER_SWIMMER, "MUS-SWIMEYE") \
+    X(MUS_CAVE_OF_ORIGIN, "MUS-DAN03") \
+    X(MUS_OBTAIN_BERRY, "MUS-ME-KINOMI") \
+    X(MUS_AWAKEN_LEGEND, "MUS-ME-TAMA") \
+    X(MUS_SLOTS_JACKPOT, "MUS-ME-B-BIG") \
+    X(MUS_SLOTS_WIN, "MUS-ME-B-SMALL") \
+    X(MUS_TOO_BAD, "MUS-ME-ZANNEN") \
+    X(MUS_ROULETTE, "MUS-BD-TIME") \
+    X(MUS_LINK_CONTEST_P1, "MUS-TEST1") \
+    X(MUS_LINK_CONTEST_P2, "MUS-TEST2") \
+    X(MUS_LINK_CONTEST_P3, "MUS-TEST3") \
+    X(MUS_LINK_CONTEST_P4, "MUS-TEST4") \
+    X(MUS_ENCOUNTER_RICH, "MUS-TEST") \
+    X(MUS_VERDANTURF, "MUS-GOMACHI0") \
+    X(MUS_RUSTBORO, "MUS-GOTOWN") \
+    X(MUS_POKE_CENTER, "MUS-POKECEN") \
+    X(MUS_ROUTE104, "MUS-NEXTROAD") \
+    X(MUS_ROUTE119, "MUS-GRANROAD") \
     X(MUS_CYCLING, "MUS-CYCLING") \
-    X(MUS_FRIENDLY, "MUS-FRIENDLY") \
-    X(MUS_MISHIRO, "MUS-MISHIRO") \
-    X(MUS_TOZAN, "MUS-TOZAN") \
-    X(MUS_GIRLEYE, "MUS-GIRLEYE") \
-    X(MUS_MINAMO, "MUS-MINAMO") \
-    X(MUS_ASHROAD, "MUS-ASHROAD") \
-    X(MUS_EVENT0, "MUS-EVENT0") \
-    X(MUS_DEEPDEEP, "MUS-DEEPDEEP") \
-    X(MUS_KACHI1, "MUS-KACHI1") \
-    X(MUS_TITLE3, "MUS-TITLE3") \
-    X(MUS_DEMO1, "MUS-DEMO1") \
-    X(MUS_GIRL_SUP, "MUS-GIRL-SUP") \
-    X(MUS_HAGESHII, "MUS-HAGESHII") \
-    X(MUS_KAKKOII, "MUS-KAKKOII") \
-    X(MUS_KAZANBAI, "MUS-KAZANBAI") \
-    X(MUS_AQA_0, "MUS-AQA-0") \
-    X(MUS_TSURETEK, "MUS-TSURETEK") \
-    X(MUS_BOY_SUP, "MUS-BOY-SUP") \
-    X(MUS_RAINBOW, "MUS-RAINBOW") \
-    X(MUS_AYASII, "MUS-AYASII") \
-    X(MUS_KACHI4, "MUS-KACHI4") \
-    X(MUS_ROPEWAY, "MUS-ROPEWAY") \
-    X(MUS_CASINO, "MUS-CASINO") \
-    X(MUS_HIGHTOWN, "MUS-HIGHTOWN") \
-    X(MUS_SAFARI, "MUS-SAFARI") \
-    X(MUS_C_ROAD, "MUS-C-ROAD") \
-    X(MUS_AJITO, "MUS-AJITO") \
-    X(MUS_M_BOAT, "MUS-M-BOAT") \
-    X(MUS_M_DUNGON, "MUS-M-DUNGON") \
-    X(MUS_FINECITY, "MUS-FINECITY") \
-    X(MUS_MACHUPI, "MUS-MACHUPI") \
-    X(MUS_P_SCHOOL, "MUS-P-SCHOOL") \
-    X(MUS_DENDOU, "MUS-DENDOU") \
-    X(MUS_TONEKUSA, "MUS-TONEKUSA") \
-    X(MUS_MABOROSI, "MUS-MABOROSI") \
-    X(MUS_CON_FAN, "MUS-CON-FAN") \
-    X(MUS_CONTEST0, "MUS-CONTEST0") \
-    X(MUS_MGM0, "MUS-MGM0") \
-    X(MUS_T_BATTLE, "MUS-T-BATTLE") \
-    X(MUS_OOAME, "MUS-OOAME") \
-    X(MUS_HIDERI, "MUS-HIDERI") \
-    X(MUS_RUNECITY, "MUS-RUNECITY") \
-    X(MUS_CON_K, "MUS-CON-K") \
-    X(MUS_EIKOU_R, "MUS-EIKOU-R") \
-    X(MUS_KARAKURI, "MUS-KARAKURI") \
-    X(MUS_HUTAGO, "MUS-HUTAGO") \
-    X(MUS_SITENNOU, "MUS-SITENNOU") \
-    X(MUS_YAMA_EYE, "MUS-YAMA-EYE") \
-    X(MUS_CONLOBBY, "MUS-CONLOBBY") \
-    X(MUS_INTER_V, "MUS-INTER-V") \
-    X(MUS_DAIGO, "MUS-DAIGO") \
-    X(MUS_THANKFOR, "MUS-THANKFOR") \
+    X(MUS_POKE_MART, "MUS-FRIENDLY") \
+    X(MUS_LITTLEROOT, "MUS-MISHIRO") \
+    X(MUS_MT_CHIMNEY, "MUS-TOZAN") \
+    X(MUS_ENCOUNTER_FEMALE, "MUS-GIRLEYE") \
+    X(MUS_LILYCOVE, "MUS-MINAMO") \
+    X(MUS_ROUTE111, "MUS-ASHROAD") \
+    X(MUS_HELP, "MUS-EVENT0") \
+    X(MUS_UNDERWATER, "MUS-DEEPDEEP") \
+    X(MUS_VICTORY_TRAINER, "MUS-KACHI1") \
+    X(MUS_TITLE, "MUS-TITLE3") \
+    X(MUS_INTRO, "MUS-DEMO1") \
+    X(MUS_ENCOUNTER_MAY, "MUS-GIRL-SUP") \
+    X(MUS_ENCOUNTER_INTENSE, "MUS-HAGESHII") \
+    X(MUS_ENCOUNTER_COOL, "MUS-KAKKOII") \
+    X(MUS_ROUTE113, "MUS-KAZANBAI") \
+    X(MUS_ENCOUNTER_AQUA, "MUS-AQA-0") \
+    X(MUS_FOLLOW_ME, "MUS-TSURETEK") \
+    X(MUS_ENCOUNTER_BRENDAN, "MUS-BOY-SUP") \
+    X(MUS_EVER_GRANDE, "MUS-RAINBOW") \
+    X(MUS_ENCOUNTER_SUSPICIOUS, "MUS-AYASII") \
+    X(MUS_VICTORY_AQUA_MAGMA, "MUS-KACHI4") \
+    X(MUS_CABLE_CAR, "MUS-ROPEWAY") \
+    X(MUS_GAME_CORNER, "MUS-CASINO") \
+    X(MUS_DEWFORD, "MUS-HIGHTOWN") \
+    X(MUS_SAFARI_ZONE, "MUS-SAFARI") \
+    X(MUS_VICTORY_ROAD, "MUS-C-ROAD") \
+    X(MUS_AQUA_MAGMA_HIDEOUT, "MUS-AJITO") \
+    X(MUS_SAILING, "MUS-M-BOAT") \
+    X(MUS_MT_PYRE, "MUS-M-DUNGON") \
+    X(MUS_SLATEPORT, "MUS-FINECITY") \
+    X(MUS_MT_PYRE_EXTERIOR, "MUS-MACHUPI") \
+    X(MUS_SCHOOL, "MUS-P-SCHOOL") \
+    X(MUS_HALL_OF_FAME, "MUS-DENDOU") \
+    X(MUS_FALLARBOR, "MUS-TONEKUSA") \
+    X(MUS_SEALED_CHAMBER, "MUS-MABOROSI") \
+    X(MUS_CONTEST_WINNER, "MUS-CON-FAN") \
+    X(MUS_CONTEST, "MUS-CONTEST0") \
+    X(MUS_ENCOUNTER_MAGMA, "MUS-MGM0") \
+    X(MUS_INTRO_BATTLE, "MUS-T-BATTLE") \
+    X(MUS_ABNORMAL_WEATHER, "MUS-OOAME") \
+    X(MUS_WEATHER_GROUDON, "MUS-HIDERI") \
+    X(MUS_SOOTOPOLIS, "MUS-RUNECITY") \
+    X(MUS_CONTEST_RESULTS, "MUS-CON-K") \
+    X(MUS_HALL_OF_FAME_ROOM, "MUS-EIKOU-R") \
+    X(MUS_TRICK_HOUSE, "MUS-KARAKURI") \
+    X(MUS_ENCOUNTER_TWINS, "MUS-HUTAGO") \
+    X(MUS_ENCOUNTER_ELITE_FOUR, "MUS-SITENNOU") \
+    X(MUS_ENCOUNTER_HIKER, "MUS-YAMA-EYE") \
+    X(MUS_CONTEST_LOBBY, "MUS-CONLOBBY") \
+    X(MUS_ENCOUNTER_INTERVIEWER, "MUS-INTER-V") \
+    X(MUS_ENCOUNTER_CHAMPION, "MUS-DAIGO") \
+    X(MUS_CREDITS, "MUS-THANKFOR") \
     X(MUS_END, "MUS-END") \
     X(MUS_B_FRONTIER, "MUS-B-FRONTIER") \
     X(MUS_B_ARENA, "MUS-B-ARENA") \
-    X(MUS_ME_POINTGET, "MUS-ME-POINTGET") \
-    X(MUS_ME_TORE_EYE, "MUS-ME-TORE-EYE") \
-    X(MUS_PYRAMID, "MUS-PYRAMID") \
-    X(MUS_PYRAMID_TOP, "MUS-PYRAMID-TOP") \
+    X(MUS_OBTAIN_B_POINTS, "MUS-ME-POINTGET") \
+    X(MUS_REGISTER_MATCH_CALL, "MUS-ME-TORE-EYE") \
+    X(MUS_B_PYRAMID, "MUS-PYRAMID") \
+    X(MUS_B_PYRAMID_TOP, "MUS-PYRAMID-TOP") \
     X(MUS_B_PALACE, "MUS-B-PALACE") \
-    X(MUS_REKKUU_KOURIN, "MUS-REKKUU-KOURIN") \
-    X(MUS_SATTOWER, "MUS-SATTOWER") \
-    X(MUS_ME_SYMBOLGET, "MUS-ME-SYMBOLGET") \
+    X(MUS_RAYQUAZA_APPEARS, "MUS-REKKUU-KOURIN") \
+    X(MUS_B_TOWER, "MUS-SATTOWER") \
+    X(MUS_OBTAIN_SYMBOL, "MUS-ME-SYMBOLGET") \
     X(MUS_B_DOME, "MUS-B-DOME") \
-    X(MUS_B_TUBE, "MUS-B-TUBE") \
+    X(MUS_B_PIKE, "MUS-B-TUBE") \
     X(MUS_B_FACTORY, "MUS-B-FACTORY") \
-    X(MUS_VS_REKKU, "MUS-VS-REKKU") \
-    X(MUS_VS_FRONT, "MUS-VS-FRONT") \
+    X(MUS_VS_RAYQUAZA, "MUS-VS-REKKU") \
+    X(MUS_VS_FRONTIER_BRAIN, "MUS-VS-FRONT") \
     X(MUS_VS_MEW, "MUS-VS-MEW") \
-    X(MUS_B_DOME1, "MUS-B-DOME1") \
-    X(MUS_BATTLE27, "Battle! Wild Pokémon") \
-    X(MUS_BATTLE31, "Battle! Grunt") \
-    X(MUS_BATTLE20, "Battle! Trainer") \
-    X(MUS_BATTLE32, "Battle! Gym Leader") \
-    X(MUS_BATTLE33, "Battle! Champion") \
-    X(MUS_BATTLE36, "Battle! Regi") \
-    X(MUS_BATTLE34, "Battle! Legendary") \
-    X(MUS_BATTLE35, "Battle! Rival") \
-    X(MUS_BATTLE38, "Battle! E4") \
-    X(MUS_BATTLE30, "Battle! Team Leader") \
-    X(MUS_RG_ANNAI, "FRLG Follow Me!") \
-    X(MUS_RG_SLOT, "FRLG Game Corner") \
-    X(MUS_RG_AJITO, "MUS-RG-AJITO") \
+    X(MUS_B_DOME_LOBBY, "MUS-B-DOME1") \
+    X(MUS_VS_WILD, "Battle! Wild Pokémon") \
+    X(MUS_VS_AQUA_MAGMA, "Battle! Grunt") \
+    X(MUS_VS_TRAINER, "Battle! Trainer") \
+    X(MUS_VS_GYM_LEADER, "Battle! Gym Leader") \
+    X(MUS_VS_CHAMPION, "Battle! Champion") \
+    X(MUS_VS_REGI, "Battle! Regi") \
+    X(MUS_VS_KYOGRE_GROUDON, "Battle! Legendary") \
+    X(MUS_VS_RIVAL, "Battle! Rival") \
+    X(MUS_VS_ELITE_FOUR, "Battle! E4") \
+    X(MUS_VS_AQUA_MAGMA_LEADER, "Battle! Team Leader") \
+    X(MUS_RG_FOLLOW_ME, "FRLG Follow Me!") \
+    X(MUS_RG_GAME_CORNER, "FRLG Game Corner") \
+    X(MUS_RG_ROCKET_HIDEOUT, "MUS-RG-AJITO") \
     X(MUS_RG_GYM, "MUS-RG-GYM") \
-    X(MUS_RG_PURIN, "MUS-RG-PURIN") \
-    X(MUS_RG_DEMO, "MUS-RG-DEMO") \
+    X(MUS_RG_JIGGLYPUFF, "MUS-RG-PURIN") \
+    X(MUS_RG_INTRO_FIGHT, "MUS-RG-DEMO") \
     X(MUS_RG_TITLE, "MUS-RG-TITLE") \
-    X(MUS_RG_GUREN, "MUS-RG-GUREN") \
-    X(MUS_RG_SHION, "MUS-RG-SHION") \
-    X(MUS_RG_KAIHUKU, "MUS-RG-KAIHUKU") \
+    X(MUS_RG_CINNABAR, "MUS-RG-GUREN") \
+    X(MUS_RG_LAVENDER, "MUS-RG-SHION") \
+    X(MUS_RG_HEAL, "MUS-RG-KAIHUKU") \
     X(MUS_RG_CYCLING, "MUS-RG-CYCLING") \
-    X(MUS_RG_ROCKET, "MUS-RG-ROCKET") \
-    X(MUS_RG_SHOUJO, "MUS-RG-SHOUJO") \
-    X(MUS_RG_SHOUNEN, "MUS-RG-SHOUNEN") \
-    X(MUS_RG_DENDOU, "MUS-RG-DENDOU") \
-    X(MUS_RG_T_MORI, "MUS-RG-T-MORI") \
-    X(MUS_RG_OTSUKIMI, "MUS-RG-OTSUKIMI") \
-    X(MUS_RG_POKEYASHI, "MUS-RG-POKEYASHI") \
-    X(MUS_RG_ENDING, "MUS-RG-ENDING") \
-    X(MUS_RG_LOAD01, "MUS-RG-LOAD01") \
-    X(MUS_RG_OPENING, "MUS-RG-OPENING") \
-    X(MUS_RG_LOAD02, "MUS-RG-LOAD02") \
-    X(MUS_RG_LOAD03, "MUS-RG-LOAD03") \
-    X(MUS_RG_CHAMP_R, "MUS-RG-CHAMP-R") \
-    X(MUS_RG_VS_GYM, "MUS-RG-VS-GYM") \
-    X(MUS_RG_VS_TORE, "MUS-RG-VS-TORE") \
-    X(MUS_RG_VS_YASEI, "MUS-RG-VS-YASEI") \
-    X(MUS_RG_VS_LAST, "MUS-RG-VS-LAST") \
-    X(MUS_RG_MASARA, "MUS-RG-MASARA") \
-    X(MUS_RG_KENKYU, "MUS-RG-KENKYU") \
-    X(MUS_RG_OHKIDO, "MUS-RG-OHKIDO") \
-    X(MUS_RG_POKECEN, "MUS-RG-POKECEN") \
-    X(MUS_RG_SANTOAN, "MUS-RG-SANTOAN") \
-    X(MUS_RG_NAMINORI, "MUS-RG-NAMINORI") \
-    X(MUS_RG_P_TOWER, "MUS-RG-P-TOWER") \
-    X(MUS_RG_SHIRUHU, "MUS-RG-SHIRUHU") \
-    X(MUS_RG_HANADA, "MUS-RG-HANADA") \
-    X(MUS_RG_TAMAMUSI, "MUS-RG-TAMAMUSI") \
-    X(MUS_RG_WIN_TRE, "MUS-RG-WIN-TRE") \
-    X(MUS_RG_WIN_YASEI, "MUS-RG-WIN-YASEI") \
-    X(MUS_RG_WIN_GYM, "MUS-RG-WIN-GYM") \
-    X(MUS_RG_KUCHIBA, "MUS-RG-KUCHIBA") \
-    X(MUS_RG_NIBI, "MUS-RG-NIBI") \
-    X(MUS_RG_RIVAL1, "MUS-RG-RIVAL1") \
-    X(MUS_RG_RIVAL2, "MUS-RG-RIVAL2") \
-    X(MUS_RG_FAN2, "MUS-RG-FAN2") \
-    X(MUS_RG_FAN5, "MUS-RG-FAN5") \
-    X(MUS_RG_FAN6, "MUS-RG-FAN6") \
-    X(MUS_ME_RG_PHOTO, "MUS-ME-RG-PHOTO") \
-    X(MUS_RG_TITLEROG, "MUS-RG-TITLEROG") \
-    X(MUS_RG_GET_YASEI, "MUS-RG-GET-YASEI") \
-    X(MUS_RG_SOUSA, "MUS-RG-SOUSA") \
-    X(MUS_RG_SEKAIKAN, "MUS-RG-SEKAIKAN") \
-    X(MUS_RG_SEIBETU, "MUS-RG-SEIBETU") \
-    X(MUS_RG_JUMP, "MUS-RG-JUMP") \
-    X(MUS_RG_UNION, "MUS-RG-UNION") \
-    X(MUS_RG_NETWORK, "MUS-RG-NETWORK") \
-    X(MUS_RG_OKURIMONO, "MUS-RG-OKURIMONO") \
-    X(MUS_RG_KINOMIKUI, "MUS-RG-KINOMIKUI") \
-    X(MUS_RG_NANADUNGEON, "MUS-RG-NANADUNGEON") \
-    X(MUS_RG_OSHIE_TV, "MUS-RG-OSHIE-TV") \
-    X(MUS_RG_NANASHIMA, "MUS-RG-NANASHIMA") \
-    X(MUS_RG_NANAISEKI, "MUS-RG-NANAISEKI") \
-    X(MUS_RG_NANA123, "MUS-RG-NANA123") \
-    X(MUS_RG_NANA45, "MUS-RG-NANA45") \
-    X(MUS_RG_NANA67, "MUS-RG-NANA67") \
-    X(MUS_RG_POKEFUE, "MUS-RG-POKEFUE") \
-    X(MUS_RG_VS_DEO, "MUS-RG-VS-DEO") \
-    X(MUS_RG_VS_MYU2, "MUS-RG-VS-MYU2") \
-    X(MUS_RG_VS_DEN, "MUS-RG-VS-DEN") \
-    X(MUS_RG_EXEYE, "MUS-RG-EXEYE") \
-    X(MUS_RG_DEOEYE, "MUS-RG-DEOEYE") \
-    X(MUS_RG_T_TOWER, "MUS-RG-T-TOWER") \
-    X(MUS_RG_SLOWMASARA, "MUS-RG-SLOWMASARA") \
-    X(MUS_RG_TVNOIZE, "MUS-RG-TVNOIZE") \
+    X(MUS_RG_ENCOUNTER_ROCKET, "MUS-RG-ROCKET") \
+    X(MUS_RG_ENCOUNTER_GIRL, "MUS-RG-SHOUJO") \
+    X(MUS_RG_ENCOUNTER_BOY, "MUS-RG-SHOUNEN") \
+    X(MUS_RG_HALL_OF_FAME, "MUS-RG-DENDOU") \
+    X(MUS_RG_VIRIDIAN_FOREST, "MUS-RG-T-MORI") \
+    X(MUS_RG_MT_MOON, "MUS-RG-OTSUKIMI") \
+    X(MUS_RG_POKE_MANSION, "MUS-RG-POKEYASHI") \
+    X(MUS_RG_CREDITS, "MUS-RG-ENDING") \
+    X(MUS_RG_ROUTE1, "MUS-RG-LOAD01") \
+    X(MUS_RG_ROUTE24, "MUS-RG-OPENING") \
+    X(MUS_RG_ROUTE3, "MUS-RG-LOAD02") \
+    X(MUS_RG_ROUTE11, "MUS-RG-LOAD03") \
+    X(MUS_RG_VICTORY_ROAD, "MUS-RG-CHAMP-R") \
+    X(MUS_RG_VS_GYM_LEADER, "MUS-RG-VS-GYM") \
+    X(MUS_RG_VS_TRAINER, "MUS-RG-VS-TORE") \
+    X(MUS_RG_VS_WILD, "MUS-RG-VS-YASEI") \
+    X(MUS_RG_VS_CHAMPION, "MUS-RG-VS-LAST") \
+    X(MUS_RG_PALLET, "MUS-RG-MASARA") \
+    X(MUS_RG_OAK_LAB, "MUS-RG-KENKYU") \
+    X(MUS_RG_OAK, "MUS-RG-OHKIDO") \
+    X(MUS_RG_POKE_CENTER, "MUS-RG-POKECEN") \
+    X(MUS_RG_SS_ANNE, "MUS-RG-SANTOAN") \
+    X(MUS_RG_SURF, "MUS-RG-NAMINORI") \
+    X(MUS_RG_POKE_TOWER, "MUS-RG-P-TOWER") \
+    X(MUS_RG_SILPH, "MUS-RG-SHIRUHU") \
+    X(MUS_RG_FUCHSIA, "MUS-RG-HANADA") \
+    X(MUS_RG_CELADON, "MUS-RG-TAMAMUSI") \
+    X(MUS_RG_VICTORY_TRAINER, "MUS-RG-WIN-TRE") \
+    X(MUS_RG_VICTORY_WILD, "MUS-RG-WIN-YASEI") \
+    X(MUS_RG_VICTORY_GYM_LEADER, "MUS-RG-WIN-GYM") \
+    X(MUS_RG_VERMILLION, "MUS-RG-KUCHIBA") \
+    X(MUS_RG_PEWTER, "MUS-RG-NIBI") \
+    X(MUS_RG_ENCOUNTER_RIVAL, "MUS-RG-RIVAL1") \
+    X(MUS_RG_RIVAL_EXIT, "MUS-RG-RIVAL2") \
+    X(MUS_RG_DEX_RATING, "MUS-RG-FAN2") \
+    X(MUS_RG_OBTAIN_KEY_ITEM, "MUS-RG-FAN5") \
+    X(MUS_RG_CAUGHT_INTRO, "MUS-RG-FAN6") \
+    X(MUS_RG_PHOTO, "MUS-ME-RG-PHOTO") \
+    X(MUS_RG_GAME_FREAK, "MUS-RG-TITLEROG") \
+    X(MUS_RG_CAUGHT, "MUS-RG-GET-YASEI") \
+    X(MUS_RG_NEW_GAME_INSTRUCT, "MUS-RG-SOUSA") \
+    X(MUS_RG_NEW_GAME_INTRO, "MUS-RG-SEKAIKAN") \
+    X(MUS_RG_NEW_GAME_EXIT, "MUS-RG-SEIBETU") \
+    X(MUS_RG_POKE_JUMP, "MUS-RG-JUMP") \
+    X(MUS_RG_UNION_ROOM, "MUS-RG-UNION") \
+    X(MUS_RG_NET_CENTER, "MUS-RG-NETWORK") \
+    X(MUS_RG_MYSTERY_GIFT, "MUS-RG-OKURIMONO") \
+    X(MUS_RG_BERRY_PICK, "MUS-RG-KINOMIKUI") \
+    X(MUS_RG_SEVII_CAVE, "MUS-RG-NANADUNGEON") \
+    X(MUS_RG_TEACHY_TV_SHOW, "MUS-RG-OSHIE-TV") \
+    X(MUS_RG_SEVII_ROUTE, "MUS-RG-NANASHIMA") \
+    X(MUS_RG_SEVII_DUNGEON, "MUS-RG-NANAISEKI") \
+    X(MUS_RG_SEVII_123, "MUS-RG-NANA123") \
+    X(MUS_RG_SEVII_45, "MUS-RG-NANA45") \
+    X(MUS_RG_SEVII_67, "MUS-RG-NANA67") \
+    X(MUS_RG_POKE_FLUTE, "MUS-RG-POKEFUE") \
+    X(MUS_RG_VS_DEOXYS, "MUS-RG-VS-DEO") \
+    X(MUS_RG_VS_MEWTWO, "MUS-RG-VS-MYU2") \
+    X(MUS_RG_VS_LEGEND, "MUS-RG-VS-DEN") \
+    X(MUS_RG_ENCOUNTER_GYM_LEADER, "MUS-RG-EXEYE") \
+    X(MUS_RG_ENCOUNTER_DEOXYS, "MUS-RG-DEOEYE") \
+    X(MUS_RG_TRAINER_TOWER, "MUS-RG-T-TOWER") \
+    X(MUS_RG_SLOW_PALLET, "MUS-RG-SLOWMASARA") \
+    X(MUS_RG_TEACHY_TV_MENU, "MUS-RG-TVNOIZE") \
     X(PH_TRAP_BLEND, "PH-TRAP-BLEND") \
     X(PH_TRAP_HELD, "PH-TRAP-HELD") \
     X(PH_TRAP_SOLO, "PH-TRAP-SOLO") \
