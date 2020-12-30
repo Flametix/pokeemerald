@@ -2717,7 +2717,7 @@ const u32 gMonPalette_Grassduck[] = INCBIN_U32("graphics/pokemon/grassduck/norma
 const u32 gMonBackPic_Grassduck[] = INCBIN_U32("graphics/pokemon/grassduck/back.4bpp.lz");
 const u32 gMonShinyPalette_Grassduck[] = INCBIN_U32("graphics/pokemon/grassduck/shiny.gbapal.lz");
 const u8 gMonIcon_Grassduck[] = INCBIN_U8("graphics/pokemon/grassduck/icon.4bpp");
-const u8 gMonFootprint_Grassduck[] = INCBIN_U8("graphics/pokemon/grassduck/footprint.1bpp");
+const u8 gMonFootprint_Grassduck[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
 const u32 gMonStillFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/front.4bpp.lz");
 const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
