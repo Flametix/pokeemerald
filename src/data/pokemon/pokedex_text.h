@@ -2325,3 +2325,9 @@ const u8 gGrassduckPokedexText[] = _(
     "\n"
     "\n"
     "That's it.");
+
+const u8 gDuckPokedexText[] = _(
+    "bubububbberduckybubberducky\n"
+    "bubberduckbubbudebdeukrucye\n"
+    "bubbureuduckybuberudkc\n"
+    "QUACK QUACK");

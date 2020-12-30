@@ -4590,6 +4590,264 @@ static const union AnimCmd sAnim_GRASSDUCK_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_GRASSDUCK2_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_GRASSDUCK3_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_FLAMEDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_FLAMEINGO_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_XENOPH_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_WATERDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_WATERDUCK2_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_WATERDUCK3_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_GLASSEDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_3DUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_SUNDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DAGGERDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_SWORDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_PINGEDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_GOKUDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_SANDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_MONODUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_PETERDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_INVERTDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_PENGUIDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DEADUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DUCCAR_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_BEEDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_GHOSTEDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_FLYINGDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_FLYDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_ZOMBIDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_HELLDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_POTDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_WEEDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_BAKEDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_GOLDDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_TOXIDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_TETRIDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_VERT_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DUCKBOXV1_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DUCKBOXV2_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DUCKBOXV3_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DUCKBOXV4_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DUCKBOXV5_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_BUBCARL_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_BUBBERDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_ULTRABDUCK_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_EGG_1[] =
 {
     ANIMCMD_FRAME(0, 6),
@@ -6820,6 +7078,221 @@ static const union AnimCmd *const sAnims_GRASSDUCK[] ={
     sAnim_GRASSDUCK_1,
 };
 
+static const union AnimCmd *const sAnims_GRASSDUCK2[] ={
+    sAnim_GeneralFrame0,
+    sAnim_GRASSDUCK2_1,
+};
+
+static const union AnimCmd *const sAnims_GRASSDUCK3[] ={
+    sAnim_GeneralFrame0,
+    sAnim_GRASSDUCK3_1,
+};
+
+static const union AnimCmd *const sAnims_FLAMEDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_FLAMEDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_FLAMEINGO[] ={
+    sAnim_GeneralFrame0,
+    sAnim_FLAMEINGO_1,
+};
+
+static const union AnimCmd *const sAnims_XENOPH[] ={
+    sAnim_GeneralFrame0,
+    sAnim_XENOPH_1,
+};
+
+static const union AnimCmd *const sAnims_WATERDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_WATERDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_WATERDUCK2[] ={
+    sAnim_GeneralFrame0,
+    sAnim_WATERDUCK2_1,
+};
+
+static const union AnimCmd *const sAnims_WATERDUCK3[] ={
+    sAnim_GeneralFrame0,
+    sAnim_WATERDUCK3_1,
+};
+
+static const union AnimCmd *const sAnims_GLASSEDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_GLASSEDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_3DUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_3DUCK_1,
+};
+
+static const union AnimCmd *const sAnims_SUNDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_SUNDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_DAGGERDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DAGGERDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_SWORDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_SWORDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_PINGEDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_PINGEDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_GOKUDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_GOKUDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_SANDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_SANDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_MONODUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_MONODUCK_1,
+};
+
+static const union AnimCmd *const sAnims_PETERDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_PETERDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_INVERTDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_INVERTDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_PENGUIDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_PENGUIDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_DEADUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DEADUCK_1,
+};
+
+static const union AnimCmd *const sAnims_DUCCAR[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DUCCAR_1,
+};
+
+static const union AnimCmd *const sAnims_BEEDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_BEEDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_GHOSTEDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_GHOSTEDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_FLYINGDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_FLYINGDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_FLYDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_FLYDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_ZOMBIDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_ZOMBIDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_HELLDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_HELLDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_POTDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_POTDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_WEEDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_WEEDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_BAKEDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_BAKEDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_GOLDDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_GOLDDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_TOXIDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_TOXIDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_TETRIDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_TETRIDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_VERT[] ={
+    sAnim_GeneralFrame0,
+    sAnim_VERT_1,
+};
+
+static const union AnimCmd *const sAnims_DUCKBOXV1[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DUCKBOXV1_1,
+};
+
+static const union AnimCmd *const sAnims_DUCKBOXV2[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DUCKBOXV2_1,
+};
+
+static const union AnimCmd *const sAnims_DUCKBOXV3[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DUCKBOXV3_1,
+};
+
+static const union AnimCmd *const sAnims_DUCKBOXV4[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DUCKBOXV4_1,
+};
+
+static const union AnimCmd *const sAnims_DUCKBOXV5[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DUCKBOXV5_1,
+};
+
+static const union AnimCmd *const sAnims_BUBCARL[] ={
+    sAnim_GeneralFrame0,
+    sAnim_BUBCARL_1,
+};
+
+static const union AnimCmd *const sAnims_BUBBERDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_BUBBERDUCK_1,
+};
+
+static const union AnimCmd *const sAnims_ULTRABDUCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_ULTRABDUCK_1,
+};
+
 static const union AnimCmd *const sAnims_EGG[] ={
     sAnim_GeneralFrame0,
     sAnim_EGG_1,
@@ -7378,6 +7851,50 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(DEOXYS),
     ANIM_CMD(CHIMECHO),
     ANIM_CMD(GRASSDUCK),
+    ANIM_CMD(GRASSDUCK2),
+    ANIM_CMD(GRASSDUCK3),
+    ANIM_CMD(FLAMEDUCK),
+    ANIM_CMD(FLAMEINGO),
+    ANIM_CMD(XENOPH),
+    ANIM_CMD(WATERDUCK),
+    ANIM_CMD(WATERDUCK2),
+    ANIM_CMD(WATERDUCK3),
+    ANIM_CMD(GLASSEDUCK),
+    ANIM_CMD(3DUCK),
+    ANIM_CMD(SUNDUCK),
+    ANIM_CMD(DAGGERDUCK),
+    ANIM_CMD(SWORDUCK),
+    ANIM_CMD(PINGEDUCK),
+    ANIM_CMD(GOKUDUCK),
+    ANIM_CMD(SANDUCK),
+    ANIM_CMD(MONODUCK),
+    ANIM_CMD(PETERDUCK),
+    ANIM_CMD(INVERTDUCK),
+    ANIM_CMD(PENGUIDUCK),
+    ANIM_CMD(DEADUCK),
+    ANIM_CMD(DUCCAR),
+    ANIM_CMD(BEEDUCK),
+    ANIM_CMD(GHOSTEDUCK),
+    ANIM_CMD(FLYINGDUCK),
+    ANIM_CMD(FLYDUCK),
+    ANIM_CMD(ZOMBIDUCK),
+    ANIM_CMD(HELLDUCK),
+    ANIM_CMD(POTDUCK),
+    ANIM_CMD(WEEDUCK),
+    ANIM_CMD(BAKEDUCK),
+    ANIM_CMD(GOLDDUCK),
+    ANIM_CMD(TOXIDUCK),
+    ANIM_CMD(TETRIDUCK),
+    ANIM_CMD(VERT),
+    ANIM_CMD(DUCKBOXV1),
+    ANIM_CMD(DUCKBOXV2),
+    ANIM_CMD(DUCKBOXV3),
+    ANIM_CMD(DUCKBOXV4),
+    ANIM_CMD(DUCKBOXV5),
+    ANIM_CMD(BUBCARL),
+    ANIM_CMD(BUBBERDUCK),
+    ANIM_CMD(ULTRABDUCK),
+
     ANIM_CMD(EGG),
     ANIM_CMD(UNOWN_B),
     ANIM_CMD(UNOWN_C),

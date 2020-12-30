@@ -4646,7 +4646,31 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_GRASSDUCK] = 
     {
-        .categoryName = _("DUCK"),
+        .categoryName = _("BUG CATCHER"),
+        .height = 5,
+        .weight = 12,
+        .description = gGrassduckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_GRASSDUCK2] = 
+    {
+        .categoryName = _("BUG CATCHER"),
+        .height = 5,
+        .weight = 12,
+        .description = gGrassduckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_GRASSDUCK3] = 
+    {
+        .categoryName = _("BUG CATCHER"),
         .height = 5,
         .weight = 12,
         .description = gGrassduckPokedexText,

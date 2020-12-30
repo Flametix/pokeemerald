@@ -1939,7 +1939,7 @@ Cry_Chimecho::
 	.incbin "sound/direct_sound_samples/cries/chimecho.bin"
 
 	.align 2
-Cry_Grassduck::
+Cry_Quack::
 	.incbin "sound/direct_sound_samples/cries/quack.bin"
 
 	.align 2
