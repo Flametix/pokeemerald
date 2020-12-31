@@ -8,6 +8,7 @@
 #include "util.h"
 #include "constants/battle_anim.h"
 #include "constants/rgb.h"
+#include "data.h"
 
 struct UnkAnimStruct
 {

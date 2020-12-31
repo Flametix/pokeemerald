@@ -214,12 +214,12 @@ void EnableVCountIntrAtLine150(void)
 }
 
 // oops! FRLG commented this out to remove RTC, however Emerald didnt undo this!
-//static void SeedRngWithRtc(void)
-//{
-//    u32 seed = RtcGetMinuteCount();
-//    seed = (seed >> 16) ^ (seed & 0xFFFF);
-//    SeedRng(seed);
-//}
+static void SeedRngWithRtc(void)
+{
+   u32 seed = RtcGetMinuteCount();
+   seed = (seed >> 16) ^ (seed & 0xFFFF);
+   SeedRng(seed);
+}
 
 void InitKeys(void)
 {
@@ -396,9 +396,7 @@ static void IntrDummy(void)
 static void WaitForVBlank(void)
 {
     gMain.intrCheck &= ~INTR_FLAG_VBLANK;
-
-    while (!(gMain.intrCheck & INTR_FLAG_VBLANK))
-        ;
+    VBlankIntrWait();
 }
 
 void SetTrainerHillVBlankCounter(u32 *counter)
