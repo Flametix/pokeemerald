@@ -4679,4 +4679,485 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 256,
         .trainerOffset = 0,
     },
+
+    [NATIONAL_DEX_FLAMEINGO] = 
+    {
+        .categoryName = _("FLAMINGO"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_XENOPH] = 
+    {
+        .categoryName = _("PHOENIX"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_WATERDUCK] = 
+    {
+        .categoryName = _("SPRITE"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_WATERDUCK2] = 
+    {
+        .categoryName = _("SPRITE"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_WATERDUCK3] = 
+    {
+        .categoryName = _("SPRITE"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_GLASSEDUCK] = 
+    {
+        .categoryName = _("GLASSES"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_3DUCK] = 
+    {
+        .categoryName = _("GLASSES"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_SUNDUCK] = 
+    {
+        .categoryName = _("GLASSES"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DAGGERDUCK] = 
+    {
+        .categoryName = _("EVIL"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_SWORDUCK] = 
+    {
+        .categoryName = _("SUPER DEATH"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_PINGEDUCK] = 
+    {
+        .categoryName = _("PING"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_GOKUDUCK] = 
+    {
+        .categoryName = _("SAIYAN"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_SANDUCK] = 
+    {
+        .categoryName = _("UNDERTALE"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_MONODUCK] = 
+    {
+        .categoryName = _("MONOCHROME"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_PETERDUCK] = 
+    {
+        .categoryName = _("FUNNY"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_INVERTDUCK] = 
+    {
+        .categoryName = _("INVERTED"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_PENGUIDUCK] = 
+    {
+        .categoryName = _("PENGUIN"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_BEEDUCK] = 
+    {
+        .categoryName = _("BEE"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_GHOSTEDUCK] = 
+    {
+        .categoryName = _("SPOOKY"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_FLYINGDUCK] = 
+    {
+        .categoryName = _("BIRD"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_FLYDUCK] = 
+    {
+        .categoryName = _("INSECT"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_ZOMBIDUCK] = 
+    {
+        .categoryName = _("UNDEAD"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_HELLDUCK] = 
+    {
+        .categoryName = _("UNDERWORLD"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_POTDUCK] = 
+    {
+        .categoryName = _("BUD"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_WEEDUCK] = 
+    {
+        .categoryName = _("HERB"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_BAKEDUCK] = 
+    {
+        .categoryName = _("BLAZING"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_GOLDDUCK] = 
+    {
+        .categoryName = _("GOLDEN"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_TOXIDUCK] = 
+    {
+        .categoryName = _("POISON PIN"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_TETRIDUCK] = 
+    {
+        .categoryName = _("TETROMINO"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DEADUCK] = 
+    {
+        .categoryName = _("SKELETON"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DUCCAR] = 
+    {
+        .categoryName = _("CAR"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_BUBCARL] = 
+    {
+        .categoryName = _("BUBBER"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_VERT] = 
+    {
+        .categoryName = _("VERT"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DUCKBOXV1] = 
+    {
+        .categoryName = _("BOX"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DUCKBOXV2] = 
+    {
+        .categoryName = _("BOX"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DUCKBOXV3] = 
+    {
+        .categoryName = _("BOX"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DUCKBOXV4] = 
+    {
+        .categoryName = _("BOX"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DUCKBOXV5] = 
+    {
+        .categoryName = _("TESSERACT"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_BUBBERDUCK] = 
+    {
+        .categoryName = _("BUBBER"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_ULTRABDUCK] = 
+    {
+        .categoryName = _("ULTRA"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
 };

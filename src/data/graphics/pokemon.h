@@ -2851,11 +2851,11 @@ const u32 gMonStillFrontPic_Grassduck3[] = INCBIN_U32("graphics/pokemon/duck/fro
 const u8 gMonIcon_Grassduck3[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_Grassduck3[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
-const u32 gMonPalette_Flameduck[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
-const u32 gMonBackPic_Flameduck[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
-const u32 gMonShinyPalette_Flameduck[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
-const u32 gMonStillFrontPic_Flameduck[] = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
-const u8 gMonIcon_Flameduck[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
+const u32 gMonPalette_Flameduck[] = INCBIN_U32("graphics/pokemon/flameduck/normal.gbapal.lz");
+const u32 gMonBackPic_Flameduck[] = INCBIN_U32("graphics/pokemon/flameduck/back.4bpp.lz");
+const u32 gMonShinyPalette_Flameduck[] = INCBIN_U32("graphics/pokemon/flameduck/shiny.gbapal.lz");
+const u32 gMonStillFrontPic_Flameduck[] = INCBIN_U32("graphics/pokemon/flameduck/front.4bpp.lz");
+const u8 gMonIcon_Flameduck[] = INCBIN_U8("graphics/pokemon/flameduck/icon.4bpp");
 const u8 gMonFootprint_Flameduck[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
 const u32 gMonPalette_Flameingo[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
@@ -2872,10 +2872,10 @@ const u32 gMonStillFrontPic_Xenoph[] = INCBIN_U32("graphics/pokemon/duck/front.4
 const u8 gMonIcon_Xenoph[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_Xenoph[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
-const u32 gMonPalette_Waterduck[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
-const u32 gMonBackPic_Waterduck[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
+const u32 gMonPalette_Waterduck[] = INCBIN_U32("graphics/pokemon/waterduck/normal.gbapal.lz");
+const u32 gMonBackPic_Waterduck[] = INCBIN_U32("graphics/pokemon/waterduck/back.4bpp.lz");
 const u32 gMonShinyPalette_Waterduck[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
-const u32 gMonStillFrontPic_Waterduck[] = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
+const u32 gMonStillFrontPic_Waterduck[] = INCBIN_U32("graphics/pokemon/waterduck/front.4bpp.lz");
 const u8 gMonIcon_Waterduck[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_Waterduck[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
@@ -2900,11 +2900,11 @@ const u32 gMonStillFrontPic_Glasseduck[] = INCBIN_U32("graphics/pokemon/duck/fro
 const u8 gMonIcon_Glasseduck[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_Glasseduck[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
-const u32 gMonPalette_3Duck[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
-const u32 gMonBackPic_3Duck[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
-const u32 gMonShinyPalette_3Duck[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
-const u32 gMonStillFrontPic_3Duck[] = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
-const u8 gMonIcon_3Duck[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
+const u32 gMonPalette_3Duck[] = INCBIN_U32("graphics/pokemon/3duck/normal.gbapal.lz");
+const u32 gMonBackPic_3Duck[] = INCBIN_U32("graphics/pokemon/3duck/back.4bpp.lz");
+const u32 gMonShinyPalette_3Duck[] = INCBIN_U32("graphics/pokemon/3duck/shiny.gbapal.lz");
+const u32 gMonStillFrontPic_3Duck[] = INCBIN_U32("graphics/pokemon/3duck/front.4bpp.lz");
+const u8 gMonIcon_3Duck[] = INCBIN_U8("graphics/pokemon/3duck/icon.4bpp");
 const u8 gMonFootprint_3Duck[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
 const u32 gMonPalette_Sunduck[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
