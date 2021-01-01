@@ -68,6 +68,7 @@ BattleScript_PrintCaughtMonInfo::
 	printstring STRINGID_GOTCHAPKMNCAUGHT
 	setbyte sGIVEEXP_STATE, 0x0
 	getexp BS_TARGET
+	sethword gBattle_BG2_X, 0x0
 	trysetcaughtmondexflags BattleScript_TryNicknameCaughtMon
 	printstring STRINGID_PKMNDATAADDEDTODEX
 	waitstate
