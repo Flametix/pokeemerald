@@ -475,6 +475,7 @@ struct BattleScripting
     s32 bideDmg;
     u8 multihitString[6];
     u8 dmgMultiplier;
+    bool8 expOnCatch;
     u8 twoTurnsMoveStringId;
     u8 animArg1;
     u8 animArg2;
@@ -498,6 +499,7 @@ struct BattleScripting
     u8 windowsType; // 0 - normal, 1 - battle arena
     u8 multiplayerId;
     u8 specialTrainerBattleType;
+    bool8 monCaught;
 };
 
 // rom_80A5C6C
