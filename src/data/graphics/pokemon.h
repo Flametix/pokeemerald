@@ -2712,12 +2712,12 @@ const u32 gMonShinyPalette_Chimecho[] = INCBIN_U32("graphics/pokemon/chimecho/sh
 const u8 gMonIcon_Chimecho[] = INCBIN_U8("graphics/pokemon/chimecho/icon.4bpp");
 const u8 gMonFootprint_Chimecho[] = INCBIN_U8("graphics/pokemon/chimecho/footprint.1bpp");
 
-const u32 gMonStillFrontPic_Grassduck[] = INCBIN_U32("graphics/pokemon/grassduck/front.4bpp.lz");
-const u32 gMonPalette_Grassduck[] = INCBIN_U32("graphics/pokemon/grassduck/normal.gbapal.lz");
-const u32 gMonBackPic_Grassduck[] = INCBIN_U32("graphics/pokemon/grassduck/back.4bpp.lz");
-const u32 gMonShinyPalette_Grassduck[] = INCBIN_U32("graphics/pokemon/grassduck/shiny.gbapal.lz");
-const u8 gMonIcon_Grassduck[] = INCBIN_U8("graphics/pokemon/grassduck/icon.4bpp");
-const u8 gMonFootprint_Grassduck[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
+const u32 gMonStillFrontPic_Leafduck[] = INCBIN_U32("graphics/pokemon/leafduck/front.4bpp.lz");
+const u32 gMonPalette_Leafduck[] = INCBIN_U32("graphics/pokemon/leafduck/normal.gbapal.lz");
+const u32 gMonBackPic_Leafduck[] = INCBIN_U32("graphics/pokemon/leafduck/back.4bpp.lz");
+const u32 gMonShinyPalette_Leafduck[] = INCBIN_U32("graphics/pokemon/leafduck/shiny.gbapal.lz");
+const u8 gMonIcon_Leafduck[] = INCBIN_U8("graphics/pokemon/leafduck/icon.4bpp");
+const u8 gMonFootprint_Leafduck[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
 const u32 gMonStillFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/front.4bpp.lz");
 const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
@@ -2837,19 +2837,19 @@ const u32 gMonShinyPalette_Duck[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbap
 const u8 gMonIcon_Duck[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_Duck[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
-const u32 gMonPalette_Grassduck2[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
-const u32 gMonBackPic_Grassduck2[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
-const u32 gMonShinyPalette_Grassduck2[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
-const u32 gMonStillFrontPic_Grassduck2[] = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
-const u8 gMonIcon_Grassduck2[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
-const u8 gMonFootprint_Grassduck2[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
+const u32 gMonPalette_Leafduck2[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
+const u32 gMonBackPic_Leafduck2[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
+const u32 gMonShinyPalette_Leafduck2[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
+const u32 gMonStillFrontPic_Leafduck2[] = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
+const u8 gMonIcon_Leafduck2[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
+const u8 gMonFootprint_Leafduck2[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
-const u32 gMonPalette_Grassduck3[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
-const u32 gMonBackPic_Grassduck3[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
-const u32 gMonShinyPalette_Grassduck3[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
-const u32 gMonStillFrontPic_Grassduck3[] = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
-const u8 gMonIcon_Grassduck3[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
-const u8 gMonFootprint_Grassduck3[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
+const u32 gMonPalette_Leafduck3[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
+const u32 gMonBackPic_Leafduck3[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
+const u32 gMonShinyPalette_Leafduck3[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
+const u32 gMonStillFrontPic_Leafduck3[] = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
+const u8 gMonIcon_Leafduck3[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
+const u8 gMonFootprint_Leafduck3[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
 const u32 gMonPalette_Flameduck[] = INCBIN_U32("graphics/pokemon/flameduck/normal.gbapal.lz");
 const u32 gMonBackPic_Flameduck[] = INCBIN_U32("graphics/pokemon/flameduck/back.4bpp.lz");

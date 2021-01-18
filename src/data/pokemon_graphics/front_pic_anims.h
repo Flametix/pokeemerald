@@ -4580,7 +4580,7 @@ static const union AnimCmd sAnim_CHIMECHO_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_GRASSDUCK_1[] =
+static const union AnimCmd sAnim_LEAFDUCK_1[] =
 {
     ANIMCMD_FRAME(0, 6),
     ANIMCMD_FRAME(1, 15),
@@ -4590,13 +4590,13 @@ static const union AnimCmd sAnim_GRASSDUCK_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_GRASSDUCK2_1[] =
+static const union AnimCmd sAnim_LEAFDUCK2_1[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_GRASSDUCK3_1[] =
+static const union AnimCmd sAnim_LEAFDUCK3_1[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
@@ -7073,19 +7073,19 @@ static const union AnimCmd *const sAnims_CHIMECHO[] ={
     sAnim_CHIMECHO_1,
 };
 
-static const union AnimCmd *const sAnims_GRASSDUCK[] ={
+static const union AnimCmd *const sAnims_LEAFDUCK[] ={
     sAnim_GeneralFrame0,
-    sAnim_GRASSDUCK_1,
+    sAnim_LEAFDUCK_1,
 };
 
-static const union AnimCmd *const sAnims_GRASSDUCK2[] ={
+static const union AnimCmd *const sAnims_LEAFDUCK2[] ={
     sAnim_GeneralFrame0,
-    sAnim_GRASSDUCK2_1,
+    sAnim_LEAFDUCK2_1,
 };
 
-static const union AnimCmd *const sAnims_GRASSDUCK3[] ={
+static const union AnimCmd *const sAnims_LEAFDUCK3[] ={
     sAnim_GeneralFrame0,
-    sAnim_GRASSDUCK3_1,
+    sAnim_LEAFDUCK3_1,
 };
 
 static const union AnimCmd *const sAnims_FLAMEDUCK[] ={
@@ -7850,9 +7850,9 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(JIRACHI),
     ANIM_CMD(DEOXYS),
     ANIM_CMD(CHIMECHO),
-    ANIM_CMD(GRASSDUCK),
-    ANIM_CMD(GRASSDUCK2),
-    ANIM_CMD(GRASSDUCK3),
+    ANIM_CMD(LEAFDUCK),
+    ANIM_CMD(LEAFDUCK2),
+    ANIM_CMD(LEAFDUCK3),
     ANIM_CMD(FLAMEDUCK),
     ANIM_CMD(FLAMEINGO),
     ANIM_CMD(XENOPH),

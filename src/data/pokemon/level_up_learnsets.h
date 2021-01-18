@@ -5616,7 +5616,7 @@ static const u16 sChimechoLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sGrassduckLevelUpLearnset[] = {
+static const u16 sLeafduckLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 4, MOVE_GROWL),
     LEVEL_UP_MOVE( 7, MOVE_LEECH_SEED),

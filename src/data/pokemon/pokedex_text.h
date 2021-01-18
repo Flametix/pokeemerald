@@ -2320,7 +2320,7 @@ const u8 gDeoxysPokedexText[] = _(
     "beam. Its body is configured for superior\n"
     "agility and speed.");
 
-const u8 gGrassduckPokedexText[] = _(
+const u8 gLeafduckPokedexText[] = _(
     "Lures flies into it.\n"
     "\n"
     "\n"

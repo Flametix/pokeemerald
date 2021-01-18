@@ -413,9 +413,9 @@ const struct CompressedSpriteSheet gMonBackPicTable[] =
     SPECIES_SPRITE(DEOXYS, gMonBackPic_Deoxys),
     SPECIES_SPRITE(CHIMECHO, gMonBackPic_Chimecho),
     //Pokemon Bubber
-    SPECIES_SPRITE(GRASSDUCK, gMonBackPic_Grassduck),
-    SPECIES_SPRITE(GRASSDUCK2, gMonBackPic_Grassduck2),
-    SPECIES_SPRITE(GRASSDUCK3, gMonBackPic_Grassduck3),
+    SPECIES_SPRITE(LEAFDUCK, gMonBackPic_Leafduck),
+    SPECIES_SPRITE(LEAFDUCK2, gMonBackPic_Leafduck2),
+    SPECIES_SPRITE(LEAFDUCK3, gMonBackPic_Leafduck3),
     SPECIES_SPRITE(FLAMEDUCK, gMonBackPic_Flameduck),
     SPECIES_SPRITE(FLAMEINGO, gMonBackPic_Flameingo),
     SPECIES_SPRITE(XENOPH, gMonBackPic_Xenoph),

@@ -1306,7 +1306,7 @@ const u16 gEggMoves[] = {
               MOVE_HYPNOSIS,
               MOVE_DREAM_EATER),
 
-    egg_moves(GRASSDUCK,
+    egg_moves(LEAFDUCK,
               MOVE_LIGHT_SCREEN,
               MOVE_SKULL_BASH,
               MOVE_SAFEGUARD,

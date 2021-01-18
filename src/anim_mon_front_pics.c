@@ -393,9 +393,9 @@ const u32 gMonFrontPic_Jirachi[] = INCBIN_U32("graphics/pokemon/jirachi/anim_fro
 const u32 gMonFrontPic_Deoxys[] = INCBIN_U32("graphics/pokemon/deoxys/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Chimecho[] = INCBIN_U32("graphics/pokemon/chimecho/anim_front.4bpp.lz");
 
-const u32 gMonFrontPic_Grassduck[] = INCBIN_U32("graphics/pokemon/grassduck/anim_front.4bpp.lz");
-const u32 gMonFrontPic_Grassduck2[] = INCBIN_U32("graphics/pokemon/grassduck/anim_front.4bpp.lz");
-const u32 gMonFrontPic_Grassduck3[] = INCBIN_U32("graphics/pokemon/grassduck/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Leafduck[] = INCBIN_U32("graphics/pokemon/leafduck/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Leafduck2[] = INCBIN_U32("graphics/pokemon/leafduck/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Leafduck3[] = INCBIN_U32("graphics/pokemon/leafduck/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Flameduck[] = INCBIN_U32("graphics/pokemon/flameduck/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Flameingo[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Xenoph[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");

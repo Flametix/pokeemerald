@@ -2060,7 +2060,7 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x37,
         .y_offset = 6,
     },
-    [SPECIES_GRASSDUCK] =
+    [SPECIES_LEAFDUCK] =
     {
         .size = 0x45,
         .y_offset = 0x0e,

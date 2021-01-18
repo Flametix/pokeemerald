@@ -12440,7 +12440,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_GRASSDUCK] =
+    [SPECIES_LEAFDUCK] =
     {
         .baseHP        = 45,
         .baseAttack    = 65,
@@ -12472,7 +12472,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_GRASSDUCK2] =
+    [SPECIES_LEAFDUCK2] =
     {
         .baseHP        = 60,
         .baseAttack    = 80,
@@ -12504,7 +12504,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_GRASSDUCK3] =
+    [SPECIES_LEAFDUCK3] =
     {
         .baseHP        = 80,
         .baseAttack    = 100,
