@@ -76,6 +76,18 @@ static const u8 sPurePowerDescription[] = _("Raises ATTACK.");
 static const u8 sShellArmorDescription[] = _("Blocks critical hits.");
 static const u8 sCacophonyDescription[] = _("Avoids sound-based moves.");
 static const u8 sAirLockDescription[] = _("Negates weather effects.");
+static const u8 sCringeDescription[] = _("Helps repel wild POKéMON.");
+static const u8 sSunriseDescription[] = _("Summons sunlight in battle.");
+static const u8 sRefillDescription[] = _("Slight HP recovery in rain.");
+static const u8 sVertDescription[] = _("Ups ??? moves in a pinch.");
+static const u8 sSnowWarningDescription[] = _("Summons hail in battle.");
+static const u8 sBodyguardDescription[] = _("Defends with DEMON GUARD.");
+static const u8 sDemonGuardDescription[] = _("Defends with BODYGUARD.");
+static const u8 sDefeatistDescription[] = _("Lowers stats at half HP.");
+static const u8 sBeastBoostDescription[] = _("Boosts power after a KO.");
+static const u8 sForDeQueenDescription[] = _("Hurts female POKéMON less.");
+static const u8 sIllusionerDescription[] = _("Transforms at half HP.");
+static const u8 sBlindLoveDescription[] = _("Attracts any POKéMON.");
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
@@ -157,6 +169,18 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SHELL_ARMOR] = _("SHELL ARMOR"),
     [ABILITY_CACOPHONY] = _("CACOPHONY"),
     [ABILITY_AIR_LOCK] = _("AIR LOCK"),
+    [ABILITY_CRINGE] = _("CRINGE"),
+    [ABILITY_SUNRISE] = _("SUNRISE"),
+    [ABILITY_REFILL] = _("REFILL"),
+    [ABILITY_VERT] = _("VERT"),
+    [ABILITY_SNOW_WARNING] = _("SNOW WARNING"),
+    [ABILITY_BODYGUARD] = _("BODYGUARD"),
+    [ABILITY_DEMON_GUARD] = _("DEMON GUARD"),
+    [ABILITY_DEFEATIST] = _("DEFEATIST"),
+    [ABILITY_BEAST_BOOST] = _("BEAST BOOST"),
+    [ABILITY_FOR_DE_QUEEN] = _("FOR DE QUEEN"),
+    [ABILITY_ILLUSIONER] = _("ILLUSIONER"),
+    [ABILITY_BLIND_LOVE] = _("BLIND LOVE"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -239,4 +263,16 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_SHELL_ARMOR] = sShellArmorDescription,
     [ABILITY_CACOPHONY] = sCacophonyDescription,
     [ABILITY_AIR_LOCK] = sAirLockDescription,
+    [ABILITY_CRINGE] = sCringeDescription,
+    [ABILITY_SUNRISE] = sSunriseDescription,
+    [ABILITY_REFILL] = sRefillDescription,
+    [ABILITY_VERT] = sVertDescription,
+    [ABILITY_SNOW_WARNING] = sSnowWarningDescription,
+    [ABILITY_BODYGUARD] = sBodyguardDescription,
+    [ABILITY_DEMON_GUARD] = sDemonGuardDescription,
+    [ABILITY_DEFEATIST] = sDefeatistDescription,
+    [ABILITY_BEAST_BOOST] = sBeastBoostDescription,
+    [ABILITY_FOR_DE_QUEEN] = sForDeQueenDescription,
+    [ABILITY_ILLUSIONER] = sIllusionerDescription,
+    [ABILITY_BLIND_LOVE] = sBlindLoveDescription,
 };
