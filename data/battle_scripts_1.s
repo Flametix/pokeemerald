@@ -2837,6 +2837,7 @@ BattleScript_FaintTarget::
 	dofaintanimation BS_TARGET
 	cleareffectsonfaint BS_TARGET
 	printstring STRINGID_TARGETFAINTED
+	tryactivatebeastboost BS_ATTACKER
 	return
 
 BattleScript_GiveExp::
@@ -4579,8 +4580,8 @@ BattleScript_SnowWarningActivates::
 	end3
 
 BattleScript_AttackerAbilityStatRaise::
-	copybyte gBattlerAbility, gBattlerAttacker
-	call BattleScript_AbilityPopUp
+	@ copybyte gBattlerAbility, gBattlerAttacker
+	@ call BattleScript_AbilityPopUp
 	setgraphicalstatchangevalues
 	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
 	waitanimation

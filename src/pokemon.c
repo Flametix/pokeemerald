@@ -3388,7 +3388,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense /= 2;
     if (attacker->ability == ABILITY_DEFEATIST && attacker->hp <= (attacker->maxHP / 2))
         attack /= 2, spAttack /= 2;
-    if (attacker->ability == ABILITY_FOR_DE_QUEEN && GetMonGender(defender) == MON_FEMALE)
+    if (attacker->ability == ABILITY_FOR_DE_QUEEN && GetGenderFromSpeciesAndPersonality(defender->species, defender->personality) == MON_FEMALE)
         attack *= 3/4, spAttack *= 3/4;
     if (IS_TYPE_PHYSICAL(type))
     {

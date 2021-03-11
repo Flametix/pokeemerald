@@ -111,13 +111,13 @@ MAKEFLAGS += --no-print-directory
 # Secondary expansion is required for dependency variables in object rules.
 .SECONDEXPANSION:
 
-.PHONY: all rom clean compare tidy tools mostlyclean clean-tools $(TOOLDIRS) berry_fix libagbsyscall modern debug modern_debug
+.PHONY: all rom clean compare tidy tools mostlyclean clean-tools $(TOOLDIRS) berry_fix libagbsyscall modern debugging debugging_modern
 
 infoshell = $(foreach line, $(shell $1 | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
 
 # Build tools when building the rom
 # Disable dependency scanning for clean/tidy/tools
-ifeq (,$(filter-out all rom compare modern berry_fix libagbsyscall,$(MAKECMDGOALS)))
+ifeq (,$(filter-out all rom compare debugging debugging_modern modern berry_fix libagbsyscall,$(MAKECMDGOALS)))
 $(call infoshell, $(MAKE) tools)
 else
 NODEP := 1
@@ -252,9 +252,9 @@ override CFLAGS += -g
 endif
 
 # DebugMenu
-ifeq ($(DDEBUG),1)
-override ASFLAGS += --defsym DEBUG=1
-override CPPFLAGS += -D DEBUG=1
+ifeq ($(DDEBUGGING),1)
+override ASFLAGS += --defsym DEBUGGING=1
+override CPPFLAGS += -D DEBUGGING=1
 endif
 
 $(C_BUILDDIR)/%.o : $(C_SUBDIR)/%.c $$(c_dep)
@@ -353,6 +353,6 @@ berry_fix:
 libagbsyscall:
 	@$(MAKE) -C libagbsyscall TOOLCHAIN=$(TOOLCHAIN)
 
-debug: ; @$(MAKE) DDEBUG=1 DINFO=1
-
-modern_debug: ; @$(MAKE) MODERN=1 DDEBUG=1 DINFO=1
+# Debug menu
+debugging: ; @$(MAKE) DDEBUGGING=1 DINFO=1
+debugging_modern: ; @$(MAKE) MODERN=1 DDEBUGGING=1 DINFO=1
