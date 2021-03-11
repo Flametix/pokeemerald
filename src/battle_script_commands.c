@@ -7672,7 +7672,7 @@ static void Cmd_tryinfatuating(void)
     }
     else
     {
-        if (gBattleMons[gBattlerAttacker].ability == ABILITY_BLIND_LOVE) //Blind Love allows any attraction.
+        if (gBattleMons[gBattlerAttacker].ability == ABILITY_BLIND_LOVE || gBattleMons[gBattlerTarget].ability == ABILITY_BLIND_LOVE) //Blind Love allows any attraction.
         {
             gBattleMons[gBattlerTarget].status2 |= STATUS2_INFATUATED_WITH(gBattlerAttacker);
             gBattlescriptCurrInstr += 5;
