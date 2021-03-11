@@ -6433,6 +6433,21 @@ static void Cmd_various(void)
         BtlController_EmitPlayFanfareOrBGM(0, MUS_VICTORY_TRAINER, TRUE);
         MarkBattlerForControllerExec(gActiveBattler);
         break;
+    case VARIOUS_TRY_ACTIVATE_BEAST_BOOST:
+        i = GetHighestStatId(gActiveBattler);
+        if (GetBattlerAbility(gActiveBattler) == ABILITY_BEAST_BOOST
+            && HasAttackerFaintedTarget()
+            && !NoAliveMonsForEitherParty()
+            && gBattleMons[gBattlerAttacker].statStages[i] != 12)
+        {
+            gBattleMons[gBattlerAttacker].statStages[i]++;
+            SET_STATCHANGER(i, 1, FALSE);
+            PREPARE_STAT_BUFFER(gBattleTextBuff1, i);
+            BattleScriptPush(gBattlescriptCurrInstr + 3);
+            gBattlescriptCurrInstr = BattleScript_AttackerAbilityStatRaise;
+            return;
+        }
+        break;
     }
 
     gBattlescriptCurrInstr += 3;
@@ -7576,17 +7591,25 @@ static void Cmd_tryinfatuating(void)
     }
     else
     {
-        if (GetGenderFromSpeciesAndPersonality(speciesAttacker, personalityAttacker) == GetGenderFromSpeciesAndPersonality(speciesTarget, personalityTarget)
-            || gBattleMons[gBattlerTarget].status2 & STATUS2_INFATUATION
-            || GetGenderFromSpeciesAndPersonality(speciesAttacker, personalityAttacker) == MON_GENDERLESS
-            || GetGenderFromSpeciesAndPersonality(speciesTarget, personalityTarget) == MON_GENDERLESS)
-        {
-            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
-        }
-        else
+        if (gBattleMons[gBattlerAttacker].ability == ABILITY_BLIND_LOVE) //Blind Love allows any attraction.
         {
             gBattleMons[gBattlerTarget].status2 |= STATUS2_INFATUATED_WITH(gBattlerAttacker);
             gBattlescriptCurrInstr += 5;
+        }
+        else
+        {
+            if (GetGenderFromSpeciesAndPersonality(speciesAttacker, personalityAttacker) == GetGenderFromSpeciesAndPersonality(speciesTarget, personalityTarget)
+                || gBattleMons[gBattlerTarget].status2 & STATUS2_INFATUATION
+                || GetGenderFromSpeciesAndPersonality(speciesAttacker, personalityAttacker) == MON_GENDERLESS
+                || GetGenderFromSpeciesAndPersonality(speciesTarget, personalityTarget) == MON_GENDERLESS)
+            {
+                gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+            }
+            else
+            {
+                gBattleMons[gBattlerTarget].status2 |= STATUS2_INFATUATED_WITH(gBattlerAttacker);
+                gBattlescriptCurrInstr += 5;
+            }
         }
     }
 }
@@ -10170,4 +10193,20 @@ static void Cmd_trainerslideout(void)
     MarkBattlerForControllerExec(gActiveBattler);
 
     gBattlescriptCurrInstr += 2;
+}
+
+static u32 GetHighestStatId(u32 battlerId) //from DizzyEgg/battle engine
+{
+    u32 i, highestId = STAT_ATK, highestStat = gBattleMons[battlerId].attack;
+
+    for (i = STAT_DEF; i < NUM_STATS; i++)
+    {
+        u16 *statVal = &gBattleMons[battlerId].attack + (i - 1);
+        if (*statVal > highestStat)
+        {
+            highestStat = *statVal;
+            highestId = i;
+        }
+    }
+    return highestId;
 }

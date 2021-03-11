@@ -28,6 +28,7 @@ void sub_801AFD8(void)
     CpuFill32(0, &gSaveBlock1Ptr->unk_322C, sizeof(gSaveBlock1Ptr->unk_322C));
     sub_801B180();
     InitQuestionnaireWords();
+    #endif
 }
 
 struct WonderNews *GetSavedWonderNews(void)

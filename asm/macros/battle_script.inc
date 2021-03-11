@@ -1354,6 +1354,10 @@
 	.macro playtrainerdefeatbgm battler:req
 	various \battler, VARIOUS_PLAY_TRAINER_DEFEATED_MUSIC
 	.endm
+
+	.macro tryactivatebeastboost battler:req
+	various \battler, VARIOUS_TRY_ACTIVATE_BEAST_BOOST
+	.endm
 	
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
