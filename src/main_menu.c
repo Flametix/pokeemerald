@@ -1060,11 +1060,13 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
             default:
                 gPlttBufferUnfaded[0] = RGB_BLACK;
                 gPlttBufferFaded[0] = RGB_BLACK;
-                #if DEBUGGING
-                    gTasks[taskId].func = Task_NewGameSkipSpeech;
-                #else
+                #ifndef NDEBUG
+                    if (gMain.heldKeysRaw & (R_BUTTON))
+                        gTasks[taskId].func = Task_NewGameSkipSpeech;
+                    else
+                #endif
                     gTasks[taskId].func = Task_NewGameBirchSpeech_Init;
-                #endif                break;
+                break;
             case ACTION_CONTINUE:
                 gPlttBufferUnfaded[0] = RGB_BLACK;
                 gPlttBufferFaded[0] = RGB_BLACK;
@@ -1268,7 +1270,6 @@ static void HighlightSelectedMainMenuItem(u8 menuType, u8 selectedMenuItem, s16 
 
 // DEBUG from TPP Trick or Treat house
 extern u16 gTrainerId;
-extern void SeedRngWithRtc(void);
 static void Task_NewGameSkipSpeech(u8 taskId)
 {
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
@@ -1281,7 +1282,6 @@ static void Task_NewGameSkipSpeech(u8 taskId)
     SetGpuReg(REG_OFFSET_BLDALPHA, 0);
     SetGpuReg(REG_OFFSET_BLDY, 0);
 
-    SeedRngWithRtc();
     {
         u16 rng = Random();
         gSaveBlock2Ptr->playerGender = (rng & 0xFF) % 1;

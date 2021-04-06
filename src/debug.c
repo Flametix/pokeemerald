@@ -1,4 +1,4 @@
-#if DEBUGGING
+#ifndef NDEBUG
 //CREDITS
 //TheXaman:             https://github.com/TheXaman/pokeemerald/tree/tx_debug_system
 //CODE USED FROM:
