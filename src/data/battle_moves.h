@@ -4969,4 +4969,47 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
         .physicality = MOVE_PHYSICALITY_SPECIAL,
     },
+
+    [MOVE_VERT] =
+    {
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_MYSTERY,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+        .physicality = MOVE_PHYSICALITY_SPECIAL,
+    },
+
+    [MOVE_INFLATE] =
+    {
+        .effect = EFFECT_INFLATE,
+        .power = 0,
+        .type = TYPE_FLYING,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .flags = FLAG_SNATCH_AFFECTED,
+        .physicality = MOVE_PHYSICALITY_STATUS,
+    },
+
+    [MOVE_TSUNAMISO] =
+    {
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_WATER,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+        .physicality = MOVE_PHYSICALITY_SPECIAL,
+    },
+
 };
