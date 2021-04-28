@@ -370,6 +370,9 @@ gBattleAnims_Moves::
 	.4byte Move_WATER_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
+	.4byte Move_VERT
+	.4byte Move_INFLATE
+	.4byte Move_TSUNAMISO
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -10752,4 +10755,38 @@ Special_SubstituteToMon:
 
 Special_MonToSubstitute:
 	createvisualtask AnimTask_SwapMonSpriteToFromSubstitute, 2, FALSE
+	end
+
+Move_VERT: @Temp
+	call SetPsychicBackground
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(27, 27, 0), 12, 1, 1
+	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 0
+	playsewithpan SE_M_BIND, SOUND_PAN_TARGET
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(27, 27, 0), 12, 1, 1
+	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 1
+	playsewithpan SE_M_BIND, SOUND_PAN_TARGET
+	waitforvisualfinish
+	createvisualtask AnimTask_TransparentCloneGrowAndShrink, 5, ANIM_ATTACKER
+	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 2
+	playsewithpan SE_M_LEER, SOUND_PAN_ATTACKER
+	waitforvisualfinish
+	blendoff
+	clearmonbg ANIM_DEF_PARTNER
+	call UnsetPsychicBackground
+	end
+
+Move_INFLATE:
+	createvisualtask AnimTask_GrowAndShrink, 2
+	playsewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER
+	waitforvisualfinish
+	end
+
+Move_TSUNAMISO: @Temp
+	createvisualtask AnimTask_CreateSurfWave, 2, FALSE
+	delay 24
+	panse_1B SE_M_SURF, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
+	waitforvisualfinish
 	end
