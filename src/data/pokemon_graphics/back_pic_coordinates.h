@@ -2060,12 +2060,228 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = 0x47,
         .y_offset = 7,
     },
+    //Pokemon Bubber
     [SPECIES_LEAFDUCK] = 
     {
         .size = 0x64,
         .y_offset = 0x10,
     },
-    
+
+    [SPECIES_LEAFDUCK2] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_LEAFDUCK3] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_FLAMEDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_FLAMEINGO] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_XENOPH] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_WATERDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_WATERDUCK2] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_WATERDUCK3] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_GLASSEDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_3DUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_SUNDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_DAGGERDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_SWORDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_PINGEDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_GOKUDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_SANDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_MONODUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_PETERDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_INVERTDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_PENGUIDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_DEADUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_DUCCAR] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_BEEDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_GHOSTEDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_FLYINGDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_FLYDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_ZOMBIDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_HELLDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_POTDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_WEEDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_BAKEDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_GOLDDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_TOXIDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_TETRIDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_VERT] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_DUCKBOXV1] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_DUCKBOXV2] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_DUCKBOXV3] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_DUCKBOXV4] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_DUCKBOXV5] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_BUBCARL] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_BUBBERDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },
+    [SPECIES_ULTRABDUCK] = 
+    {
+        .size = 0x64,
+        .y_offset = 0x10,
+    },        
     [SPECIES_EGG] =
     {
         .size = 0x36,

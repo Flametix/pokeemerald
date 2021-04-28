@@ -2065,6 +2065,221 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x45,
         .y_offset = 0x0e,
     },
+    [SPECIES_LEAFDUCK2] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_LEAFDUCK3] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_FLAMEDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_FLAMEINGO] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_XENOPH] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_WATERDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_WATERDUCK2] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_WATERDUCK3] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_GLASSEDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_3DUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_SUNDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_DAGGERDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_SWORDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_PINGEDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_GOKUDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_SANDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_MONODUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_PETERDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_INVERTDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_PENGUIDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_DEADUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_DUCCAR] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_BEEDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_GHOSTEDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_FLYINGDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_FLYDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_ZOMBIDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_HELLDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_POTDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_WEEDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_BAKEDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_GOLDDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_TOXIDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_TETRIDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_VERT] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_DUCKBOXV1] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_DUCKBOXV2] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_DUCKBOXV3] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_DUCKBOXV4] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_DUCKBOXV5] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_BUBCARL] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_BUBBERDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_ULTRABDUCK] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
     [SPECIES_EGG] =
     {
         .size = 0x33,

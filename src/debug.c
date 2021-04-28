@@ -2089,8 +2089,8 @@ static void DebugAction_Give_Pokemon_Move(u8 taskId)
         if(gMain.newKeys & DPAD_UP)
         {
             gTasks[taskId].data[3] += sPowersOfTen[gTasks[taskId].data[4]];
-            if(gTasks[taskId].data[3] > MOVES_COUNT)
-                gTasks[taskId].data[3] = MOVES_COUNT;
+            if(gTasks[taskId].data[3] >= MOVES_COUNT)
+                gTasks[taskId].data[3] = MOVES_COUNT - 1;
         }
         if(gMain.newKeys & DPAD_DOWN)
         {
