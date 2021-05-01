@@ -157,7 +157,7 @@ static const struct SpriteTemplate sVibrateBattlerBackSpriteTemplate =
 };
 
 // Unused
-static const struct SpriteTemplate sMovingClampSpriteTemplate =
+const struct SpriteTemplate sMovingClampSpriteTemplate =
 {
     .tileTag = ANIM_TAG_CLAMP,
     .paletteTag = ANIM_TAG_CLAMP,

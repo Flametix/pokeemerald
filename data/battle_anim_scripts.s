@@ -5389,8 +5389,29 @@ IceBeamCreateCrystals:
 	return
 
 Move_WITHDRAW:
+	@ Unused version 1
+	loadspritegfx ANIM_TAG_CLAMP
+	monbg ANIM_ATTACKER
+	setalpha 12, 8
+	createsprite sMovingClampSpriteTemplate, ANIM_ATTACKER, 2, 0, -20, 20, 20, 30
+	delay 20 - 2
+	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0,0,15,0,20
+	waitforvisualfinish
+	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 10
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	blendoff
+	end
+	@ semi-used version 2
 	playsewithpan SE_M_HEADBUTT, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_Withdraw, 5
+	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 6, 0x0300, 0, 0
+	waitforvisualfinish
+	delay 30
+	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 6, 0x0300, 0, 1
+	createvisualtask AnimTask_Withdraw, -0x00a0, 6
+	waitforvisualfinish
+	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 1
 	waitforvisualfinish
 	end
 
