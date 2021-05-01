@@ -479,7 +479,7 @@ static bool32 TryWriteTrainerHill_Internal(struct EReaderTrainerHillSet * hillSe
 {
     int i;
 
-    AGB_ASSERT_EX(hillSet->dummy == 0, "cereader_tool.c", 450);
+    // AGB_ASSERT_EX(hillSet->dummy == 0, "cereader_tool.c", 450);
     AGB_ASSERT_EX(hillSet->id == 0, "cereader_tool.c", 452);
 
     memset(hillTag, 0, SECTOR_SIZE);
