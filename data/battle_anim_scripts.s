@@ -9465,11 +9465,15 @@ SeismicTossContinue:
 	blendoff
 	end
 SeismicTossWeak:
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 20, 8, 1, 2
+	delay 16
 	call SeismicTossRockScatter1
 	delay 16
 	call SeismicTossRockScatter2
 	goto SeismicTossContinue
 SeismicTossMedium:
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 20, 8, 2, 3
+	delay 12
 	call SeismicTossRockScatter1
 	delay 14
 	call SeismicTossRockScatter2
@@ -9477,6 +9481,8 @@ SeismicTossMedium:
 	call SeismicTossRockScatter1
 	goto SeismicTossContinue
 SeismicTossStrong:
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 20, 8, 3, 4
+	delay 10
 	call SeismicTossRockScatter2
 	delay 10
 	call SeismicTossRockScatter1
