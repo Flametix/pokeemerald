@@ -5403,17 +5403,17 @@ Move_WITHDRAW:
 	blendoff
 	end
 	@ semi-used version 2
-	playsewithpan SE_M_HEADBUTT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_Withdraw, 5
-	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 6, 0x0300, 0, 0
-	waitforvisualfinish
-	delay 30
-	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 6, 0x0300, 0, 1
-	createvisualtask AnimTask_Withdraw, -0x00a0, 6
-	waitforvisualfinish
-	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 1
-	waitforvisualfinish
-	end
+	@ playsewithpan SE_M_HEADBUTT, SOUND_PAN_ATTACKER
+	@ createvisualtask AnimTask_Withdraw, 5
+	@ createvisualtask AnimTask_RotateMonSpriteToSide, 2, 6, 0x0300, 0, 0
+	@ waitforvisualfinish
+	@ delay 30
+	@ createvisualtask AnimTask_RotateMonSpriteToSide, 2, 6, 0x0300, 0, 1
+	@ createvisualtask AnimTask_Withdraw, 5, -0x00a0, 6
+	@ waitforvisualfinish
+	@ createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 1
+	@ waitforvisualfinish
+	@ end
 
 Move_AURORA_BEAM:
 	loadspritegfx ANIM_TAG_RAINBOW_RINGS
