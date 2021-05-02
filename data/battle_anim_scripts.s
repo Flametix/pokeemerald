@@ -7395,6 +7395,19 @@ Move_LICK:
 	end
 
 Move_FOCUS_ENERGY:
+	@ Unused version 1 (boring)
+	@ loadspritegfx ANIM_TAG_VOID_LINES
+	@ monbg ANIM_ATK_PARTNER
+	@ monbgprio_28 ANIM_ATTACKER
+	@ setalpha 4, 16
+	@ playsewithpan SE_M_DRAGON_RAGE, SOUND_PAN_ATTACKER
+	@ createsprite sVoidLinesSpriteTemplate, ANIM_ATTACKER, 2, 0, 5
+	@ waitforvisualfinish
+	@ delay 1
+	@ clearmonbg ANIM_ATK_PARTNER
+	@ blendoff
+	@ end
+	@ Used version
 	loadspritegfx ANIM_TAG_FOCUS_ENERGY
 	playsewithpan SE_M_DRAGON_RAGE, SOUND_PAN_ATTACKER
 	call EndureEffect

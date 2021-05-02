@@ -366,7 +366,7 @@ const struct SpriteTemplate gEggThrowSpriteTemplate =
 };
 
 // Unused
-static const struct SpriteTemplate sVoidLinesSpriteTemplate =
+const struct SpriteTemplate sVoidLinesSpriteTemplate =
 {
     .tileTag = ANIM_TAG_VOID_LINES,
     .paletteTag = ANIM_TAG_VOID_LINES,
