@@ -3344,7 +3344,9 @@ static void Cmd_getexp(void)
                     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
                     if (GetEvolutionTargetSpecies(&gPlayerParty[gBattleStruct->expGetterMonId], EVO_MODE_NORMAL, 0) != SPECIES_NONE)
-                        gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
+                        gBattleMoveDamage = (gBattleMoveDamage * 120) / 100;
+                    if (holdEffect == HOLD_EFFECT_PREVENT_EVOLVE) // The above check does not boost with Everstone. Could fix but eh
+                        gBattleMoveDamage = (gBattleMoveDamage * 120) / 100;
                     if (IsTradedMon(&gPlayerParty[gBattleStruct->expGetterMonId]))
                     {
                         // check if the pokemon doesn't belong to the player
