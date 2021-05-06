@@ -54,6 +54,7 @@ enum { // Main
     DEBUG_MENU_ITEM_FLAGS,
     DEBUG_MENU_ITEM_VARS,
     DEBUG_MENU_ITEM_GIVE,
+    DEBUG_MENU_ITEM_ACCESS_PC,
     DEBUG_MENU_ITEM_CANCEL
 };
 enum { // Util
@@ -92,7 +93,6 @@ enum { // Give
     DEBUG_GIVE_MENU_ITEM_POKEMON_SIMPLE,
     DEBUG_GIVE_MENU_ITEM_POKEMON_COMPLEX,
     DEBUG_GIVE_MENU_ITEM_CHEAT,
-    //DEBUG_MENU_ITEM_ACCESS_PC,
 };
 
 
@@ -216,6 +216,7 @@ extern u8 PlayersHouse_2F_EventScript_SetWallClock[];
 extern u8 PlayersHouse_2F_EventScript_CheckWallClock[];
 #define ABILITY_NAME_LENGTH 12
 extern const u8 gAbilityNames[][ABILITY_NAME_LENGTH + 1];
+extern void ShowPokemonStorageSystemPC(void);
 
 
 // *******************************
@@ -291,7 +292,7 @@ static const u8 gDebugText_PokemonMove_1[] =            _("Move 1: {STR_VAR_3}  
 static const u8 gDebugText_PokemonMove_2[] =            _("Move 2: {STR_VAR_3}                   \n{STR_VAR_1}           \n          \n{STR_VAR_2}");
 static const u8 gDebugText_PokemonMove_3[] =            _("Move 3: {STR_VAR_3}                   \n{STR_VAR_1}           \n          \n{STR_VAR_2}");
 static const u8 gDebugText_Give_GiveCHEAT[] =           _("CHEAT start");
-// static const u8 gDebugText_Give_AccessPC[] =         _("Access PC");
+static const u8 gDebugText_Give_AccessPC[] =         _("Access PC");
 
 static const u8 digitInidicator_1[] =               _("{LEFT_ARROW}+1{RIGHT_ARROW}        ");
 static const u8 digitInidicator_10[] =              _("{LEFT_ARROW}+10{RIGHT_ARROW}       ");
@@ -334,7 +335,8 @@ static const struct ListMenuItem sDebugMenu_Items_Main[] =
     [DEBUG_MENU_ITEM_FLAGS]         = {gDebugText_Flags,        DEBUG_MENU_ITEM_FLAGS},
     [DEBUG_MENU_ITEM_VARS]          = {gDebugText_Vars,         DEBUG_MENU_ITEM_VARS},
     [DEBUG_MENU_ITEM_GIVE]          = {gDebugText_Give,         DEBUG_MENU_ITEM_GIVE},
-    [DEBUG_MENU_ITEM_CANCEL]        = {gDebugText_Cancel,       DEBUG_MENU_ITEM_CANCEL}
+    [DEBUG_MENU_ITEM_ACCESS_PC]     = {gDebugText_Give_AccessPC, DEBUG_MENU_ITEM_ACCESS_PC},
+    [DEBUG_MENU_ITEM_CANCEL]        = {gDebugText_Cancel,       DEBUG_MENU_ITEM_CANCEL},
 };
 static const struct ListMenuItem sDebugMenu_Items_Utilities[] =
 {
@@ -387,6 +389,7 @@ static void (*const sDebugMenu_Actions_Main[])(u8) =
     [DEBUG_MENU_ITEM_FLAGS]         = DebugAction_OpenFlagsMenu,
     [DEBUG_MENU_ITEM_VARS]          = DebugAction_OpenVariablesMenu,
     [DEBUG_MENU_ITEM_GIVE]          = DebugAction_OpenGiveMenu,
+    [DEBUG_MENU_ITEM_ACCESS_PC]     = DebugAction_AccessPC,
     [DEBUG_MENU_ITEM_CANCEL]        = DebugAction_Cancel
 };
 static void (*const sDebugMenu_Actions_Utilities[])(u8) =
@@ -2342,12 +2345,11 @@ static void DebugAction_Give_CHEAT(u8 taskId)
     ScriptContext1_SetupScript(Debug_CheatStart);
 }
 
-// static void DebugAction_AccessPC(u8 taskId)
-// {
-//     Debug_DestroyMenu(taskId);
-//     PlaySE(SE_PC_ON);
-//     ScriptContext1_SetupScript(EventScript_PC);
-// }
+static void DebugAction_AccessPC(u8 taskId)
+{
+    Debug_DestroyMenu(taskId);
+    ShowPokemonStorageSystemPC();
+}
 
 
 
