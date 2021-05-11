@@ -10813,24 +10813,8 @@ Special_MonToSubstitute:
 	end
 
 Move_VERT: @Temp
-	call SetPsychicBackground
-	monbg ANIM_DEF_PARTNER
-	setalpha 12, 8
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(27, 27, 0), 12, 1, 1
-	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 0
-	playsewithpan SE_M_BIND, SOUND_PAN_TARGET
+	createvisualtask AnimTask_VertEffect, 2, 0
 	waitforvisualfinish
-	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB(27, 27, 0), 12, 1, 1
-	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 1
-	playsewithpan SE_M_BIND, SOUND_PAN_TARGET
-	waitforvisualfinish
-	createvisualtask AnimTask_TransparentCloneGrowAndShrink, 5, ANIM_ATTACKER
-	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 2
-	playsewithpan SE_M_LEER, SOUND_PAN_ATTACKER
-	waitforvisualfinish
-	blendoff
-	clearmonbg ANIM_DEF_PARTNER
-	call UnsetPsychicBackground
 	end
 
 Move_INFLATE:

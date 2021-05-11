@@ -899,6 +899,10 @@ const u32 gCureBubblesGfx[] = INCBIN_U32("graphics/battle_anims/masks/cure_bubbl
 const u32 gCureBubblesPal[] = INCBIN_U32("graphics/battle_anims/masks/cure_bubbles.gbapal.lz");
 const u32 gCureBubblesTilemap[] = INCBIN_U32("graphics/battle_anims/masks/cure_bubbles.bin.lz");
 
+const u32 gVertGfx[] = INCBIN_U32("graphics/battle_anims/masks/vert.4bpp.lz");
+const u32 gVertPal[] = INCBIN_U32("graphics/battle_anims/masks/vert.gbapal.lz");
+const u32 gVertTilemap[] = INCBIN_U32("graphics/battle_anims/masks/vert.bin.lz");
+
 const u32 gBattleAnimSpritePal_PurpleScratch[] = INCBIN_U32("graphics/battle_anims/sprites/purple_scratch.gbapal.lz");
 const u32 gBattleAnimSpriteGfx_PurpleScratch[] = INCBIN_U32("graphics/battle_anims/sprites/purple_scratch.4bpp.lz");
 
