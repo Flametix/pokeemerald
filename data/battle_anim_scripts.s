@@ -10813,8 +10813,28 @@ Special_MonToSubstitute:
 	end
 
 Move_VERT: @Temp
+	setalpha 12, 8
+	monbg ANIM_ATTACKER
+	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_TransparentCloneGrowAndShrink, 5, ANIM_ATTACKER
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 0, 0, 16, RGB_WHITE
+	delay 8
+	createvisualtask AnimTask_AttackerFadeToInvisible, 5, 0
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	invisible ANIM_ATTACKER
+	delay 8
+	playsewithpan SE_M_LEER, SOUND_PAN_TARGET
 	createvisualtask AnimTask_VertEffect, 2, 0
 	waitforvisualfinish
+	delay 8
+	createvisualtask AnimTask_AttackerFadeFromInvisible, 5, 1
+	visible ANIM_ATTACKER
+	delay 2
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 0, 15, 0, RGB_WHITE
+	waitforvisualfinish
+	blendoff
 	end
 
 Move_INFLATE:
