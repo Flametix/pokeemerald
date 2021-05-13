@@ -2609,20 +2609,22 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                 }
                 break;
-            case ABILITY_ILLUSIONER:
-                if (gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 2)
-                {
-                    gBattleMons[battler].species = SPECIES_ZAPDOS; //test: DUCKBOX GANG
-                    BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
-                    effect++;
-                }
-                else
-                {
-                    gBattleMons[battler].species = SPECIES_LEAFDUCK; //test: DUCKBOXV5
-                    BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
-                    effect++;                        
-                }
-                break;
+               case ABILITY_ILLUSIONER:
+                //TODO: Add a species check here
+                // if ((gBattleMons[battler].species == SPECIES_DUCKBOXV5 || gBattleMons[battler].species == SPECIES_DUCKBOX_GANG)
+                    if (gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 2)
+                    {
+                        gBattleMons[battler].species = SPECIES_ZAPDOS; //test: DUCKBOX GANG
+                        BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
+                        effect++;
+                    }
+                    else
+                    {
+                        gBattleMons[battler].species = SPECIES_LEAFDUCK; //test: DUCKBOXV5
+                        BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
+                        effect++;                        
+                    }
+                    break;
             }
             break;
         case ABILITYEFFECT_ENDTURN: // 1
