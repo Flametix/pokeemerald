@@ -4619,3 +4619,18 @@ BattleScript_InflateTryAcc::
 	waitmessage 0x40
 BattleScript_InflateEnd::
 	goto BattleScript_MoveEnd
+
+BattleScript_AttackerFormChange::
+	pause 0x5
+	printstring STRINGID_EMPTYSTRING3
+	waitmessage 0x1
+	handleformchange BS_ATTACKER, 0
+	handleformchange BS_ATTACKER, 1
+	playanimation BS_ATTACKER, B_ANIM_FORM_CHANGE, NULL
+	waitanimation
+	handleformchange BS_ATTACKER, 2 
+	return
+	
+BattleScript_AttackerFormChangeEnd3::
+	call BattleScript_AttackerFormChange
+	end3

@@ -2609,6 +2609,20 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                 }
                 break;
+            case ABILITY_ILLUSIONER:
+                if (gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 2)
+                {
+                    gBattleMons[battler].species = SPECIES_ZAPDOS; //test: DUCKBOX GANG
+                    BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
+                    effect++;
+                }
+                else
+                {
+                    gBattleMons[battler].species = SPECIES_LEAFDUCK; //test: DUCKBOXV5
+                    BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
+                    effect++;                        
+                }
+                break;
             }
             break;
         case ABILITYEFFECT_ENDTURN: // 1
@@ -2678,6 +2692,21 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     break;
                 case ABILITY_TRUANT:
                     gDisableStructs[gBattlerAttacker].truantCounter ^= 1;
+                    break;
+                
+                case ABILITY_ILLUSIONER:
+                    if (gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 2)
+                    {
+                        gBattleMons[battler].species = SPECIES_ZAPDOS; //test: DUCKBOX GANG
+                        BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
+                        effect++;
+                    }
+                    else
+                    {
+                        gBattleMons[battler].species = SPECIES_LEAFDUCK; //test: DUCKBOXV5
+                        BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
+                        effect++;                        
+                    }
                     break;
                 }
             }
@@ -4148,6 +4177,27 @@ u8 IsMonDisobedient(void)
             gBattleCommunication[MULTISTRING_CHOOSER] = Random() & (NUM_LOAF_STRINGS - 1);
             gBattlescriptCurrInstr = BattleScript_MoveUsedLoafingAround;
             return 1;
+        }
+    }
+}
+
+void UndoFormChange(u32 monId, u32 side) //from battle engine
+{
+    u32 i, currSpecies;
+    struct Pokemon *party = (side == B_SIDE_PLAYER) ? gPlayerParty : gEnemyParty;
+    static const u16 species[][2] = // changed form id, default form id
+    {
+        {SPECIES_ZAPDOS, SPECIES_LEAFDUCK} //Testing only
+    };
+
+    currSpecies = GetMonData(&party[monId], MON_DATA_SPECIES, NULL);
+    for (i = 0; i < ARRAY_COUNT(species); i++)
+    {
+        if (currSpecies == species[i][0])
+        {
+            SetMonData(&party[monId], MON_DATA_SPECIES, &species[i][1]);
+            CalculateMonStats(&party[monId]);
+            break;
         }
     }
 }

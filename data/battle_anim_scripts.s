@@ -413,6 +413,7 @@ gBattleAnims_General::
 	.4byte General_FocusPunchSetUp          @ B_ANIM_FOCUS_PUNCH_SETUP
 	.4byte General_IngrainHeal              @ B_ANIM_INGRAIN_HEAL
 	.4byte General_WishHeal                 @ B_ANIM_WISH_HEAL
+	.4byte General_FormChange               @ B_ANIM_FORM_CHANGE
 
 	.align 2
 gBattleAnims_Special::
@@ -10892,3 +10893,10 @@ BubberBeamOrbs:
 	createsprite gDuckOrbSpriteTemplate, ANIM_TARGET, 2
 	delay 1
 	return
+
+General_FormChange:
+	monbg ANIM_ATTACKER
+	createvisualtask AnimTask_TransformMon, 2, 0, 1
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	end
