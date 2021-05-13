@@ -373,6 +373,7 @@ gBattleAnims_Moves::
 	.4byte Move_VERT
 	.4byte Move_INFLATE
 	.4byte Move_TSUNAMISO
+	.4byte Move_BUBBER_BEAM
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -10812,7 +10813,7 @@ Special_MonToSubstitute:
 	createvisualtask AnimTask_SwapMonSpriteToFromSubstitute, 2, FALSE
 	end
 
-Move_VERT: @Temp
+Move_VERT:
 	setalpha 12, 8
 	monbg ANIM_ATTACKER
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
@@ -10837,7 +10838,7 @@ Move_VERT: @Temp
 	blendoff
 	end
 
-Move_INFLATE:
+Move_INFLATE: @Temp
 	createvisualtask AnimTask_GrowAndShrink, 2
 	playsewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER
 	waitforvisualfinish
@@ -10849,3 +10850,45 @@ Move_TSUNAMISO: @Temp
 	panse_1B SE_M_SURF, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
 	waitforvisualfinish
 	end
+
+Move_BUBBER_BEAM: 
+	loadspritegfx ANIM_TAG_DUCK
+	playsewithpan SE_M_HYPER_BEAM, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 4, 1
+	waitforvisualfinish
+	delay 30
+	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_HYPER_BEAM2, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 1, 15, 0, 5
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_ATTACKER, 0, 4, 50, 1
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 50, 1
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	call BubberBeamOrbs
+	end
+BubberBeamOrbs:
+	createsprite gDuckOrbSpriteTemplate, ANIM_TARGET, 2
+	createsprite gDuckOrbSpriteTemplate, ANIM_TARGET, 2
+	delay 1
+	return

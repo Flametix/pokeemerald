@@ -358,4 +358,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_VERT] = _("Vert"),
     [MOVE_INFLATE] = _("Inflate"),
     [MOVE_TSUNAMISO]= _("Tsunamiso"),
+    [MOVE_BUBBER_BEAM]= _("Bubber Beam"),
 };
