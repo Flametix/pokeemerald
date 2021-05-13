@@ -454,6 +454,6 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_DUCKBOXV5] = _("DuckBoxV5"),
     [SPECIES_BUBCARL] = _("Bubcarl"),
     [SPECIES_BUBBERDUCK] = _("Bubberduck"),
-    [SPECIES_ULTRABDUCK] = _("Bubberduck"),
+    [SPECIES_ULTRABDUCK] = _("UltraBduck"),
 
 };

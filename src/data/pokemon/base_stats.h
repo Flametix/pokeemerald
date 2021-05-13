@@ -12760,6 +12760,38 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
+    [SPECIES_3DUCK] =
+    {
+        .baseHP        = 70,
+        .baseAttack    = 60,
+        .baseDefense   = 65,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 75,
+        .baseSpeed = 70,
+        .type1 = TYPE_PSYCHIC,
+        .type2 = TYPE_PSYCHIC,
+        .catchRate = 255,
+        .expYield = 54,
+        .evYield_HP        = 1,
+        .evYield_Attack    = 1,
+        .evYield_Defense   = 1,
+        .evYield_Speed     = 1,
+        .evYield_SpAttack  = 2,
+        .evYield_SpDefense = 1,
+        .item1 = ITEM_NONE,
+        .item2 = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_UNDISCOVERED,
+        .eggGroup2 = EGG_GROUP_UNDISCOVERED,
+        .abilities = {ABILITY_NONE, ABILITY_KEEN_EYE},
+        .safariZoneFleeRate = 0,
+        .bodyColor = BODY_COLOR_YELLOW,
+        .noFlip = FALSE,
+    },
+
     [SPECIES_BUBBERDUCK] =
     {
         .baseHP        = 97,
