@@ -381,7 +381,7 @@ const struct SpriteTemplate gDuckOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_DUCK,
     .paletteTag = ANIM_TAG_DUCK,
-    .oam = &gOamData_AffineOff_ObjNormal_8x8,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
     .anims = gSolarbeamBigOrbAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
