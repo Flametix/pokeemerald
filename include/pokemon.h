@@ -361,6 +361,7 @@ u8 *UseStatIncreaseItem(u16 itemId);
 u8 GetNature(struct Pokemon *mon);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem);
+u16 GetEvolutionLevelTargetSpecies(struct Pokemon *mon);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
 u16 NationalPokedexNumToSpecies(u16 nationalNum);
 u16 NationalToHoennOrder(u16 nationalNum);

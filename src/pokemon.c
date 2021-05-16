@@ -5721,6 +5721,90 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
     return targetSpecies;
 }
 
+u16 GetEvolutionLevelTargetSpecies(struct Pokemon *mon)
+{// For unevolved EXP boost check
+    int i;
+    u16 targetSpecies = 0;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, 0);
+    u16 heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0);
+    u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, 0);
+    u8 level;
+    u16 friendship;
+    u8 beauty = GetMonData(mon, MON_DATA_BEAUTY, 0);
+    u16 upperPersonality = personality >> 16;
+    u8 holdEffect;
+
+    if (heldItem == ITEM_ENIGMA_BERRY)
+        #ifndef FREE_ENIGMA_BERRY
+        holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
+        #else
+        holdEffect = 0;
+        #endif
+    else
+        holdEffect = ItemId_GetHoldEffect(heldItem);
+
+    level = GetMonData(mon, MON_DATA_LEVEL, 0);
+    friendship = GetMonData(mon, MON_DATA_FRIENDSHIP, 0);
+
+    for (i = 0; i < EVOS_PER_MON; i++)
+    {
+        switch (gEvolutionTable[species][i].method)
+        {
+        case EVO_FRIENDSHIP:
+            if (friendship >= 220)
+                targetSpecies = gEvolutionTable[species][i].targetSpecies;
+            break;
+        case EVO_FRIENDSHIP_DAY:
+            RtcCalcLocalTime();
+            if (gLocalTime.hours >= 12 && gLocalTime.hours < 24 && friendship >= 220)
+                targetSpecies = gEvolutionTable[species][i].targetSpecies;
+            break;
+        case EVO_FRIENDSHIP_NIGHT:
+            RtcCalcLocalTime();
+            if (gLocalTime.hours >= 0 && gLocalTime.hours < 12 && friendship >= 220)
+                targetSpecies = gEvolutionTable[species][i].targetSpecies;
+            break;
+        case EVO_LEVEL:
+            if (gEvolutionTable[species][i].param <= level)
+                targetSpecies = gEvolutionTable[species][i].targetSpecies;
+            break;
+        case EVO_LEVEL_ATK_GT_DEF:
+            if (gEvolutionTable[species][i].param <= level)
+                if (GetMonData(mon, MON_DATA_ATK, 0) > GetMonData(mon, MON_DATA_DEF, 0))
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+            break;
+        case EVO_LEVEL_ATK_EQ_DEF:
+            if (gEvolutionTable[species][i].param <= level)
+                if (GetMonData(mon, MON_DATA_ATK, 0) == GetMonData(mon, MON_DATA_DEF, 0))
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+            break;
+        case EVO_LEVEL_ATK_LT_DEF:
+            if (gEvolutionTable[species][i].param <= level)
+                if (GetMonData(mon, MON_DATA_ATK, 0) < GetMonData(mon, MON_DATA_DEF, 0))
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+            break;
+        case EVO_LEVEL_SILCOON:
+            if (gEvolutionTable[species][i].param <= level && (upperPersonality % 10) <= 4)
+                targetSpecies = gEvolutionTable[species][i].targetSpecies;
+            break;
+        case EVO_LEVEL_CASCOON:
+            if (gEvolutionTable[species][i].param <= level && (upperPersonality % 10) > 4)
+                targetSpecies = gEvolutionTable[species][i].targetSpecies;
+            break;
+        case EVO_LEVEL_NINJASK:
+            if (gEvolutionTable[species][i].param <= level)
+                targetSpecies = gEvolutionTable[species][i].targetSpecies;
+            break;
+        case EVO_BEAUTY:
+            if (gEvolutionTable[species][i].param <= beauty)
+                targetSpecies = gEvolutionTable[species][i].targetSpecies;
+            break;
+        }
+    }
+
+    return targetSpecies;
+}
+
 u16 HoennPokedexNumToSpecies(u16 hoennNum)
 {
     u16 species;
