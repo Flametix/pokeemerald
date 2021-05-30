@@ -4482,6 +4482,11 @@ static void Cmd_typecalc2(void)
                 {
                     break;
                 }
+                // put Scrappy check here because it should work like Foresight. Thank you game freak
+                else if (gBattleMons[gBattlerAttacker].ability == ABILITY_SCRAPPY)
+                {
+                    break;
+                }
                 else
                 {
                     i += 3;

@@ -88,6 +88,10 @@ static const u8 sBeastBoostDescription[] = _("Boosts power after a KO.");
 static const u8 sForDeQueenDescription[] = _("Hurts female POKéMON less.");
 static const u8 sIllusionerDescription[] = _("Transforms at half HP.");
 static const u8 sBlindLoveDescription[] = _("Attracts any POKéMON.");
+static const u8 sSteadfastDescription[] = _("Raises SPEED on flinch.");
+static const u8 sScrappyDescription[] = _("Negates GHOST-type immunities.");
+
+
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
@@ -181,6 +185,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_FOR_DE_QUEEN] = _("For De Queen"),
     [ABILITY_ILLUSIONER] = _("Illusioner"),
     [ABILITY_BLIND_LOVE] = _("Blind Love"),
+    [ABILITY_STEADFAST] = _("Steadfast"),
+    [ABILITY_SCRAPPY] = _("Scrappy"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -275,4 +281,6 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_FOR_DE_QUEEN] = sForDeQueenDescription,
     [ABILITY_ILLUSIONER] = sIllusionerDescription,
     [ABILITY_BLIND_LOVE] = sBlindLoveDescription,
+    [ABILITY_STEADFAST] = sSteadfastDescription,
+    [ABILITY_SCRAPPY] = sScrappyDescription,
 };
