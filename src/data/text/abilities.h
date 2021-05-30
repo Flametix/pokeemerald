@@ -65,8 +65,7 @@ static const u8 sMarvelScaleDescription[] = _("Ups DEFENSE if suffering.");
 static const u8 sLiquidOozeDescription[] = _("Draining causes injury.");
 static const u8 sOvergrowDescription[] = _("Ups GRASS moves in a pinch.");
 static const u8 sBlazeDescription[] = _("Ups FIRE moves in a pinch.");
-static const u8 sTorrentDescription[] = _("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm");
-// static const u8 sTorrentDescription[] = _("Ups WATER moves in a pinch.");
+static const u8 sTorrentDescription[] = _("Ups WATER moves in a pinch.");
 static const u8 sSwarmDescription[] = _("Ups BUG moves in a pinch.");
 static const u8 sRockHeadDescription[] = _("Prevents recoil damage.");
 static const u8 sDroughtDescription[] = _("Summons sunlight in battle.");
@@ -90,7 +89,7 @@ static const u8 sForDeQueenDescription[] = _("Hurts female POKéMON less.");
 static const u8 sIllusionerDescription[] = _("Transforms at half HP.");
 static const u8 sBlindLoveDescription[] = _("Attracts any POKéMON.");
 static const u8 sSteadfastDescription[] = _("Raises SPEED on flinch.");
-static const u8 sScrappyDescription[] = _("Negates GHOST-type immunities.");
+static const u8 sScrappyDescription[] = _("Negates GHOST immunities.");
 
 
 
