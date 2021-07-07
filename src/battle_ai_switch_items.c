@@ -782,6 +782,8 @@ static u8 GetAI_ItemType(u16 itemId, const u8 *itemEffect) // NOTE: should take 
 {
     if (itemId == ITEM_FULL_RESTORE)
         return AI_ITEM_FULL_RESTORE;
+    else if (itemEffect[4] & ITEM4_REVIVE)
+        return AI_ITEM_REVIVE;
     else if (itemEffect[4] & ITEM4_HEAL_HP)
         return AI_ITEM_HEAL_HP;
     else if (itemEffect[3] & ITEM3_STATUS_ALL)
@@ -790,8 +792,6 @@ static u8 GetAI_ItemType(u16 itemId, const u8 *itemEffect) // NOTE: should take 
         return AI_ITEM_X_STAT;
     else if (itemEffect[3] & ITEM3_GUARD_SPEC)
         return AI_ITEM_GUARD_SPEC;
-    else if (itemEffect[4] & ITEM4_REVIVE)
-        return AI_ITEM_REVIVE;
     else
         return AI_ITEM_NOT_RECOGNIZABLE;
 }
