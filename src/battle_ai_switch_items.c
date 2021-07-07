@@ -823,6 +823,7 @@ static bool8 ShouldUseItem(void)
 
     for (i = 0; i < MAX_TRAINER_ITEMS; i++)
     {
+        u8 loop;
         u16 item;
         const u8 *itemEffects;
         u8 paramOffset;
@@ -923,11 +924,11 @@ static bool8 ShouldUseItem(void)
                 shouldUse = TRUE;
             break;
         case AI_ITEM_REVIVE:
-            for (i = 0; i < PARTY_SIZE; i++)
+            for (loop = 0; loop < PARTY_SIZE; loop++)
                 {
-                    if (GetMonData(&party[i], MON_DATA_HP) == 0
-                        && GetMonData(&party[i], MON_DATA_SPECIES2) != SPECIES_NONE
-                        && GetMonData(&party[i], MON_DATA_SPECIES2) != SPECIES_EGG)
+                    if (GetMonData(&party[loop], MON_DATA_HP) == 0
+                        && GetMonData(&party[loop], MON_DATA_SPECIES2) != SPECIES_NONE
+                        && GetMonData(&party[loop], MON_DATA_SPECIES2) != SPECIES_EGG)
                     {
                         shouldUse = TRUE;
                         break;
