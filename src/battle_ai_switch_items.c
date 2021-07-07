@@ -778,7 +778,7 @@ u8 GetMostSuitableMonToSwitchInto(void)
     return bestMonId;
 }
 
-static u8 GetAI_ItemType(u8 itemId, const u8 *itemEffect) // NOTE: should take u16 as item Id argument
+static u8 GetAI_ItemType(u16 itemId, const u8 *itemEffect) // NOTE: should take u16 as item Id argument
 {
     if (itemId == ITEM_FULL_RESTORE)
         return AI_ITEM_FULL_RESTORE;
@@ -790,6 +790,8 @@ static u8 GetAI_ItemType(u8 itemId, const u8 *itemEffect) // NOTE: should take u
         return AI_ITEM_X_STAT;
     else if (itemEffect[3] & ITEM3_GUARD_SPEC)
         return AI_ITEM_GUARD_SPEC;
+    else if (itemEffect[4] & ITEM4_REVIVE)
+        return AI_ITEM_REVIVE;
     else
         return AI_ITEM_NOT_RECOGNIZABLE;
 }
@@ -920,6 +922,18 @@ static bool8 ShouldUseItem(void)
             if (gDisableStructs[gActiveBattler].isFirstTurn != 0 && gSideTimers[battlerSide].mistTimer == 0)
                 shouldUse = TRUE;
             break;
+        case AI_ITEM_REVIVE:
+            for (i = 0; i < PARTY_SIZE; i++)
+                {
+                    if (GetMonData(&party[i], MON_DATA_HP) == 0
+                        && GetMonData(&party[i], MON_DATA_SPECIES2) != SPECIES_NONE
+                        && GetMonData(&party[i], MON_DATA_SPECIES2) != SPECIES_EGG)
+                    {
+                        shouldUse = TRUE;
+                        break;
+                    }
+                }
+                break;
         case AI_ITEM_NOT_RECOGNIZABLE:
             return FALSE;
         }

@@ -35,6 +35,8 @@ gBattlescriptsForUsingItem:: @ 82DBD3C
 	.4byte BattleScript_OpponentUsesStatusCureItem  @ AI_ITEM_CURE_CONDITION
 	.4byte BattleScript_OpponentUsesXItem           @ AI_ITEM_X_STAT
 	.4byte BattleScript_OpponentUsesGuardSpec       @ AI_ITEM_GUARD_SPEC
+	.4byte BattleScript_OpponentUsesReviveItem      @ AI_ITEM_REVIVE
+
 
 	.align 2
 gBattlescriptsForRunningByItem:: @ 82DBD54
@@ -166,6 +168,18 @@ BattleScript_OpponentUsesGuardSpec::
 	waitmessage B_WAIT_TIME_LONG
 	useitemonopponent
 	printfromtable gMistUsedStringIds
+	waitmessage B_WAIT_TIME_LONG
+	moveendcase MOVEEND_MIRROR_MOVE
+	finishaction
+
+BattleScript_OpponentUsesReviveItem::
+	printstring STRINGID_EMPTYSTRING3
+	pause B_WAIT_TIME_MED
+	playse SE_USE_ITEM
+	printstring STRINGID_TRAINER1USEDITEM
+	waitmessage B_WAIT_TIME_LONG
+	usereviveonopponent
+	printstring STRINGID_PKMNSITEMREVIVED
 	waitmessage B_WAIT_TIME_LONG
 	moveendcase MOVEEND_MIRROR_MOVE
 	finishaction

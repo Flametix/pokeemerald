@@ -90,6 +90,7 @@
 #define VARIOUS_PLAY_TRAINER_DEFEATED_MUSIC     26
 #define VARIOUS_HANDLE_FORM_CHANGE              27
 #define VARIOUS_TRY_ACTIVATE_BEAST_BOOST        91
+#define VARIOUS_USE_REVIVE_ON_OPPONENT          105
 
 
 // Cmd_manipulatedmg
