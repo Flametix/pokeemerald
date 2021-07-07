@@ -626,7 +626,7 @@ static void ModulateByTypeEffectiveness(u8 atkType, u8 defType1, u8 defType2, u8
 u8 GetMostSuitableMonToSwitchInto(void)
 {
     u8 opposingBattler;
-    u8 bestDmg; // Note : should be changed to u32 for obvious reasons.
+    u32 bestDmg; // Note : should be changed to u32 for obvious reasons.
     u8 bestMonId;
     u8 battlerIn1, battlerIn2;
     s32 firstId;
