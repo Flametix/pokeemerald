@@ -781,3 +781,17 @@ PetalburgCity_Text_ImLookingForTalentedTrainers: @ 81DCC09
 	.string "I'm roaming the land in search of\n"
 	.string "talented TRAINERS.\p"
 	.string "I'm sorry to have taken your time.$"
+
+PetalburgCity_EventScript_TestBattle::
+	trainerbattle_single TRAINER_TEST, PetalburgCity_Text_TestBattle_Intro, PetalburgCity_Text_TestBattle_Defeat
+	msgbox PetalburgCity_Text_TestBattle_Post, MSGBOX_AUTOCLOSE
+	end
+
+PetalburgCity_Text_TestBattle_Intro:
+	.string "test$"
+
+PetalburgCity_Text_TestBattle_Defeat:
+	.string "est$"
+
+PetalburgCity_Text_TestBattle_Post:
+	.string "best$"

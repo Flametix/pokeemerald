@@ -364,7 +364,7 @@ struct BattleStruct
     u8 moveTarget[MAX_BATTLERS_COUNT];
     u8 expGetterMonId;
     u8 unused_1;
-    u8 wildVictorySong;
+    u8 wildVictorySong; // reused for revivals in trainer battles
     u8 dynamicMoveType;
     u8 wrappedBy[MAX_BATTLERS_COUNT];
     u16 assistPossibleMoves[PARTY_SIZE * MAX_MON_MOVES]; // Each of mons can know max 4 moves.
