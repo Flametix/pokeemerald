@@ -12455,9 +12455,9 @@ static const struct TrainerMonItemCustomMoves sParty_TestTrainer[] = {
     {
     .iv = 255,
     .lvl = 1,
-    .species = SPECIES_WAILORD,
+    .species = SPECIES_MEWTWO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_SPOUT, MOVE_DOUBLE_EDGE}
+    .moves = {MOVE_PSYCHIC, MOVE_THUNDER, MOVE_FIRE_BLAST, MOVE_BLIZZARD}
     },
 
     {
@@ -12481,6 +12481,6 @@ static const struct TrainerMonItemCustomMoves sParty_TestTrainer[] = {
     .lvl = 100,
     .species = SPECIES_MEWTWO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_PSYCHIC, MOVE_THUNDER, MOVE_FIRE_BLAST, MOVE_BLIZZARD}
+    .moves = {MOVE_PSYCHIC}
     }
 };
