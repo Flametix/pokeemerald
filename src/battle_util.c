@@ -2611,21 +2611,22 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 }
                 break;
                case ABILITY_ILLUSIONER:
-                //TODO: Add a species check here
-                // if ((gBattleMons[battler].species == SPECIES_DUCKBOXV5 || gBattleMons[battler].species == SPECIES_DUCKBOX_GANG)
-                    if (gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 2)
+                if (gBattleMons[battler].species == SPECIES_DUCKBOXV5 || gBattleMons[battler].species == SPECIES_DUCKBOXGANG)
+                {
+                    if (gBattleMons[battler].hp > gBattleMons[battler].maxHP / 2 && gBattleMons[battler].species == SPECIES_DUCKBOXV5)
                     {
-                        gBattleMons[battler].species = SPECIES_ZAPDOS; //test: DUCKBOX GANG
+                        gBattleMons[battler].species = SPECIES_DUCKBOXGANG; //test: DUCKBOX GANG
                         BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
                         effect++;
                     }
-                    else
+                    else if (gBattleMons[battler].hp <= gBattleMons[battler].maxHP / 2 && gBattleMons[battler].species == SPECIES_DUCKBOXGANG)
                     {
-                        gBattleMons[battler].species = SPECIES_LEAFDUCK; //test: DUCKBOXV5
+                        gBattleMons[battler].species = SPECIES_DUCKBOXV5; //test: DUCKBOXV5
                         BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
                         effect++;                        
                     }
                     break;
+                }
             }
             break;
         case ABILITYEFFECT_ENDTURN: // 1
@@ -2698,21 +2699,22 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     break;
                 
                 case ABILITY_ILLUSIONER:
-                //TODO: Add a species check here
-                // if ((gBattleMons[battler].species == SPECIES_DUCKBOXV5 || gBattleMons[battler].species == SPECIES_DUCKBOX_GANG)
-                    if (gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 2)
+                    if (gBattleMons[battler].species == SPECIES_DUCKBOXV5 || gBattleMons[battler].species == SPECIES_DUCKBOXGANG)
                     {
-                        gBattleMons[battler].species = SPECIES_ZAPDOS; //test: DUCKBOX GANG
-                        BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
-                        effect++;
+                        if (gBattleMons[battler].hp > gBattleMons[battler].maxHP / 2 && gBattleMons[battler].species == SPECIES_DUCKBOXV5)
+                        {
+                            gBattleMons[battler].species = SPECIES_DUCKBOXGANG; //test: DUCKBOX GANG
+                            BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
+                            effect++;
+                        }
+                        else if (gBattleMons[battler].hp <= gBattleMons[battler].maxHP / 2 && gBattleMons[battler].species == SPECIES_DUCKBOXGANG)
+                        {
+                            gBattleMons[battler].species = SPECIES_DUCKBOXV5; //test: DUCKBOXV5
+                            BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
+                            effect++;                        
+                        }
+                        break;
                     }
-                    else
-                    {
-                        gBattleMons[battler].species = SPECIES_LEAFDUCK; //test: DUCKBOXV5
-                        BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
-                        effect++;                        
-                    }
-                    break;
                 }
             }
             break;
@@ -4192,7 +4194,7 @@ void UndoFormChange(u32 monId, u32 side) //from battle engine
     struct Pokemon *party = (side == B_SIDE_PLAYER) ? gPlayerParty : gEnemyParty;
     static const u16 species[][2] = // changed form id, default form id
     {
-        {SPECIES_ZAPDOS, SPECIES_LEAFDUCK} //Testing only
+        {SPECIES_DUCKBOXGANG, SPECIES_DUCKBOXV5} //Testing only
     };
 
     currSpecies = GetMonData(&party[monId], MON_DATA_SPECIES, NULL);
