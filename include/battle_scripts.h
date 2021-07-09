@@ -226,5 +226,7 @@ extern const u8 BattleScript_SnowWarningActivates[];
 extern const u8 BattleScript_AttackerAbilityStatRaise[];
 extern const u8 BattleScript_AttackerFormChange[];
 extern const u8 BattleScript_AttackerFormChangeEnd3[];
+extern const u8 BattleScript_BattlerAbilityStatRaiseOnSwitchIn[];
+
 
 #endif // GUARD_BATTLE_SCRIPTS_H

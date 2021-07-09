@@ -90,7 +90,8 @@ static const u8 sIllusionerDescription[] = _("Transforms at half HP.");
 static const u8 sBlindLoveDescription[] = _("Attracts any POKéMON.");
 static const u8 sSteadfastDescription[] = _("Raises SPEED on flinch.");
 static const u8 sScrappyDescription[] = _("Negates GHOST immunities.");
-
+static const u8 sIntrepidSwordDescription[] = _("Raises ATTACK on entry.");
+static const u8 sTintedLensDescription[] = _("Powers up resisted moves.");
 
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -187,6 +188,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_BLIND_LOVE] = _("Blind Love"),
     [ABILITY_STEADFAST] = _("Steadfast"),
     [ABILITY_SCRAPPY] = _("Scrappy"),
+    [ABILITY_INTREPID_SWORD] = _("Brave Blade"),
+    [ABILITY_TINTED_LENS] = _("Tinted Lens"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -283,4 +286,6 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_BLIND_LOVE] = sBlindLoveDescription,
     [ABILITY_STEADFAST] = sSteadfastDescription,
     [ABILITY_SCRAPPY] = sScrappyDescription,
+    [ABILITY_INTREPID_SWORD] = sIntrepidSwordDescription,
+    [ABILITY_TINTED_LENS] = sTintedLensDescription,
 };

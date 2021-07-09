@@ -147,6 +147,7 @@ struct SpecialStatus
     s32 specialDmg;
     u8 physicalBattlerId;
     u8 specialBattlerId;
+    u8 switchInAbilityDone:1;
 };
 
 struct SideTimer

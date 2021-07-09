@@ -2610,7 +2610,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                 }
                 break;
-               case ABILITY_ILLUSIONER:
+            case ABILITY_ILLUSIONER:
                 if (gBattleMons[battler].species == SPECIES_DUCKBOXV5 || gBattleMons[battler].species == SPECIES_DUCKBOXGANG)
                 {
                     if (gBattleMons[battler].hp > gBattleMons[battler].maxHP / 2 && gBattleMons[battler].species == SPECIES_DUCKBOXV5)
@@ -2626,6 +2626,14 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect++;                        
                     }
                     break;
+                }
+            case ABILITY_INTREPID_SWORD:
+                if (!gSpecialStatuses[battler].switchInAbilityDone)
+                {
+                    gSpecialStatuses[battler].switchInAbilityDone = 1;
+                    SET_STATCHANGER(STAT_ATK, 1, FALSE);
+                    BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
+                    effect++;
                 }
             }
             break;

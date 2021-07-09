@@ -1410,6 +1410,13 @@ static void Cmd_typecalc(void)
         gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_DMG;
         RecordAbilityBattle(gBattlerTarget, gLastUsedAbility);
     }
+    if (gBattleMons[gBattlerAttacker].ability == ABILITY_TINTED_LENS
+     && gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE
+     && !(gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE)
+     && gBattleMoves[gCurrentMove].power)
+     {
+        gBattleMoveDamage = gBattleMoveDamage * 2;
+     }
     if (gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE)
         gProtectStructs[gBattlerAttacker].targetNotAffected = 1;
 

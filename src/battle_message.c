@@ -522,6 +522,7 @@ static const u8 sText_Trainer2LoseText[];
 
 //New battle strings
 static const u8 sText_AttackerAbilityRaisedStat[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}\nraised its {B_BUFF1}!");
+static const u8 sText_BattlerAbilityRaisedStat[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its {B_BUFF1}!");
 
 
 const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT] =
@@ -898,6 +899,8 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNSXWHIPPEDUPHAILSTORM - 12] = sText_PkmnsXWhippedUpHailstorm,
     [STRINGID_ATTACKERABILITYSTATRAISE - 12] = sText_AttackerAbilityRaisedStat,
     [STRINGID_PKMNSITEMREVIVED - 12] = sText_PkmnsItemRevived,
+    [STRINGID_BATTLERABILITYRAISEDSTAT - 12] = sText_BattlerAbilityRaisedStat,
+
 };
 
 const u16 gMissStringIds[] =
