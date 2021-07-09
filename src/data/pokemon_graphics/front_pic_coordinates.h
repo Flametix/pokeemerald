@@ -2280,6 +2280,36 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x45,
         .y_offset = 0x0e,
     },
+    [SPECIES_DUCKLES] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_DUCKBOXGANG] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_DUCKBOT666] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_MARC] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_BIGDUCKUS] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
+    [SPECIES_BUTTONBARI] = 
+    {
+        .size = 0x45,
+        .y_offset = 0x0e,
+    },
     [SPECIES_EGG] =
     {
         .size = 0x33,

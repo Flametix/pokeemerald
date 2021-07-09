@@ -456,5 +456,11 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_BUBCARL] = gMonFootprint_Bubcarl,
     [SPECIES_BUBBERDUCK] = gMonFootprint_Bubberduck,
     [SPECIES_ULTRABDUCK] = gMonFootprint_UltraBubberduck,
+    [SPECIES_DUCKLES] = gMonFootprint_Duckles,
+    [SPECIES_DUCKBOXGANG] = gMonFootprint_DuckboxGang,
+    [SPECIES_DUCKBOT666] = gMonFootprint_DuckBot666,
+    [SPECIES_MARC] = gMonFootprint_Marc,
+    [SPECIES_BIGDUCKUS] = gMonFootprint_BigDuckus,
+    [SPECIES_BUTTONBARI] = gMonFootprint_ButtonBari,
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

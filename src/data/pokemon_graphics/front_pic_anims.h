@@ -4848,6 +4848,42 @@ static const union AnimCmd sAnim_ULTRABDUCK_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_DUCKLES_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DUCKBOXGANG_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DUCKBOT666_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_MARC_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_BIGDUCKUS_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_BUTTONBARI_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_EGG_1[] =
 {
     ANIMCMD_FRAME(0, 6),
@@ -7293,6 +7329,36 @@ static const union AnimCmd *const sAnims_ULTRABDUCK[] ={
     sAnim_ULTRABDUCK_1,
 };
 
+static const union AnimCmd *const sAnims_DUCKLES[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DUCKLES_1,
+};
+
+static const union AnimCmd *const sAnims_DUCKBOXGANG[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DUCKBOXGANG_1,
+};
+
+static const union AnimCmd *const sAnims_DUCKBOT666[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DUCKBOT666_1,
+};
+
+static const union AnimCmd *const sAnims_MARC[] ={
+    sAnim_GeneralFrame0,
+    sAnim_MARC_1,
+};
+
+static const union AnimCmd *const sAnims_BIGDUCKUS[] ={
+    sAnim_GeneralFrame0,
+    sAnim_BIGDUCKUS_1,
+};
+
+static const union AnimCmd *const sAnims_BUTTONBARI[] ={
+    sAnim_GeneralFrame0,
+    sAnim_BUTTONBARI_1,
+};
+
 static const union AnimCmd *const sAnims_EGG[] ={
     sAnim_GeneralFrame0,
     sAnim_EGG_1,
@@ -7894,6 +7960,12 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(BUBCARL),
     ANIM_CMD(BUBBERDUCK),
     ANIM_CMD(ULTRABDUCK),
+    ANIM_CMD(DUCKLES),
+    ANIM_CMD(DUCKBOXGANG),
+    ANIM_CMD(DUCKBOT666),
+    ANIM_CMD(MARC),
+    ANIM_CMD(BIGDUCKUS),
+    ANIM_CMD(BUTTONBARI),
 
     ANIM_CMD(EGG),
     ANIM_CMD(UNOWN_B),

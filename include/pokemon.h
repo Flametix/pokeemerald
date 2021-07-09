@@ -222,6 +222,7 @@ struct BattleMove
     s8 priority;
     u8 flags;
     u8 physicality;
+    u8 argument;
 };
 
 struct SpindaSpot

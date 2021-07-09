@@ -445,6 +445,13 @@ const u32 gMonFrontPic_DuckBoxV4[] = INCBIN_U32("graphics/pokemon/duck/anim_fron
 const u32 gMonFrontPic_DuckBoxV5[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Bubberduck[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");
 const u32 gMonFrontPic_UltraBubberduck[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Duckles[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");
+const u32 gMonFrontPic_DuckboxGang[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Marc[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");
+const u32 gMonFrontPic_BigDuckus[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");
+const u32 gMonFrontPic_ButtonBari[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");
+const u32 gMonFrontPic_DuckBot666[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");
+
 
 
 const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
