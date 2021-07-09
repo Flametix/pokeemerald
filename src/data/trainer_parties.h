@@ -12484,3 +12484,46 @@ static const struct TrainerMonItemCustomMoves sParty_TestTrainer[] = {
     .moves = {MOVE_PSYCHIC}
     }
 };
+
+static const struct TrainerMonItemCustomMoves sParty_DemoTrainer[] = {
+    {
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_MARC,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_WATER_SPORT, MOVE_SURF, MOVE_RAIN_DANCE, MOVE_SPLASH}
+    },
+
+    {
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_BIGDUCKUS,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_WATER_SPORT, MOVE_HAIL, MOVE_WATER_GUN, MOVE_POWDER_SNOW}
+    },
+
+    {
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_BUTTONBARI,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_WATER_SPORT, MOVE_PSYWAVE, MOVE_MIST_BALL, MOVE_BUBBLE}
+    },
+
+    {
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_DUCKBOT666,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_IRON_DEFENSE, MOVE_METAL_SOUND, MOVE_PURSUIT, MOVE_HEAT_WAVE}
+    },
+
+    {
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_DUCKBOXV5,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_BUBBER_BEAM, MOVE_HYDRO_CANNON, MOVE_SACRED_FIRE, MOVE_DISABLE}
+    },
+
+};
