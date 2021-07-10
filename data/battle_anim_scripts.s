@@ -10970,7 +10970,8 @@ Move_DRAINING_KISS:
 	end
 
 Move_ASTRAL_BLADE:
-	loadspritegfx ANIM_TAG_SLASH
+	@ loadspritegfx ANIM_TAG_SLASH
+	loadspritegfx ANIM_TAG_CUT
 	monbg ANIM_TARGET
 	setalpha 12, 8
 	choosetwoturnanim AstralBladeLeft, AstralBladeRight
@@ -10982,10 +10983,12 @@ AstralBladeContinue:
 	blendoff
 	end
 AstralBladeLeft:
-	createsprite gSlashSliceSpriteTemplate, ANIM_ATTACKER, 2, -8, 0, ANIM_TARGET, 2
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 20, 8, 1, 3
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
 	goto AstralBladeContinue
 AstralBladeRight:
-	createsprite gSlashSliceSpriteTemplate, ANIM_ATTACKER, 2, 8, 0, ANIM_TARGET, 2
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 20, 8, 1, 3
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
 	goto AstralBladeContinue
 
 Move_EARTHQUACK:
