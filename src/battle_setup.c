@@ -665,6 +665,10 @@ u8 BattleSetup_GetTerrainId(void)
         if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
             return BATTLE_TERRAIN_WATER;
         return BATTLE_TERRAIN_PLAIN;
+    case MAP_TYPE_SPACE:
+        return BATTLE_TERRAIN_SPACE;
+    case MAP_TYPE_ULTRA:
+        return BATTLE_TERRAIN_ULTRA;
     }
     if (MetatileBehavior_IsDeepOrOceanWater(tileBehavior))
         return BATTLE_TERRAIN_WATER;

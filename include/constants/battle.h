@@ -302,6 +302,8 @@
 #define BATTLE_TERRAIN_CAVE         7
 #define BATTLE_TERRAIN_BUILDING     8
 #define BATTLE_TERRAIN_PLAIN        9
+#define BATTLE_TERRAIN_SPACE        10
+#define BATTLE_TERRAIN_ULTRA        11
 
 #define B_WAIT_TIME_LONG  64
 #define B_WAIT_TIME_MED   48
