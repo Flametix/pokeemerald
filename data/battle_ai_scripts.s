@@ -99,6 +99,7 @@ AI_CheckBadMove_CheckSoundproof: @ 82DBFFE
 	if_move MOVE_UPROAR, Score_Minus10
 	if_move MOVE_METAL_SOUND, Score_Minus10
 	if_move MOVE_GRASS_WHISTLE, Score_Minus10
+	if_move MOVE_EARTHQUACK, Score_Minus10
 AI_CheckBadMove_CheckEffect: @ 82DC045
 	if_effect EFFECT_SLEEP, AI_CBM_Sleep
 	if_effect EFFECT_EXPLOSION, AI_CBM_Explosion
@@ -209,6 +210,7 @@ AI_CheckBadMove_CheckEffect: @ 82DC045
 	if_effect EFFECT_WATER_SPORT, AI_CBM_WaterSport
 	if_effect EFFECT_CALM_MIND, AI_CBM_CalmMind
 	if_effect EFFECT_DRAGON_DANCE, AI_CBM_DragonDance
+	if_effect EFFECT_INFLATE, AI_CBM_Inflate
 	end
 
 AI_CBM_Sleep: @ 82DC2D4
@@ -595,6 +597,11 @@ AI_CBM_DragonDance: @ 82DC778
 	if_stat_level_equal AI_USER, STAT_SPEED, MAX_STAT_STAGE, Score_Minus8
 	end
 
+AI_CBM_Inflate: @ 82DC778
+	if_stat_level_equal AI_USER, STAT_DEF, MAX_STAT_STAGE, Score_Minus10
+	if_stat_level_equal AI_USER, STAT_ACC, MAX_STAT_STAGE, Score_Minus8
+	end
+
 Score_Minus1:
 	score -1
 	end
@@ -771,6 +778,8 @@ AI_CheckViability:
 	if_effect EFFECT_WATER_SPORT, AI_CV_WaterSport
 	if_effect EFFECT_CALM_MIND, AI_CV_SpDefUp
 	if_effect EFFECT_DRAGON_DANCE, AI_CV_DragonDance
+	if_effect EFFECT_INFLATE, AI_CV_DefenseUp
+	if_effect EFFECT_ASTRAL_BLADE, AI_CV_HighCrit
 	end
 
 AI_CV_Sleep: @ 82DCA92

@@ -361,5 +361,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_BUBBER_BEAM]= _("Bubber Beam"),
     [MOVE_METEOR_ASSAULT] = _("Star Assault"),
     [MOVE_DRAINING_KISS] = _("DrainingKiss"),
+    [MOVE_ASTRAL_BLADE] = _("Astral Blade"),
+    [MOVE_EARTHQUACK] = _("Earthquack"),
 
 };

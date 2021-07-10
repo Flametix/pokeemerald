@@ -5054,4 +5054,32 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .physicality = MOVE_PHYSICALITY_SPECIAL,
         .argument = 75, // restores 75% HP instead of 50% HP
     },
+
+    [MOVE_ASTRAL_BLADE] =
+    {
+        .effect = EFFECT_ASTRAL_BLADE,
+        .power = 15,
+        .type = TYPE_FLYING,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_MAKES_CONTACT,
+        .physicality = MOVE_PHYSICALITY_PHYSICAL,
+    },
+
+    [MOVE_EARTHQUACK] =
+    {
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+        .physicality = MOVE_PHYSICALITY_SPECIAL,
+    },
 };

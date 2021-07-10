@@ -376,6 +376,8 @@ gBattleAnims_Moves::
 	.4byte Move_BUBBER_BEAM
 	.4byte Move_METEOR_ASSAULT
 	.4byte Move_DRAINING_KISS
+	.4byte Move_ASTRAL_BLADE
+	.4byte Move_EARTHQUACK
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -10964,5 +10966,40 @@ Move_DRAINING_KISS:
 	waitforvisualfinish
 	delay 15
 	call HealingEffect
+	waitforvisualfinish
+	end
+
+Move_ASTRAL_BLADE:
+	loadspritegfx ANIM_TAG_SLASH
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	choosetwoturnanim AstralBladeLeft, AstralBladeRight
+AstralBladeContinue:
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 18, 1
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	end
+AstralBladeLeft:
+	createsprite gSlashSliceSpriteTemplate, ANIM_ATTACKER, 2, -8, 0, ANIM_TARGET, 2
+	goto AstralBladeContinue
+AstralBladeRight:
+	createsprite gSlashSliceSpriteTemplate, ANIM_ATTACKER, 2, 8, 0, ANIM_TARGET, 2
+	goto AstralBladeContinue
+
+Move_EARTHQUACK:
+	loadspritegfx ANIM_TAG_NOISE_LINE
+	createvisualtask SoundTask_PlayDoubleCry, 2, ANIM_ATTACKER, 255
+	call RoarEffect
+	delay 10
+	createvisualtask AnimTask_HorizontalShake, 5, (MAX_BATTLERS_COUNT + 1), 10, 50
+	createvisualtask AnimTask_HorizontalShake, 5, MAX_BATTLERS_COUNT, 10, 50
+	playsewithpan SE_M_EARTHQUAKE, 0
+	delay 10
+	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 3, 1, RGB_BLACK, 14, 0x7FFF, 14
+	delay 16
+	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 3, 1, RGB_BLACK, 14, 0x7FFF, 14
+	createvisualtask SoundTask_WaitForCry, 5
 	waitforvisualfinish
 	end

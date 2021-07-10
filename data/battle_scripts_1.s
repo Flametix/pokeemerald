@@ -232,6 +232,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
 	.4byte BattleScript_EffectInflate                @ EFFECT_INFLATE
+	.4byte BattleScript_EffectAstralBlade            @ EFFECT_ASTRAL_BLADE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -4635,3 +4636,13 @@ BattleScript_BattlerAbilityStatRaiseOnSwitchIn::
 	printstring STRINGID_BATTLERABILITYRAISEDSTAT
 	waitmessage B_WAIT_TIME_LONG
 	end3
+
+BattleScript_EffectAstralBlade::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	setmultihitcounter 10
+	initmultihitstring
+	setbyte sMULTIHIT_EFFECT, 0
+	goto BattleScript_MultiHitLoop

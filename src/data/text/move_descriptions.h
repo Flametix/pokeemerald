@@ -1441,6 +1441,14 @@ static const u8 sDrainingKissDescription[] = _(
     "An attack that steals 3/4 of\n"
     "the damage inflicted.");    
 
+static const u8 sAstralBladeDescription[] = _(
+    "Slashes the foe multiple times.\n"
+    "Has a high critical-hit ratio."); 
+
+static const u8 sEarthquackDescription[] = _(
+    "A powerful quack that tears\n"
+    "open the ground.");     
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -1804,5 +1812,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_BUBBER_BEAM - 1] = sBubberBeamDescription,
     [MOVE_METEOR_ASSAULT - 1] = sMeteorAssaultDescription,
     [MOVE_DRAINING_KISS - 1] = sDrainingKissDescription,
+    [MOVE_ASTRAL_BLADE - 1] = sAstralBladeDescription,
+    [MOVE_EARTHQUACK - 1] = sEarthquackDescription,
 
 };
