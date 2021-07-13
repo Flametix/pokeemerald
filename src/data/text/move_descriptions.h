@@ -1442,8 +1442,8 @@ static const u8 sDrainingKissDescription[] = _(
     "the damage inflicted.");    
 
 static const u8 sAstralBladeDescription[] = _(
-    "Slashes the foe multiple times.\n"
-    "Has a high critical-hit ratio."); 
+    "Slashes the foe ten times.\n"
+    "High critical-hit ratio."); 
 
 static const u8 sEarthquackDescription[] = _(
     "A powerful quack that tears\n"
