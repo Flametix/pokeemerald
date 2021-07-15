@@ -3068,9 +3068,9 @@ const u32 gMonStillFrontPic_Deaduck[] = INCBIN_U32("graphics/pokemon/duck/front.
 const u8 gMonIcon_Deaduck[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_Deaduck[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
-const u32 gMonPalette_Duccar[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
-const u32 gMonBackPic_Duccar[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
-const u32 gMonShinyPalette_Duccar[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
+const u32 gMonPalette_Duccar[] = INCBIN_U32("graphics/pokemon/duccar/normal.gbapal.lz");
+const u32 gMonBackPic_Duccar[] = INCBIN_U32("graphics/pokemon/duccar/back.4bpp.lz");
+const u32 gMonShinyPalette_Duccar[] = INCBIN_U32("graphics/pokemon/duccar/shiny.gbapal.lz");
 const u32 gMonStillFrontPic_Duccar[] = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
 const u8 gMonIcon_Duccar[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_Duccar[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
