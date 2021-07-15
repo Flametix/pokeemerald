@@ -2921,9 +2921,9 @@ const u32 gMonStillFrontPic_Daggerduck[] = INCBIN_U32("graphics/pokemon/duck/fro
 const u8 gMonIcon_Daggerduck[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_Daggerduck[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
-const u32 gMonPalette_Sworduck[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
-const u32 gMonBackPic_Sworduck[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
-const u32 gMonShinyPalette_Sworduck[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
+const u32 gMonPalette_Sworduck[] = INCBIN_U32("graphics/pokemon/sworduck/normal.gbapal.lz");
+const u32 gMonBackPic_Sworduck[] = INCBIN_U32("graphics/pokemon/sworduck/back.4bpp.lz");
+const u32 gMonShinyPalette_Sworduck[] = INCBIN_U32("graphics/pokemon/sworduck/shiny.gbapal.lz");
 const u32 gMonStillFrontPic_Sworduck[] = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
 const u8 gMonIcon_Sworduck[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_Sworduck[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
