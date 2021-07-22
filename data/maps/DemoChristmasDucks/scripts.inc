@@ -4,10 +4,12 @@ DemoChristmasDucks_MapScripts::
 	.byte 0
 
 DemoChristmasDucks_OnLoad:
+	setrespawn HEAL_LOCATION_DEMO
 	call_if_unset FLAG_HIDE_FALLARBOR_AZURILL, DemoChristmasDucks_EventScript_HideDoor
 	end
 
 DemoChristmasDucks_OnTransition:
+	setrespawn HEAL_LOCATION_DEMO
 	call_if_unset FLAG_HIDE_FALLARBOR_AZURILL, DemoChristmasDucks_EventScript_HideDoor
 	end
 
