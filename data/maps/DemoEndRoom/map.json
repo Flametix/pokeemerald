@@ -2,7 +2,7 @@
   "id": "MAP_DEMO_END_ROOM",
   "name": "DemoEndRoom",
   "layout": "LAYOUT_DEMO_END_ROOM",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_HALL_OF_FAME_ROOM",
   "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
