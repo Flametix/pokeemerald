@@ -198,6 +198,8 @@ static const u8 sMapName_MarineCave[] = _("MARINE CAVE");
 static const u8 sMapName_TerraCave[] = _("TERRA CAVE");
 static const u8 sMapName_DesertUnderpass[] = _("DESERT UNDERPASS");
 static const u8 sMapName_TrainerHill[] = _("TRAINER HILL");
+static const u8 sMapName_TheTower[] = _("The Tower");
+
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_LITTLEROOT_TOWN]            = { 4, 11, 1, 1, sMapName_LittlerootTown},
@@ -215,7 +217,7 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_LILYCOVE_CITY]              = {18,  3, 2, 1, sMapName_LilycoveCity},
     [MAPSEC_MOSSDEEP_CITY]              = {24,  5, 2, 1, sMapName_MossdeepCity},
     [MAPSEC_SOOTOPOLIS_CITY]            = {21,  7, 1, 1, sMapName_SootopolisCity},
-    [MAPSEC_EVER_GRANDE_CITY]           = {27,  8, 1, 2, sMapName_EverGrandeCity},
+    [MAPSEC_EVER_GRANDE_CITY]           = {27,  8, 1, 2, sMapName_TheTower}, // demo
     [MAPSEC_ROUTE_101]                  = { 4, 10, 1, 1, sMapName_Route101},
     [MAPSEC_ROUTE_102]                  = { 2,  9, 2, 1, sMapName_Route102},
     [MAPSEC_ROUTE_103]                  = { 4,  8, 4, 1, sMapName_Route103},
