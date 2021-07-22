@@ -830,3 +830,25 @@ gTileset_UnionRoom:: @ 83DFDFC
 	.4byte gMetatiles_UnionRoom
 	.4byte gMetatileAttributes_UnionRoom
 	.4byte NULL @ animation callback
+
+	.align 2
+gTileset_DemoRoom::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_DemoRoom
+	.4byte gTilesetPalettes_DemoRoom
+	.4byte gMetatiles_DemoRoom
+	.4byte gMetatileAttributes_DemoRoom
+	.4byte NULL
+
+	.align 2
+gTileset_DemoChristmasDucks::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_DemoChristmasDucks
+	.4byte gTilesetPalettes_DemoChristmasDucks
+	.4byte gMetatiles_DemoChristmasDucks
+	.4byte gMetatileAttributes_DemoChristmasDucks
+	.4byte NULL

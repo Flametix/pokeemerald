@@ -557,3 +557,18 @@ gMetatiles_UnionRoom:: @ 83DF392
 	.align 1
 gMetatileAttributes_UnionRoom:: @ 83DF6A2
 	.incbin "data/tilesets/secondary/union_room/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_DemoRoom::
+	.incbin "data/tilesets/secondary/demoroom/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_DemoRoom::
+	.incbin "data/tilesets/secondary/demoroom/metatile_attributes.bin"
+	.align 1
+gMetatiles_DemoChristmasDucks::
+	.incbin "data/tilesets/secondary/demochristmasducks/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_DemoChristmasDucks::
+	.incbin "data/tilesets/secondary/demochristmasducks/metatile_attributes.bin"

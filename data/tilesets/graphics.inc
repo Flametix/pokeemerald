@@ -1729,3 +1729,43 @@ gTilesetPalettes_UnionRoom:: @ 8395678
 	.align 2
 gTilesetTiles_UnionRoom:: @ 8395878
 	.incbin "data/tilesets/secondary/union_room/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_DemoRoom::
+	.incbin "data/tilesets/secondary/demoroom/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/demoroom/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_DemoRoom::
+	.incbin "data/tilesets/secondary/demoroom/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_DemoChristmasDucks::
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/demochristmasducks/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_DemoChristmasDucks::
+	.incbin "data/tilesets/secondary/demochristmasducks/tiles.4bpp.lz"
