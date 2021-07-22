@@ -414,4 +414,10 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_CHIMECHO] = sChimechoLevelUpLearnset,
 
     [SPECIES_LEAFDUCK] = sLeafduckLevelUpLearnset,
+    [SPECIES_3DUCK] = sPlaceholderLevelUpLearnset,
+    [SPECIES_SWORDUCK] = sPlaceholderLevelUpLearnset,
+    [SPECIES_VERT] = sPlaceholderLevelUpLearnset,
+    [SPECIES_DUCCAR] = sPlaceholderLevelUpLearnset,
+    [SPECIES_DUCKLES] = sPlaceholderLevelUpLearnset,
+
 };

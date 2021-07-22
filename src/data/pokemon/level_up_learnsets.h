@@ -5630,3 +5630,8 @@ static const u16 sLeafduckLevelUpLearnset[] = {
     LEVEL_UP_MOVE(46, MOVE_SOLAR_BEAM),
     LEVEL_UP_END
 };
+
+static const u16 sPlaceholderLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_SPLASH),
+    LEVEL_UP_END
+};
