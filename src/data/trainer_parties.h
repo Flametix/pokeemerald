@@ -12459,7 +12459,7 @@ static const struct TrainerMonItemCustomMoves sParty_DemoTrainer[] = {
     .lvl = 50,
     .species = SPECIES_MARC,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_SPORT, MOVE_SURF, MOVE_RAIN_DANCE, MOVE_SPLASH}
+    .moves = {MOVE_PRESENT, MOVE_SURF, MOVE_RAIN_DANCE, MOVE_SPLASH}
     },
 
     {
@@ -12467,7 +12467,7 @@ static const struct TrainerMonItemCustomMoves sParty_DemoTrainer[] = {
     .lvl = 50,
     .species = SPECIES_BIGDUCKUS,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_SPORT, MOVE_HAIL, MOVE_WATER_GUN, MOVE_POWDER_SNOW}
+    .moves = {MOVE_PRESENT, MOVE_HAIL, MOVE_WATER_GUN, MOVE_POWDER_SNOW}
     },
 
     {
@@ -12475,7 +12475,7 @@ static const struct TrainerMonItemCustomMoves sParty_DemoTrainer[] = {
     .lvl = 50,
     .species = SPECIES_BUTTONBARI,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_SPORT, MOVE_PSYWAVE, MOVE_MIST_BALL, MOVE_BUBBLE}
+    .moves = {MOVE_PRESENT, MOVE_PSYWAVE, MOVE_MIST_BALL, MOVE_BUBBLE}
     },
 
     {
