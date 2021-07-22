@@ -2611,23 +2611,23 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                 }
                 break;
-            case ABILITY_ILLUSIONER:
-                if (gBattleMons[battler].species == SPECIES_DUCKBOXV5 || gBattleMons[battler].species == SPECIES_DUCKBOXGANG)
-                {
-                    if (gBattleMons[battler].hp > gBattleMons[battler].maxHP / 2 && gBattleMons[battler].species == SPECIES_DUCKBOXV5)
-                    {
-                        gBattleMons[battler].species = SPECIES_DUCKBOXGANG; //test: DUCKBOX GANG
-                        BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
-                        effect++;
-                    }
-                    else if (gBattleMons[battler].hp <= gBattleMons[battler].maxHP / 2 && gBattleMons[battler].species == SPECIES_DUCKBOXGANG)
-                    {
-                        gBattleMons[battler].species = SPECIES_DUCKBOXV5; //test: DUCKBOXV5
-                        BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
-                        effect++;                        
-                    }
-                }
-                break;
+            // case ABILITY_ILLUSIONER:
+                // if (gBattleMons[battler].species == SPECIES_DUCKBOXV5 || gBattleMons[battler].species == SPECIES_DUCKBOXGANG)
+                // {
+                //     if (gBattleMons[battler].hp > gBattleMons[battler].maxHP / 2 && gBattleMons[battler].species == SPECIES_DUCKBOXV5)
+                //     {
+                //         gBattleMons[battler].species = SPECIES_DUCKBOXGANG; //test: DUCKBOX GANG
+                //         BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
+                //         effect++;
+                //     }
+                //     else if (gBattleMons[battler].hp <= gBattleMons[battler].maxHP / 2 && gBattleMons[battler].species == SPECIES_DUCKBOXGANG)
+                //     {
+                //         gBattleMons[battler].species = SPECIES_DUCKBOXV5; //test: DUCKBOXV5
+                //         BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
+                //         effect++;                        
+                //     }
+                // }
+                // break;
             case ABILITY_INTREPID_SWORD:
                 if (!gSpecialStatuses[battler].switchInAbilityDone)
                 {
