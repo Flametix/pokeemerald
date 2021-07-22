@@ -20,7 +20,7 @@ DemoChristmasDucks_EventScript_GiveParty::
 	givecustommon SPECIES_SWORDUCK, 60, ITEM_NONE, ITEM_ULTRA_BALL, NATURE_BRAVE, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, MOVE_SLASH, MOVE_FLAMETHROWER, MOVE_METAL_CLAW, MOVE_SHARPEN
 	givecustommon SPECIES_VERT, 100, ITEM_NONE, ITEM_SAFARI_BALL, NATURE_QUIET, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, MOVE_VERT, MOVE_ABSORB, MOVE_PROTECT, MOVE_CONFUSION
 	givecustommon SPECIES_DUCCAR, 60, ITEM_NONE, ITEM_TIMER_BALL, NATURE_SERIOUS, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, MOVE_RAPID_SPIN, MOVE_THUNDER_SHOCK, MOVE_METAL_SOUND, MOVE_STEEL_WING
-	givecustommon SPECIES_DUCKLES, 60, ITEM_NONE, ITEM_LUXURY_BALL, NATURE_SASSY, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, MOVE_ATTRACT, MOVE_CHARM, MOVE_DRAINING_KISS, MOVE_COVET
+	givecustommon SPECIES_DUCKLES, 60, ITEM_NONE, ITEM_LUXURY_BALL, NATURE_SASSY, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, MOVE_ATTRACT, MOVE_CHARM, MOVE_DRAINING_KISS, MOVE_COVET
 
 	end
 
@@ -57,7 +57,7 @@ DemoChristmasDucks_Text_Battle_Post:
 	.string "You beat us. What do you want now? Go\n"
 	.string "home. We are still going to continue\l"
 	.string "Christmas, whether you like it or not.$"
-	
+
 DemoChristmasDucks_EventScript_HideDoor::
 	setmetatile 6, 1, METATILE_DemoChristmasDucks_WINDOW1, 1
 	setmetatile 6, 2, METATILE_DemoChristmasDucks_WINDOW2, 1
