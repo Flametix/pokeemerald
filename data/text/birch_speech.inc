@@ -44,7 +44,8 @@ gText_Birch_MainSpeech:: @ 82C8A1F
 
 gText_Birch_AndYouAre:: @ 82C8BD0
 	@ .string "And you are?$"
-	.string "But first choose yo fuckan trainer$"
+	.string "But first choose yo fuckan trainer\p"
+	.string "$"
 
 gText_Birch_BoyOrGirl:: @ 82C8BDD
 	.string "Are you a boy?\n"

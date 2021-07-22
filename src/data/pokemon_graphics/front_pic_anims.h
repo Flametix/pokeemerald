@@ -4838,7 +4838,9 @@ static const union AnimCmd sAnim_BUBCARL_1[] =
 
 static const union AnimCmd sAnim_BUBBERDUCK_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_FRAME(1, 10),
+    ANIMCMD_FRAME(0, 10),
     ANIMCMD_END,
 };
 
