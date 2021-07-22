@@ -6,11 +6,22 @@ DemoChristmasDucks_MapScripts::
 DemoChristmasDucks_OnLoad:
 	setrespawn HEAL_LOCATION_DEMO
 	call_if_unset FLAG_HIDE_FALLARBOR_AZURILL, DemoChristmasDucks_EventScript_HideDoor
+	call_if_unset FLAG_SYS_POKEMON_GET, DemoChristmasDucks_EventScript_GiveParty
 	end
 
 DemoChristmasDucks_OnTransition:
 	setrespawn HEAL_LOCATION_DEMO
 	call_if_unset FLAG_HIDE_FALLARBOR_AZURILL, DemoChristmasDucks_EventScript_HideDoor
+	end
+
+DemoChristmasDucks_EventScript_GiveParty::
+	setflag FLAG_SYS_POKEMON_GET
+	givecustommon SPECIES_3DUCK, 60, ITEM_NONE, ITEM_PREMIER_BALL, NATURE_RELAXED, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, MOVE_MAGIC_COAT, MOVE_CONVERSION, MOVE_PSYCHIC, MOVE_LOCK_ON
+	givecustommon SPECIES_SWORDUCK, 60, ITEM_NONE, ITEM_ULTRA_BALL, NATURE_BRAVE, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, MOVE_SLASH, MOVE_FLAMETHROWER, MOVE_METAL_CLAW, MOVE_SHARPEN
+	givecustommon SPECIES_VERT, 100, ITEM_NONE, ITEM_SAFARI_BALL, NATURE_QUIET, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, MOVE_VERT, MOVE_ABSORB, MOVE_PROTECT, MOVE_CONFUSION
+	givecustommon SPECIES_DUCCAR, 60, ITEM_NONE, ITEM_TIMER_BALL, NATURE_SERIOUS, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, MOVE_RAPID_SPIN, MOVE_THUNDERSHOCK, MOVE_METAL_SOUND, MOVE_STEEL_WING
+	givecustommon SPECIES_DUCKLES, 60, ITEM_NONE, ITEM_LUXURY_BALL, NATURE_SASSY, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, MOVE_ATTRACT, MOVE_CHARM, MOVE_DRAINING_KISS, MOVE_COVET
+
 	end
 
 DemoChristmasDucks_EventScript_Battle::

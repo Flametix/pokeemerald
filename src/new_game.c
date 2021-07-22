@@ -185,6 +185,7 @@ void NewGameInitData(void)
     ClearRoamerLocationData();
     gSaveBlock1Ptr->registeredItem = 0;
     ClearBag();
+    NewGameInitBagItems();
     NewGameInitPCItems();
     ClearPokeblocks();
     ClearDecorationInventories();

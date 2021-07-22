@@ -57,6 +57,7 @@ void CompactItemsInBagPocket(struct BagPocket *bagPocket);
 void SortBerriesOrTMHMs(struct BagPocket *bagPocket);
 void MoveItemSlotInList(struct ItemSlot* itemSlots_, u32 from, u32 to_);
 void ClearBag(void);
+void NewGameInitBagItems(void);
 u16 CountTotalItemQuantityInBag(u16 itemId);
 bool8 AddPyramidBagItem(u16 itemId, u16 count);
 bool8 RemovePyramidBagItem(u16 itemId, u16 count);

@@ -674,6 +674,20 @@ void ClearBag(void)
     }
 }
 
+static const struct ItemSlot gNewGameBagItems[] =
+{
+    { ITEM_FULL_RESTORE, 3 },
+    { ITEM_FULL_HEAL, 3 },
+    { ITEM_NONE, 0 }
+};
+
+void NewGameInitBagItems(void)
+{
+    u16 i;
+    for (i = 0; gNewGameBagItems[i].itemId != ITEM_NONE; i++)
+        AddBagItem(gNewGameBagItems[i].itemId, gNewGameBagItems->quantity);
+}
+
 u16 CountTotalItemQuantityInBag(u16 itemId)
 {
     u16 i;
