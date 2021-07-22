@@ -541,9 +541,10 @@
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
 #define MUS_AKRILLIC                610 // MIDI test
+#define MUS_CHRISTMAS_DUCKS         611 // demo
 
 #define MAX_SFX 269
-#define MAX_SONGS 610 //update for sound test
+#define MAX_SONGS 611 //update for sound test
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

@@ -10903,7 +10903,7 @@ BubberBeamOrbs:
 
 General_FormChange:
 	monbg ANIM_ATTACKER
-	createvisualtask AnimTask_TransformMon, 2, 0
+	createvisualtask AnimTask_TransformMon, 2, 0, 1
 	waitforvisualfinish
 	clearmonbg ANIM_ATTACKER
 	end

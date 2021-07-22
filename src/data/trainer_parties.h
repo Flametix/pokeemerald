@@ -12441,48 +12441,16 @@ static const struct TrainerMonItemCustomMoves sParty_TestTrainer[] = {
     .lvl = 1,
     .species = SPECIES_WAILORD,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_SPOUT, MOVE_DOUBLE_EDGE, MOVE_BLIZZARD}
+    .moves = {MOVE_RAIN_DANCE}
     },
 
     {
     .iv = 255,
     .lvl = 1,
-    .species = SPECIES_WAILORD,
+    .species = SPECIES_CASTFORM,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_SPOUT, MOVE_DOUBLE_EDGE}
+    .moves = {MOVE_ICE_BEAM, MOVE_WATER_SPOUT, MOVE_DOUBLE_EDGE}
     },
-
-    {
-    .iv = 255,
-    .lvl = 1,
-    .species = SPECIES_MEWTWO,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_PSYCHIC, MOVE_THUNDER, MOVE_FIRE_BLAST, MOVE_BLIZZARD}
-    },
-
-    {
-    .iv = 255,
-    .lvl = 75,
-    .species = SPECIES_WAILORD,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_SPOUT, MOVE_DOUBLE_EDGE}
-    },
-
-    {
-    .iv = 255,
-    .lvl = 50,
-    .species = SPECIES_BUTTERFREE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_RAIN_DANCE, MOVE_SILVER_WIND, MOVE_GUST}
-    },
-
-    {
-    .iv = 255,
-    .lvl = 100,
-    .species = SPECIES_MEWTWO,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_PSYCHIC}
-    }
 };
 
 static const struct TrainerMonItemCustomMoves sParty_DemoTrainer[] = {
