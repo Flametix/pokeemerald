@@ -2469,6 +2469,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         switch (caseID)
         {
         case ABILITYEFFECT_ON_SWITCHIN: // 0
+            gBattleScripting.battler = battler;
             if (gBattlerAttacker >= gBattlersCount)
                 gBattlerAttacker = battler;
             switch (gLastUsedAbility)
@@ -2625,8 +2626,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
                         effect++;                        
                     }
-                    break;
                 }
+                break;
             case ABILITY_INTREPID_SWORD:
                 if (!gSpecialStatuses[battler].switchInAbilityDone)
                 {
@@ -2635,6 +2636,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
                     effect++;
                 }
+                break;
             }
             break;
         case ABILITYEFFECT_ENDTURN: // 1
@@ -2721,8 +2723,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                             BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
                             effect++;                        
                         }
-                        break;
                     }
+                    break;
                 }
             }
             break;
