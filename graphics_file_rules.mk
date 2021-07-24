@@ -343,6 +343,9 @@ $(FONTGFXDIR)/keypad_icons.4bpp: %.4bpp: %.png
 
 
 ### Miscellaneous ###
+graphics/title_screen/demo_pokemon_logo.gbapal: %.gbapal: %.pal
+	$(GFX) $< $@ -num_colors 224
+
 graphics/title_screen/pokemon_logo.gbapal: %.gbapal: %.pal
 	$(GFX) $< $@ -num_colors 224
 
