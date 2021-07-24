@@ -466,3 +466,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_RS_BRENDAN] = sAnims_RubySapphireBrendan,
     [TRAINER_PIC_RS_MAY] = sAnims_RubySapphireMay,
 };
+
+const union AnimCmd *const gTrainerFrontAnims_TrainerSpriteNoAnim[] = {
+    sAnim_GeneralFrame0,
+};

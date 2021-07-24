@@ -89,6 +89,9 @@ static const struct CombinedMove sCombinedMoves[2] =
     {0xFFFF, 0xFFFF, 0xFFFF}
 };
 
+extern const union AnimCmd *const gTrainerFrontAnims_TrainerSpriteNoAnim[];
+
+
 #define SPECIES_TO_HOENN(name)      [SPECIES_##name - 1] = HOENN_DEX_##name
 #define SPECIES_TO_NATIONAL(name)   [SPECIES_##name - 1] = NATIONAL_DEX_##name
 #define HOENN_TO_NATIONAL(name)     [HOENN_DEX_##name - 1] = NATIONAL_DEX_##name
@@ -3647,7 +3650,8 @@ void SetMultiuseSpriteTemplateToTrainerBack(u16 trainerSpriteId, u8 battlerPosit
             gMultiuseSpriteTemplate = gMonSpritesGfxPtr->templates[battlerPosition];
         else
             gMultiuseSpriteTemplate = gBattlerSpriteTemplates[battlerPosition];
-        gMultiuseSpriteTemplate.anims = gTrainerFrontAnimsPtrTable[trainerSpriteId];
+        gMultiuseSpriteTemplate.anims = gTrainerFrontAnims_TrainerSpriteNoAnim;
+        // gMultiuseSpriteTemplate.anims = gTrainerFrontAnimsPtrTable[trainerSpriteId];
     }
 }
 
@@ -3659,7 +3663,8 @@ void SetMultiuseSpriteTemplateToTrainerFront(u16 arg0, u8 battlerPosition)
         gMultiuseSpriteTemplate = gBattlerSpriteTemplates[battlerPosition];
 
     gMultiuseSpriteTemplate.paletteTag = arg0;
-    gMultiuseSpriteTemplate.anims = gTrainerFrontAnimsPtrTable[arg0];
+    // gMultiuseSpriteTemplate.anims = gTrainerFrontAnimsPtrTable[arg0];
+    gMultiuseSpriteTemplate.anims = gTrainerFrontAnims_TrainerSpriteNoAnim;
 }
 
 static void EncryptBoxMon(struct BoxPokemon *boxMon)
