@@ -450,7 +450,7 @@ const u32 gMonFrontPic_DuckboxGang[] = INCBIN_U32("graphics/pokemon/duckboxgang/
 const u32 gMonFrontPic_Marc[] = INCBIN_U32("graphics/pokemon/marc/anim_front.4bpp.lz");
 const u32 gMonFrontPic_BigDuckus[] = INCBIN_U32("graphics/pokemon/bigduckus/anim_front.4bpp.lz");
 const u32 gMonFrontPic_ButtonBari[] = INCBIN_U32("graphics/pokemon/buttonbari/anim_front.4bpp.lz");
-const u32 gMonFrontPic_DuckBot666[] = INCBIN_U32("graphics/pokemon/duck/anim_front.4bpp.lz");
+const u32 gMonFrontPic_DuckBot666[] = INCBIN_U32("graphics/pokemon/duckbot666/anim_front.4bpp.lz");
 
 
 
