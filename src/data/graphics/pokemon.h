@@ -3180,9 +3180,9 @@ const u32 gMonStillFrontPic_DuckBoxV4[] = INCBIN_U32("graphics/pokemon/duck/fron
 const u8 gMonIcon_DuckBoxV4[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_DuckBoxV4[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
-const u32 gMonPalette_DuckBoxV5[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
-const u32 gMonBackPic_DuckBoxV5[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
-const u32 gMonShinyPalette_DuckBoxV5[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
+const u32 gMonPalette_DuckBoxV5[] = INCBIN_U32("graphics/pokemon/duckboxv5/normal.gbapal.lz");
+const u32 gMonBackPic_DuckBoxV5[] = INCBIN_U32("graphics/pokemon/duckboxv5/back.4bpp.lz");
+const u32 gMonShinyPalette_DuckBoxV5[] = INCBIN_U32("graphics/pokemon/duckboxv5/shiny.gbapal.lz");
 const u32 gMonStillFrontPic_DuckBoxV5[] = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
 const u8 gMonIcon_DuckBoxV5[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_DuckBoxV5[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
