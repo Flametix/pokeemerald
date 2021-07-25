@@ -4646,7 +4646,9 @@ static const union AnimCmd sAnim_GLASSEDUCK_1[] =
 
 static const union AnimCmd sAnim_3DUCK_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_FRAME(1, 50),
+    ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
 
@@ -4665,6 +4667,8 @@ static const union AnimCmd sAnim_DAGGERDUCK_1[] =
 static const union AnimCmd sAnim_SWORDUCK_1[] =
 {
     ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(1, 36),
+    ANIMCMD_FRAME(0, 10),
     ANIMCMD_END,
 };
 
@@ -4718,7 +4722,10 @@ static const union AnimCmd sAnim_DEADUCK_1[] =
 
 static const union AnimCmd sAnim_DUCCAR_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(1, 10),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(1, 10),
+    ANIMCMD_FRAME(0, 10),
     ANIMCMD_END,
 };
 
@@ -4796,7 +4803,9 @@ static const union AnimCmd sAnim_TETRIDUCK_1[] =
 
 static const union AnimCmd sAnim_VERT_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(0, 30),
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
 
@@ -4826,7 +4835,8 @@ static const union AnimCmd sAnim_DUCKBOXV4_1[] =
 
 static const union AnimCmd sAnim_DUCKBOXV5_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(1, 40),
+    ANIMCMD_FRAME(0, 5),
     ANIMCMD_END,
 };
 
@@ -4852,7 +4862,9 @@ static const union AnimCmd sAnim_ULTRABDUCK_1[] =
 
 static const union AnimCmd sAnim_DUCKLES_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(0, 7),
+    ANIMCMD_FRAME(1, 35),
+    ANIMCMD_FRAME(0, 10),
     ANIMCMD_END,
 };
 
@@ -4864,25 +4876,33 @@ static const union AnimCmd sAnim_DUCKBOXGANG_1[] =
 
 static const union AnimCmd sAnim_DUCKBOT666_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(1, 45),
+    ANIMCMD_FRAME(0, 10),
     ANIMCMD_END,
 };
 
 static const union AnimCmd sAnim_MARC_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(1, 25),
+    ANIMCMD_FRAME(0, 25),
+    ANIMCMD_FRAME(1, 25),
+    ANIMCMD_FRAME(0, 25),
     ANIMCMD_END,
 };
 
 static const union AnimCmd sAnim_BIGDUCKUS_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(1, 50),
+    ANIMCMD_FRAME(1, 50),
+    ANIMCMD_FRAME(0, 10),
     ANIMCMD_END,
 };
 
 static const union AnimCmd sAnim_BUTTONBARI_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(0, 7),
+    ANIMCMD_FRAME(1, 35),
+    ANIMCMD_FRAME(0, 10),
     ANIMCMD_END,
 };
 
