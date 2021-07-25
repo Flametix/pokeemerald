@@ -1287,7 +1287,8 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(PH_NURSE_BLEND, "PH-NURSE-BLEND") \
     X(PH_NURSE_HELD, "PH-NURSE-HELD") \
     X(PH_NURSE_SOLO, "PH-NURSE-SOLO") \
-	X(MUS_AKRILLIC, "Akrillic") 
+	X(MUS_AKRILLIC, "Akrillic") \
+    X(MUS_CHRISTMAS_DUCKS, "VS Xmas Ducks") \
 //16 char limit - PrintPaddedString
 #define SOUND_LIST_SE \
 	X(SE_STOP, "STOP") \
