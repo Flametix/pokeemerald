@@ -1529,9 +1529,9 @@ const u16 gTitleScreenEmeraldVersionPal[] = INCBIN_U16("graphics/title_screen/em
 const u32 gUnknown_08DDE458[] = INCBIN_U32("graphics/title_screen/title_screen1.bin.lz");
 
 //temp for demo
-const u32 gTitleScreenPokemonLogoGfx[] = INCBIN_U32("graphics/title_screen/demo_pokemon_logo.8bpp.lz");
+const u32 gTitleScreenPokemonLogoGfx[] = INCBIN_U32("graphics/title_screen/pokemon_logo.8bpp.lz");
 
-const u32 gTitleScreenEmeraldVersionGfx[] = INCBIN_U32("graphics/title_screen/demo_emerald_version.8bpp.lz");
+const u32 gTitleScreenEmeraldVersionGfx[] = INCBIN_U32("graphics/title_screen/emerald_version.8bpp.lz");
 
 const u16 gTitleScreenPressStartPal[] = INCBIN_U16("graphics/title_screen/press_start.gbapal");
 const u32 gTitleScreenPressStartGfx[] = INCBIN_U32("graphics/title_screen/press_start.4bpp.lz");
