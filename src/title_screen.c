@@ -37,9 +37,6 @@
 #define A_B_START_SELECT (A_BUTTON | B_BUTTON | START_BUTTON | SELECT_BUTTON)
 #define SOUND_CHECK_BUTTON_COMBO (R_BUTTON | DPAD_UP)
 
-extern struct MusicPlayerInfo gMPlayInfo_BGM;
-
-// this file's functions
 static void MainCB2(void);
 static void Task_TitleScreenPhase1(u8);
 static void Task_TitleScreenPhase2(u8);
@@ -361,12 +358,12 @@ static void SpriteCB_VersionBannerLeft(struct Sprite *sprite)
     if (gTasks[sprite->data[1]].data[1] != 0)
     {
         sprite->oam.objMode = ST_OAM_OBJ_NORMAL;
-        sprite->pos1.y = VERSION_BANNER_Y_GOAL;
+        sprite->y = VERSION_BANNER_Y_GOAL;
     }
     else
     {
-        if (sprite->pos1.y != VERSION_BANNER_Y_GOAL)
-            sprite->pos1.y++;
+        if (sprite->y != VERSION_BANNER_Y_GOAL)
+            sprite->y++;
         if (sprite->data[0] != 0)
             sprite->data[0]--;
         SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[sprite->data[0]]);
@@ -378,12 +375,12 @@ static void SpriteCB_VersionBannerRight(struct Sprite *sprite)
     if (gTasks[sprite->data[1]].data[1] != 0)
     {
         sprite->oam.objMode = ST_OAM_OBJ_NORMAL;
-        sprite->pos1.y = VERSION_BANNER_Y_GOAL;
+        sprite->y = VERSION_BANNER_Y_GOAL;
     }
     else
     {
-        if (sprite->pos1.y != VERSION_BANNER_Y_GOAL)
-            sprite->pos1.y++;
+        if (sprite->y != VERSION_BANNER_Y_GOAL)
+            sprite->y++;
     }
 }
 
@@ -433,13 +430,13 @@ static void CreateCopyrightBanner(s16 x, s16 y)
 
 static void SpriteCB_PokemonLogoShine(struct Sprite *sprite)
 {
-    if (sprite->pos1.x < DISPLAY_WIDTH + 32)
+    if (sprite->x < DISPLAY_WIDTH + 32)
     {
         if (sprite->data[0]) // Flash background
         {
             u16 backgroundColor;
 
-            if (sprite->pos1.x < DISPLAY_WIDTH / 2)
+            if (sprite->x < DISPLAY_WIDTH / 2)
             {
                 // Brighten background color
                 if (sprite->data[1] < 31)
@@ -457,15 +454,15 @@ static void SpriteCB_PokemonLogoShine(struct Sprite *sprite)
             }
 
             backgroundColor = _RGB(sprite->data[1], sprite->data[1], sprite->data[1]);
-            if (sprite->pos1.x == DISPLAY_WIDTH / 2 + 12
-                || sprite->pos1.x == DISPLAY_WIDTH / 2 + 16
-                || sprite->pos1.x == DISPLAY_WIDTH / 2 + 20
-                || sprite->pos1.x == DISPLAY_WIDTH / 2 + 24)
+            if (sprite->x == DISPLAY_WIDTH / 2 + 12
+                || sprite->x == DISPLAY_WIDTH / 2 + 16
+                || sprite->x == DISPLAY_WIDTH / 2 + 20
+                || sprite->x == DISPLAY_WIDTH / 2 + 24)
                 gPlttBufferFaded[0] = RGB(24, 31, 12);
             else
                 gPlttBufferFaded[0] = backgroundColor;
         }
-        sprite->pos1.x += 4;
+        sprite->x += 4;
     }
     else
     {
@@ -476,8 +473,8 @@ static void SpriteCB_PokemonLogoShine(struct Sprite *sprite)
 
 static void SpriteCB_PokemonLogoShine2(struct Sprite *sprite)
 {
-    if (sprite->pos1.x < DISPLAY_WIDTH + 32)
-        sprite->pos1.x += 8;
+    if (sprite->x < DISPLAY_WIDTH + 32)
+        sprite->x += 8;
     else
         DestroySprite(sprite);
 }
@@ -553,14 +550,14 @@ void CB2_InitTitleScreen(void)
     case 1:
         // bg2
         LZ77UnCompVram(gTitleScreenPokemonLogoGfx, (void *)(BG_CHAR_ADDR(0)));
-        LZ77UnCompVram(gUnknown_08DE0644, (void *)(BG_SCREEN_ADDR(9)));
+        LZ77UnCompVram(gTitleScreenPokemonLogoTilemap, (void *)(BG_SCREEN_ADDR(9)));
         LoadPalette(gTitleScreenBgPalettes, 0, 0x1E0);
         // bg3
         LZ77UnCompVram(sTitleScreenRayquazaGfx, (void *)(BG_CHAR_ADDR(2)));
         LZ77UnCompVram(sTitleScreenRayquazaTilemap, (void *)(BG_SCREEN_ADDR(26)));
         // bg1
         LZ77UnCompVram(sTitleScreenCloudsGfx, (void *)(BG_CHAR_ADDR(3)));
-        LZ77UnCompVram(gUnknown_08DDE458, (void *)(BG_SCREEN_ADDR(27)));
+        LZ77UnCompVram(gTitleScreenCloudsTilemap, (void *)(BG_SCREEN_ADDR(27)));
         ScanlineEffect_Stop();
         ResetTasks();
         ResetSpriteData();
