@@ -10857,7 +10857,7 @@ Move_INFLATE: @Temp
 Move_TSUNAMISO: @Temp
 	createvisualtask AnimTask_CreateSurfWave, 2, FALSE
 	delay 24
-	panse_1B SE_M_SURF, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
+	panse SE_M_SURF, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
 	waitforvisualfinish
 	end
 
@@ -10915,7 +10915,7 @@ Move_METEOR_ASSAULT: @Temp: Superpower
 	loadspritegfx ANIM_TAG_METEOR
 	loadspritegfx ANIM_TAG_FLAT_ROCK
 	monbg ANIM_ATK_PARTNER
-	monbgprio_28 ANIM_ATTACKER
+	splitbgprio ANIM_ATTACKER
 	setalpha 12, 8
 	createsprite gSuperpowerOrbSpriteTemplate, ANIM_TARGET, 2, ANIM_ATTACKER
 	playsewithpan SE_M_MEGA_KICK, SOUND_PAN_ATTACKER
