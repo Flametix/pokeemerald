@@ -2550,9 +2550,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 }
                 break;
             case ABILITY_SUNRISE:
-                if (!(gBattleWeather & WEATHER_SUN_PERMANENT))
+                if (!(gBattleWeather & B_WEATHER_SUN_PERMANENT))
                 {
-                    gBattleWeather = (WEATHER_SUN_PERMANENT | WEATHER_SUN_TEMPORARY);
+                    gBattleWeather = (B_WEATHER_SUN_PERMANENT | B_WEATHER_SUN_TEMPORARY);
                     BattleScriptPushCursorAndCallback(BattleScript_DroughtActivates);
                     gBattleScripting.battler = battler;
                     effect++;
@@ -2561,7 +2561,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             case ABILITY_SNOW_WARNING:
                 if (!(gBattleWeather & B_WEATHER_HAIL_PERMANENT))
                 {
-                    gBattleWeather = (B_WEATHER_HAIL_PERMANENT | WEATHER_HAIL_TEMPORARY);
+                    gBattleWeather = (B_WEATHER_HAIL_PERMANENT | B_WEATHER_HAIL_TEMPORARY);
                     BattleScriptPushCursorAndCallback(BattleScript_SnowWarningActivates);
                     gBattleScripting.battler = battler;
                     effect++;
@@ -2655,7 +2655,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_REFILL: //clone of Rain Dish
-                    if (WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_RAIN_ANY)
+                    if (WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN)
                      && gBattleMons[battler].maxHP > gBattleMons[battler].hp)
                     {
                         gLastUsedAbility = ABILITY_REFILL;
