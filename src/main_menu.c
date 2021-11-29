@@ -1057,11 +1057,9 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
             default:
                 gPlttBufferUnfaded[0] = RGB_BLACK;
                 gPlttBufferFaded[0] = RGB_BLACK;
-                #ifndef NDEBUG
-                    if (gMain.heldKeysRaw & (R_BUTTON))
-                        gTasks[taskId].func = Task_NewGameSkipSpeech;
-                    else
-                #endif
+                if (gMain.heldKeysRaw & (L_BUTTON | R_BUTTON))
+                    gTasks[taskId].func = Task_NewGameSkipSpeech;
+                else
                     gTasks[taskId].func = Task_NewGameBirchSpeech_Init;
                 break;
             case ACTION_CONTINUE:
