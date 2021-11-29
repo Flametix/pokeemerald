@@ -4138,6 +4138,10 @@ static void IncrementGamesWithMaxPlayers(void)
     if (records->gamesWithMaxPlayers < 9999)
         records->gamesWithMaxPlayers++;
     #endif
+}
+
+void ShowPokemonJumpRecords(void)
+{
     u8 taskId = CreateTask(Task_ShowPokemonJumpRecords, 0);
     Task_ShowPokemonJumpRecords(taskId);
 }
