@@ -1351,6 +1351,7 @@ static void SaveHighestWinStreakRecords(struct RecordMixingHallRecords *mixHallR
         for (j = 0; j < FRONTIER_LVL_MODE_COUNT; j++)
             FillWinStreakRecords1P(gSaveBlock2Ptr->hallRecords1P[i][j], mixHallRecords->hallRecords1P[i][j]);
     }
+
     for (j = 0; j < FRONTIER_LVL_MODE_COUNT; j++)
         FillWinStreakRecords2P(gSaveBlock2Ptr->hallRecords2P[j], mixHallRecords->hallRecords2P[j]);
     #endif

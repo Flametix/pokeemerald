@@ -4110,7 +4110,6 @@ void ResetPokemonJumpRecords(void)
     records->unused2 = 0;
     records->unused1 = 0;
     #endif
-
 }
 
 static bool32 TryUpdateRecords(u32 jumpScore, u16 jumpsInRow, u16 excellentsInRow)
@@ -4130,7 +4129,6 @@ static bool32 TryUpdateRecords(u32 jumpScore, u16 jumpsInRow, u16 excellentsInRo
     #else
     return FALSE;
     #endif
-
 }
 
 static void IncrementGamesWithMaxPlayers(void)
@@ -4140,11 +4138,6 @@ static void IncrementGamesWithMaxPlayers(void)
     if (records->gamesWithMaxPlayers < 9999)
         records->gamesWithMaxPlayers++;
     #endif
-
-}
-
-void ShowPokemonJumpRecords(void)
-{
     u8 taskId = CreateTask(Task_ShowPokemonJumpRecords, 0);
     Task_ShowPokemonJumpRecords(taskId);
 }

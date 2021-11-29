@@ -30,6 +30,24 @@
                                         
                                         //grand total: 4086
 
+// free saveblock 1 defines
+#define FREE_EXTRA_SEEN_FLAGS           //free up extra pokedex seen flags. Frees up 104 bytes
+#define FREE_FIELD_3598                 //frees up unused saveblock data. 384 bytes
+//#define FREE_TRAINER_HILL               //frees up trainer hill data. 28 bytes.       WARNING THIS HAS BEEN SHOWN TO BREAK MULTI BATTLES
+#define FREE_MYSTERY_EVENT_BUFFERS      //frees up mystery event and ramScript. roughly 1880 bytes
+#define FREE_MATCH_CALL                 //frees up match call data. 104 bytes
+#define FREE_UNION_ROOM_CHAT            //frees up field unk3C88. 210 bytes
+#define FREE_ENIGMA_BERRY               //frees up enigma berry. 52 bytes
+#define FREE_LINK_BATTLE_RECORDS        //frees link battle record data. 88 bytes
+                                        // saveblock1 total: 1846 bytes
+//free saveblock 2 defines
+#define FREE_BATTLE_TOWER_E_READER      //frees up battle tower e reader trainer data. 188 bytes
+#define FREE_POKEMON_JUMP               //frees up pokemon jump data. 16 bytes
+#define FREE_RECORD_MIXING_HALL_RECORDS //frees up hall records for record mixing. 1032 bytes
+                                        // saveblock2 total: 1236 bytes
+                                        
+                                        //grand total: 3082
+
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");
 
@@ -508,7 +526,7 @@ struct SaveBlock2
     /*0xDC*/ struct Apprentice apprentices[APPRENTICE_COUNT];   //272 bytes
     /*0x1EC*/ struct BerryCrush berryCrush;
     #ifndef FREE_POKEMON_JUMP
-    /*0x1FC*/ struct PokemonJumpResults pokeJump;   //16 bytes
+    /*0x1FC*/ struct PokemonJumpRecords pokeJump;   //16 bytes
     #endif
     /*0x20C*/ struct BerryPickingResults berryPick;
     #ifndef FREE_RECORD_MIXING_HALL_RECORDS
@@ -1019,6 +1037,7 @@ struct SaveBlock1
     /*0x3030*/ struct DayCare daycare;
     #ifndef FREE_LINK_BATTLE_RECORDS
     /*0x3150*/ struct LinkBattleRecords linkBattleRecords;  //88 bytes
+    /*0x3150*/ struct LinkBattleRecords linkBattleRecords;
     #endif
     /*0x31A8*/ u8 giftRibbons[GIFT_RIBBONS_COUNT];
     /*0x31B3*/ struct ExternalEventData externalEventData;
@@ -1046,9 +1065,9 @@ struct SaveBlock1
     /*0x3B58*/ LilycoveLady lilycoveLady;
     /*0x3B98*/ struct TrainerNameRecord trainerNameRecords[20];
     #ifndef FREE_UNION_ROOM_CHAT
-    /*0x3C88*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21];      //210 bytes
+    /*0x3C88*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21]; //210 bytes
     #endif
-    /*0x3D5A*/ u8 unused_3D5A[10];    //10 bytes
+    /*0x3D5A*/ u8 unused_3D5A[10];
     #ifndef FREE_TRAINER_HILL
     /*0x3D64*/ struct SaveTrainerHill trainerHill;  //12 bytes
     #endif
