@@ -2561,7 +2561,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 }
                 GetMonData(&gEnemyParty[gBattleStruct->wildVictorySong], MON_DATA_NICKNAME, text);
                 gBattleStruct->wildVictorySong = 0;
-                StringGetEnd10(text);
+                StringGet_Nickname(text);
                         toCpy = text;
                 break;
             case B_TXT_CURRENT_MOVE: // current move name
