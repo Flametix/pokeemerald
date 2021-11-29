@@ -9392,7 +9392,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM21_FRUSTRATION)
-                                        | TMHM(TM22_SOLARBEAM)
+                                        | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
