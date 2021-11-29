@@ -2,6 +2,7 @@
 #include "malloc.h"
 #include "battle_pyramid.h"
 #include "berry.h"
+#include "debug.h"
 #include "decoration.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -4625,10 +4626,10 @@ u8 GetCollisionAtCoords(struct ObjectEvent *objectEvent, s16 x, s16 y, u32 dir)
 {
     u8 direction = dir;
 
-#ifndef NDEBUG //DEBUG
-    if (FlagGet(FLAG_SYS_NO_COLLISION))
-        return COLLISION_NONE;
-#endif //
+    #ifdef TX_DEBUGGING //DEBUG
+        if (FlagGet(FLAG_SYS_NO_COLLISION))
+            return COLLISION_NONE;
+    #endif //
 
     if (IsCoordOutsideObjectEventMovementRange(objectEvent, x, y))
         return COLLISION_OUTSIDE_RANGE;
