@@ -1290,6 +1290,7 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
 	X(MUS_AKRILLIC, "Akrillic") \
     X(MUS_CHRISTMAS_DUCKS, "VS Xmas Ducks") \
     X(MUS_SCARLET_ROSE, "Scarlet Rose") \
+    X(MUS_SOME_WIND, "Some Wind") \
 //16 char limit - PrintPaddedString
 #define SOUND_LIST_SE \
 	X(SE_STOP, "STOP") \

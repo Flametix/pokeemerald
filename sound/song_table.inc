@@ -614,6 +614,7 @@ gSongTable::
 	song akrillic, 0, 0
 	song christmas, 0, 0
 	song scarletrose, 0, 0
+	song some_wind, 0, 0
 
 	.align 2
 dummy_song_header:

@@ -545,9 +545,10 @@
 #define MUS_AKRILLIC                610 // MIDI test
 #define MUS_CHRISTMAS_DUCKS         611 // demo
 #define MUS_SCARLET_ROSE            612
+#define MUS_SOME_WIND               613
 
 #define MAX_SFX 269
-#define MAX_SONGS 612 //update for sound test
+#define MAX_SONGS 613 //update for sound test
 #define END_MUS                     MAX_SONGS
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
