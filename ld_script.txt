@@ -1233,6 +1233,7 @@ SECTIONS {
         sound/songs/midi/ph_nurse_solo.o(.rodata);
         sound/songs/midi/akrillic.o(.rodata);
         sound/songs/midi/christmas.o(.rodata);
+        sound/songs/midi/scarletrose.o(.rodata);
     } =0
 
     lib_rodata :

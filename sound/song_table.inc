@@ -613,6 +613,7 @@ gSongTable::
 	song ph_nurse_solo, 2, 2
 	song akrillic, 0, 0
 	song christmas, 0, 0
+	song scarletrose, 0, 0
 
 	.align 2
 dummy_song_header:

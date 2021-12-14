@@ -9,6 +9,9 @@ $(MID_SUBDIR)/akrillic.s: %.s: %.mid
 $(MID_SUBDIR)/christmas.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V084
 
+$(MID_SUBDIR)/scarletrose.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V084
+
 $(MID_SUBDIR)/mus_aqua_magma_hideout.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G076 -V084
 
