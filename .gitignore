@@ -38,3 +38,4 @@ porymap.project.cfg
 mgba.sh
 *.diff
 *.sym
+*.js
