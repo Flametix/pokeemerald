@@ -572,3 +572,10 @@ gMetatiles_DemoChristmasDucks::
 	.align 1
 gMetatileAttributes_DemoChristmasDucks::
 	.incbin "data/tilesets/secondary/demochristmasducks/metatile_attributes.bin"
+	.align 1
+gMetatiles_Studios::
+	.incbin "data/tilesets/secondary/studios/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Studios::
+	.incbin "data/tilesets/secondary/studios/metatile_attributes.bin"

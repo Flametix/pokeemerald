@@ -1769,3 +1769,23 @@ gTilesetPalettes_DemoChristmasDucks::
 	.align 2
 gTilesetTiles_DemoChristmasDucks::
 	.incbin "data/tilesets/secondary/demochristmasducks/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_Studios::
+	.incbin "data/tilesets/secondary/studios/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/studios/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_Studios::
+	.incbin "data/tilesets/secondary/studios/tiles.4bpp.lz"

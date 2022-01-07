@@ -852,3 +852,14 @@ gTileset_DemoChristmasDucks::
 	.4byte gMetatiles_DemoChristmasDucks
 	.4byte gMetatileAttributes_DemoChristmasDucks
 	.4byte NULL
+
+	.align 2
+gTileset_Studios::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Studios
+	.4byte gTilesetPalettes_Studios
+	.4byte gMetatiles_Studios
+	.4byte gMetatileAttributes_Studios
+	.4byte NULL
