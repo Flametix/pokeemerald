@@ -1061,3 +1061,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/DemoChristmasDucks/scripts.inc"
 
 	.include "data/maps/DemoEndRoom/scripts.inc"
+
+	.include "data/maps/MoonTown/scripts.inc"

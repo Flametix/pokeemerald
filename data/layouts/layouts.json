@@ -4430,6 +4430,16 @@
       "secondary_tileset": "gTileset_DemoRoom",
       "border_filepath": "data/layouts/DemoEndRoom/border.bin",
       "blockdata_filepath": "data/layouts/DemoEndRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOON_TOWN",
+      "name": "MoonTown_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/MoonTown/border.bin",
+      "blockdata_filepath": "data/layouts/MoonTown/map.bin"
     }
   ]
 }
