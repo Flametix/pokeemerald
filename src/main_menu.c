@@ -1264,7 +1264,7 @@ static void HighlightSelectedMainMenuItem(u8 menuType, u8 selectedMenuItem, s16 
 #define tMaySpriteId data[11]
 
 // DEBUG from TPP Trick or Treat house
-extern u16 gTrainerId;
+extern u16 sTrainerId;
 static void Task_NewGameSkipSpeech(u8 taskId)
 {
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
@@ -1281,7 +1281,7 @@ static void Task_NewGameSkipSpeech(u8 taskId)
         u16 rng = Random();
         gSaveBlock2Ptr->playerGender = (rng & 0xFF) % 1;
         NewGameBirchSpeech_SetDefaultPlayerName((rng >> 8) % 20);
-        gTrainerId = Random();
+        sTrainerId = Random();
     }
 
     FadeOutBGM(4);
