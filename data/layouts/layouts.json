@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/MoonTown/border.bin",
       "blockdata_filepath": "data/layouts/MoonTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_STUDIOS_CITY",
+      "name": "StudiosCity_Layout",
+      "width": 30,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Studios",
+      "border_filepath": "data/layouts/StudiosCity/border.bin",
+      "blockdata_filepath": "data/layouts/StudiosCity/map.bin"
     }
   ]
 }
