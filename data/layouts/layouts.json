@@ -4444,12 +4444,22 @@
     {
       "id": "LAYOUT_STUDIOS_CITY",
       "name": "StudiosCity_Layout",
-      "width": 30,
-      "height": 40,
+      "width": 25,
+      "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Studios",
       "border_filepath": "data/layouts/StudiosCity/border.bin",
       "blockdata_filepath": "data/layouts/StudiosCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_STUDIOS_ROUTE",
+      "name": "StudiosRoute_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/StudiosRoute/border.bin",
+      "blockdata_filepath": "data/layouts/StudiosRoute/map.bin"
     }
   ]
 }
