@@ -282,6 +282,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_TrainerHill_Door_Elevator_Lobby,              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillLobbyElevator, sDoorAnimPalettes_TrainerHillLobbyElevator},
     {METATILE_TrainerHill_Door_Elevator_Roof,               DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},
     {METATILE_Studios_Door,                                 DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_DuckWorldStudios, sDoorAnimPalettes_DuckWorldStudios},
+    {METATILE_Studios_Door_2,                               DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_DuckWorldStudios, sDoorAnimPalettes_DuckWorldStudios},
 };
 // Note: each door tile has to have a unique id across all tilesets apparently because it checks for the first one
 
