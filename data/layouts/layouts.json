@@ -4460,6 +4460,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/StudiosRoute/border.bin",
       "blockdata_filepath": "data/layouts/StudiosRoute/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_E3",
+      "name": "RouteE3_Layout",
+      "width": 40,
+      "height": 100,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Studios",
+      "border_filepath": "data/layouts/RouteE3/border.bin",
+      "blockdata_filepath": "data/layouts/RouteE3/map.bin"
     }
   ]
 }

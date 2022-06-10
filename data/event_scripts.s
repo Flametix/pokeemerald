@@ -1067,3 +1067,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/StudiosCity/scripts.inc"
 
 	.include "data/maps/StudiosRoute/scripts.inc"
+
+	.include "data/maps/RouteE3/scripts.inc"
