@@ -5196,4 +5196,76 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 2,
     },
 
+    [NATIONAL_DEX_DUCKLES] = 
+    {
+        .categoryName = _("SEXY"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_MARC] = 
+    {
+        .categoryName = _("CHRISTMAS"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_BIGDUCKUS] = 
+    {
+        .categoryName = _("CHRISTMAS"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_BUTTONBARI] = 
+    {
+        .categoryName = _("SEXY"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DUCKBOT666] = 
+    {
+        .categoryName = _("ROBOT"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_DUCKBOXGANG] = 
+    {
+        .categoryName = _("AWESOME"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
 };
