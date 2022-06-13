@@ -4724,6 +4724,14 @@ static const union AnimCmd sAnim_DEADUCK_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_DUCKROLL_1[] =
+{
+    ANIMCMD_FRAME(1, 10),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(1, 10),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_END,
+};
 static const union AnimCmd sAnim_DUCCAR_1[] =
 {
     ANIMCMD_FRAME(1, 10),
@@ -4931,6 +4939,18 @@ static const union AnimCmd sAnim_BUTTONBARI_1[] =
     ANIMCMD_FRAME(0, 7),
     ANIMCMD_FRAME(1, 35),
     ANIMCMD_FRAME(0, 10),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_FARFETCHD_GALAR_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_SIRFETCHD_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
@@ -7409,6 +7429,21 @@ static const union AnimCmd *const sAnims_BUTTONBARI[] ={
     sAnim_BUTTONBARI_1,
 };
 
+static const union AnimCmd *const sAnims_DUCKROLL[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DUCKROLL_1,
+};
+
+static const union AnimCmd *const sAnims_FARFETCHD_GALAR[] ={
+    sAnim_GeneralFrame0,
+    sAnim_FARFETCHD_GALAR_1,
+};
+
+static const union AnimCmd *const sAnims_SIRFETCHD[] ={
+    sAnim_GeneralFrame0,
+    sAnim_SIRFETCHD_1,
+};
+
 static const union AnimCmd *const sAnims_EGG[] ={
     sAnim_GeneralFrame0,
     sAnim_EGG_1,
@@ -8016,6 +8051,9 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(MARC),
     ANIM_CMD(BIGDUCKUS),
     ANIM_CMD(BUTTONBARI),
+    ANIM_CMD(DUCKROLL),
+    ANIM_CMD(FARFETCHD_GALAR),
+    ANIM_CMD(SIRFETCHD),
 
     ANIM_CMD(EGG),
     ANIM_CMD(UNOWN_B),

@@ -2066,268 +2066,268 @@ const struct MonCoords gMonFrontPicCoords[] =
     },
     [SPECIES_LEAFDUCK] =
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_LEAFDUCK2] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_LEAFDUCK3] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_FLAMEDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_FLAMEINGO] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_XENOPH] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_WATERDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_WATERDUCK2] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_WATERDUCK3] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_GLASSEDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_3DUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_SUNDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_DAGGERDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_SWORDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_PINGEDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_GOKUDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_SANDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_MONODUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_PETERDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_INVERTDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_PENGUIDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_DEADUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_DUCCAR] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_BEEDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_GHOSTEDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_FLYINGDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_FLYDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_ZOMBIDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_HELLDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_POTDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_WEEDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_BAKEDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_GOLDDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_TOXIDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_TETRIDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_VERT] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_DUCKBOXV1] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_DUCKBOXV2] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_DUCKBOXV3] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_DUCKBOXV4] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_DUCKBOXV5] = 
     {
-        .size = 0x88,
+        .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 1,
     },
     [SPECIES_BUBCARL] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_BUBBERDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_ULTRABDUCK] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_DUCKLES] = 
     {
-        .size = 0x45,
-        .y_offset = 0x0e,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 12,
     },
     [SPECIES_DUCKBOXGANG] = 
     {
-        .size = 0x88,
+        .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 1,
     },
     [SPECIES_DUCKBOT666] = 
     {
-        .size = 0x88,
+        .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 9,
     },
     [SPECIES_MARC] = 
     {
-        .size = 0x45,
+        .size = MON_COORDS_SIZE(42, 43),
         .y_offset = 9,
     },
     [SPECIES_BIGDUCKUS] = 
     {
-        .size = 0x45,
+        .size = MON_COORDS_SIZE(42, 43),
         .y_offset = 9,
     },
     [SPECIES_BUTTONBARI] = 
     {
-        .size = 0x45,
+        .size = MON_COORDS_SIZE(42, 43),
         .y_offset = 9,
     },
     [SPECIES_DUCKROLL] = 
     {
-        .size = 0x45,
-        .y_offset = 9,
+        .size = MON_COORDS_SIZE(42, 43),
+        .y_offset = 13,
     },
     [SPECIES_FARFETCHD_GALAR] = 
     {
-        .size = 0x45,
+        .size = MON_COORDS_SIZE(64, 48),
         .y_offset = 9,
     },
     [SPECIES_SIRFETCHD] = 
     {
-        .size = 0x45,
-        .y_offset = 9,
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
     },
     [SPECIES_EGG] =
     {

@@ -5040,6 +5040,18 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
+    [NATIONAL_DEX_DUCKROLL] = 
+    {
+        .categoryName = _("WHEEL"),
+        .height = 5,
+        .weight = 12,
+        .description = gDuckPokedexText,
+        .pokemonScale = 69,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
     [NATIONAL_DEX_DUCCAR] = 
     {
         .categoryName = _("CAR"),
@@ -5158,6 +5170,30 @@ const struct PokedexEntry gPokedexEntries[] =
         .pokemonOffset = 0,
         .trainerScale = 256,
         .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_FARFETCHD_GALAR] =
+    {
+        .categoryName = _("WILD DUCK"),
+        .height = 8,
+        .weight = 420,
+        .description = gFarfetchdPokedexText,
+        .pokemonScale = 330,
+        .pokemonOffset = 2,
+        .trainerScale = 293,
+        .trainerOffset = 2,
+    },
+
+    [NATIONAL_DEX_SIRFETCHD] =
+    {
+        .categoryName = _("WILD DUCK"),
+        .height = 8,
+        .weight = 1170,
+        .description = gFarfetchdPokedexText,
+        .pokemonScale = 330,
+        .pokemonOffset = 2,
+        .trainerScale = 293,
+        .trainerOffset = 2,
     },
 
 };
