@@ -3077,13 +3077,13 @@ extern const u32 gMonStillFrontPic_Swanna[];
 extern const u8 gMonIcon_Swanna[];
 extern const u8 gMonFootprint_Swanna[];
 
-extern const u32 gMonFrontPic_FarfetchdG[];
-extern const u32 gMonPalette_FarfetchdG[];
-extern const u32 gMonBackPic_FarfetchdG[];
-extern const u32 gMonShinyPalette_FarfetchdG[];
-extern const u32 gMonStillFrontPic_FarfetchdG[];
-extern const u8 gMonIcon_FarfetchdG[];
-extern const u8 gMonFootprint_FarfetchdG[];
+extern const u32 gMonFrontPic_FarfetchdGalar[];
+extern const u32 gMonPalette_FarfetchdGalar[];
+extern const u32 gMonBackPic_FarfetchdGalar[];
+extern const u32 gMonShinyPalette_FarfetchdGalar[];
+extern const u32 gMonStillFrontPic_FarfetchdGalar[];
+extern const u8 gMonIcon_FarfetchdGalar[];
+extern const u8 gMonFootprint_FarfetchdGalar[];
 
 extern const u32 gMonFrontPic_Sirfetchd[];
 extern const u32 gMonPalette_Sirfetchd[];
@@ -3220,6 +3220,14 @@ extern const u32 gMonShinyPalette_DuckBot666[];
 extern const u32 gMonStillFrontPic_DuckBot666[];
 extern const u8  gMonIcon_DuckBot666[];
 extern const u8  gMonFootprint_DuckBot666[];
+
+extern const u32 gMonFrontPic_Duckroll[];
+extern const u32 gMonPalette_Duckroll[];
+extern const u32 gMonBackPic_Duckroll[];
+extern const u32 gMonShinyPalette_Duckroll[];
+extern const u32 gMonStillFrontPic_Duckroll[];
+extern const u8  gMonIcon_Duckroll[];
+extern const u8  gMonFootprint_Duckroll[];
 
 extern const u32 gMonPic_Egg[];
 extern const u32 gMonPalette_Egg[];
