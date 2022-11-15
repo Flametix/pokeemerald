@@ -5598,7 +5598,7 @@ static void PrintMonHeight(u16 height, u8 left, u8 top)
         PrintInfoScreenText(buffer, left, top);
     #else
         PrintInfoScreenText(gText_EmptyHeight, left, top);
-        UnusedPrintDecimalNum(WIN_INFO, height, left, top);
+        PrintDecimalNum(WIN_INFO, height, left, top);
     #endif
 }
 
@@ -5661,6 +5661,6 @@ static void PrintMonWeight(u16 weight, u8 left, u8 top)
         PrintInfoScreenText(buffer, left, top);
     #else
         PrintInfoScreenText(gText_EmptyWeight, left, top);
-        UnusedPrintDecimalNum(WIN_INFO, weight, left, top);
+        PrintDecimalNum(WIN_INFO, weight, left, top);
     #endif    
 }
