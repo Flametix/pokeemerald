@@ -4470,6 +4470,16 @@
       "secondary_tileset": "gTileset_Studios",
       "border_filepath": "data/layouts/RouteE3/border.bin",
       "blockdata_filepath": "data/layouts/RouteE3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_FE",
+      "name": "RouteFE_Layout",
+      "width": 23,
+      "height": 21,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/RouteFE/border.bin",
+      "blockdata_filepath": "data/layouts/RouteFE/map.bin"
     }
   ]
 }
