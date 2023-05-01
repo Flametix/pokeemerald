@@ -1449,6 +1449,22 @@ static const u8 sEarthquackDescription[] = _(
     "A powerful quack that tears\n"
     "open the ground.");     
 
+static const u8 sPlayRoughDescription[] = _(
+    "Plays roughly with the foe.\n"
+    "May lower foe's ATTACK.");
+
+static const u8 sMoonblastDescription[] = _(
+    "Attacks with power from the\n"
+    "moon. May lower SP. ATK.");
+
+static const u8 sDazzlingGleamDescription[] = _(
+    "Emits a dazzling flash to\n"
+    "damage foes.");
+
+static const u8 sBabyDollEyesDescription[] = _(
+    "Stares with baby-doll eyes\n"
+    "to lower foe's ATTACK.");
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -1814,5 +1830,8 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_DRAINING_KISS - 1] = sDrainingKissDescription,
     [MOVE_ASTRAL_BLADE - 1] = sAstralBladeDescription,
     [MOVE_EARTHQUACK - 1] = sEarthquackDescription,
-
+    [MOVE_PLAY_ROUGH - 1] = sPlayRoughDescription,
+    [MOVE_MOONBLAST - 1] = sMoonblastDescription,
+    [MOVE_DAZZLING_GLEAM - 1] = sDazzlingGleamDescription,
+    [MOVE_BABY_DOLL_EYES - 1] = sBabyDollEyesDescription,
 };

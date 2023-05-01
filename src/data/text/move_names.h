@@ -363,5 +363,9 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_DRAINING_KISS] = _("DrainingKiss"),
     [MOVE_ASTRAL_BLADE] = _("Astral Blade"),
     [MOVE_EARTHQUACK] = _("Earthquack"),
+    [MOVE_PLAY_ROUGH] = _("Play Rough"),
+    [MOVE_MOONBLAST] = _("Moonblast"),
+    [MOVE_DAZZLING_GLEAM] = _("ShiningGleam"),
+    [MOVE_BABY_DOLL_EYES] = _("BabyDollEyes"),
 
 };

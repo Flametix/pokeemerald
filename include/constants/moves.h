@@ -364,8 +364,11 @@
 #define MOVE_DRAINING_KISS 360
 #define MOVE_ASTRAL_BLADE 361
 #define MOVE_EARTHQUACK 362
-
-#define MOVES_COUNT 363
+#define MOVE_PLAY_ROUGH 363
+#define MOVE_MOONBLAST 364
+#define MOVE_DAZZLING_GLEAM 365 // SHINING_GLEAM
+#define MOVE_BABY_DOLL_EYES 366
+#define MOVES_COUNT 367
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

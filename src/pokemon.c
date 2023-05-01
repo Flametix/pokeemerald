@@ -3442,7 +3442,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack /= 2, spAttack /= 2;
     if (attacker->ability == ABILITY_FOR_DE_QUEEN && GetGenderFromSpeciesAndPersonality(defender->species, defender->personality) == MON_FEMALE)
         attack *= 3/4, spAttack *= 3/4;
-    if (IS_TYPE_PHYSICAL(gBattleMoves[move]))
+    if (IS_MOVE_PHYSICAL(move))
     {
         if (gCritMultiplier == 2)
         {
@@ -3497,7 +3497,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (type == TYPE_MYSTERY)
         damage = 0; // is ??? type. does 0 damage.
 
-    if (IS_TYPE_SPECIAL(gBattleMoves[move]))
+    if (IS_MOVE_SPECIAL(move))
     {
         if (gCritMultiplier == 2)
         {
