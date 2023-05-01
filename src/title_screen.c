@@ -454,12 +454,12 @@ static void SpriteCB_PokemonLogoShine(struct Sprite *sprite)
             }
 
             backgroundColor = _RGB(sprite->data[1], sprite->data[1], sprite->data[1]);
-            if (sprite->x == DISPLAY_WIDTH / 2 + 12
-                || sprite->x == DISPLAY_WIDTH / 2 + 16
-                || sprite->x == DISPLAY_WIDTH / 2 + 20
-                || sprite->x == DISPLAY_WIDTH / 2 + 24)
-                gPlttBufferFaded[0] = RGB(24, 31, 12);
-            else
+            // if (sprite->x == DISPLAY_WIDTH / 2 + 12
+            //     || sprite->x == DISPLAY_WIDTH / 2 + 16
+            //     || sprite->x == DISPLAY_WIDTH / 2 + 20
+            //     || sprite->x == DISPLAY_WIDTH / 2 + 24)
+            //     gPlttBufferFaded[0] = RGB(24, 31, 12);
+            // else
                 gPlttBufferFaded[0] = backgroundColor;
         }
         sprite->x += 4;
@@ -769,7 +769,7 @@ static void Task_TitleScreenPhase3(u8 taskId)
             gBattle_BG1_Y = gTasks[taskId].data[4] / 2;
             gBattle_BG1_X = 0;
         }
-        UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
+        // UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
         if ((gMPlayInfo_BGM.status & 0xFFFF) == 0)
         {
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_WHITEALPHA);
