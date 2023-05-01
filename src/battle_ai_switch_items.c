@@ -938,8 +938,8 @@ static bool8 ShouldUseItem(void)
             for (loop = 0; loop < PARTY_SIZE; loop++)
                 {
                     if (GetMonData(&party[loop], MON_DATA_HP) == 0
-                        && GetMonData(&party[loop], MON_DATA_SPECIES2) != SPECIES_NONE
-                        && GetMonData(&party[loop], MON_DATA_SPECIES2) != SPECIES_EGG)
+                        && GetMonData(&party[loop], MON_DATA_SPECIES_OR_EGG ) != SPECIES_NONE
+                        && GetMonData(&party[loop], MON_DATA_SPECIES_OR_EGG ) != SPECIES_EGG)
                     {
                         shouldUse = TRUE;
                         break;
