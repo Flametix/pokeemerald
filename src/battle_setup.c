@@ -46,6 +46,7 @@
 #include "constants/trainers.h"
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
+#include "debug.h"
 
 enum {
     TRANSITION_TYPE_NORMAL,
@@ -1396,6 +1397,9 @@ void BattleSetup_StartTrainerBattle_Debug(void)
 
 static void CB2_EndTrainerBattle(void)
 {
+    #if TX_DEBUG_SYSTEM_ENABLE == TRUE
+        gIsDebugBattle = FALSE;
+    #endif
     if (gTrainerBattleOpponent_A == TRAINER_SECRET_BASE)
     {
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
