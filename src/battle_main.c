@@ -732,6 +732,7 @@ static void CB2_InitBattleInternal(void)
             SetWildMonHeldItem();
         }
     }
+    gIsDebugBattle = FALSE;
 #endif
 
     gMain.inBattle = TRUE;
