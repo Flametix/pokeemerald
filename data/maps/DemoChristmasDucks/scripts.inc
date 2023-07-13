@@ -47,16 +47,14 @@ DemoChristmasDucks_EventScript_PostBattleSpeech::
 	end
 
 DemoChristmasDucks_Text_Battle_Intro:
-	.string "you! you and your ducks!! what are you\n"
-	.string "doing here?!?!?!?!$"
+	.string "good luck!$"
 
 DemoChristmasDucks_Text_Battle_Defeat:
-	.string "not even dcukbox culd save usz.,,,,$"
+	.string "dayum, nice one, ggs$"
 
 DemoChristmasDucks_Text_Battle_Post:
-	.string "You beat us. What do you want now? Go\n"
-	.string "home. We are still going to continue\l"
-	.string "Christmas, whether you like it or not.$"
+	.string "Congratulations on beating me!\n"
+	.string "Step through the door to see your reward...$"
 
 DemoChristmasDucks_EventScript_HideDoor::
 	setmetatile 6, 1, METATILE_DemoChristmasDucks_WINDOW1, 1

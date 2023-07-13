@@ -6727,7 +6727,7 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         case TRAINER_CLASS_DEMO:
-            return MUS_CHRISTMAS_DUCKS;
+            return MUS_VS_CHAMPION;
         default:
             return MUS_VS_TRAINER;
         }

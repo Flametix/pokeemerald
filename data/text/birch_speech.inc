@@ -1,6 +1,6 @@
 gText_Birch_Welcome::
 	.string "Hello welcome to pokemon bubber epic\n"
-	.string "special demo\p"
+	.string "special demo TWO\p"
 	.string "$"
 	@ .string "Hi! Sorry to keep you waiting!\p"
 	@ .string "Welcome to the world of POKéMON!\p"
@@ -16,15 +16,13 @@ gText_Birch_Pokemon::
 	.string "$"
 
 gText_Birch_MainSpeech::
-	.string "Domohead: finally you let me out of this\n"
-	.string "ball holy shit is it hard to breathe in\l"
-	.string "there\p"
-	.string "Anyway so to recap the duckpets\n"
-	.string "hit duckbot666 on the head so hard\l"
-	.string "that it flew back to the timeline it\l"
-	.string "came from\p"
-	.string "Now you'll be controlling the ducks\n"
-	.string "as they fuck up the christmas ducks\p"
+	.string "Domohead: hello it is i, the bastard\n"
+	.string "now trying to stop you\p"
+	.string "yeah i'm not gonna let you climb that\n"
+	.string "tower even though i have no incentive\l"
+	.string "not to just let you\p"
+	.string "Now you must face my elite team of\n"
+	.string "definitely all ducks.\p"
 	.string "$"
 	@ .string "This world is widely inhabited by\n"
 	@ .string "creatures known as POKéMON.\p"
@@ -44,18 +42,18 @@ gText_Birch_MainSpeech::
 
 gText_Birch_AndYouAre::
 	@ .string "And you are?$"
-	.string "But first choose yo fuckan trainer\p"
-	.string "$"
+	.string "But first uh.\n"
+	.string "Choose your player character$"
 
 gText_Birch_BoyOrGirl::
-	.string "Are you a boy?\n"
-	.string "Or are you a girl?$"
+	.string "Are you a Groudon?\n"
+	.string "Or are you a Groudon?$"
 
 gText_Birch_WhatsYourName::
 	@ .string "All right.\n"
 	@ .string "What's your name?$"
 	.string "Ok swag\n"
-	.string "Now put a name$"
+	.string "Now put an obligatory name ig$"
 
 gText_Birch_SoItsPlayer::
 	.string "So it's {PLAYER}{KUN}?$"
@@ -77,5 +75,5 @@ gText_Birch_AreYouReady::
 	@ .string "adventure, and friendships await!\p"
 	@ .string "Well, I'll be expecting you later.\n"
 	@ .string "Come see me in my POKéMON LAB.\p"
-	.string "Have fun in the demo\p"
+	.string "Have fun in the demo TWO\p"
 	.string "$"
