@@ -462,7 +462,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_DUCKBOT666] = _("DuckBot666"),
     [SPECIES_DUCKBOXGANG] = _("D-Box Gang"),
     [SPECIES_DUCKROLL] = _("Duckroll"),
-    [SPECIES_AVALUGG] = _("AVALUGG"),
+    [SPECIES_AVALUGG] = _("Avalugg"),
     [SPECIES_FARFETCHD_GALAR] = _("Farfetch'd"),
     [SPECIES_SIRFETCHD] = _("Sirfetch'd"),
 };
