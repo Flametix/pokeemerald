@@ -1131,8 +1131,7 @@ u16 GetRandomScaledFrontierTrainerId(u8 challengeNum, u8 battleNum)
     return trainerId;
 }
 
-// Unused
-static void GetRandomScaledFrontierTrainerIdRange(u8 challengeNum, u8 battleNum, u16 *trainerIdPtr, u8 *rangePtr)
+static void UNUSED GetRandomScaledFrontierTrainerIdRange(u8 challengeNum, u8 battleNum, u16 *trainerIdPtr, u8 *rangePtr)
 {
     u16 trainerId, range;
 
@@ -1786,7 +1785,7 @@ static void FillTrainerParty(u16 trainerId, u8 firstMonId, u8 monCount)
 }
 
 // Probably an early draft before the 'CreateApprenticeMon' was written.
-static void Unused_CreateApprenticeMons(u16 trainerId, u8 firstMonId)
+static void UNUSED Unused_CreateApprenticeMons(u16 trainerId, u8 firstMonId)
 {
     s32 i, j;
     u8 friendship = MAX_FRIENDSHIP;
@@ -1862,12 +1861,14 @@ static void FillFactoryFrontierTrainerParty(u16 trainerId, u8 firstMonId)
 
     if (trainerId < FRONTIER_TRAINERS_COUNT)
     {
-        u8 lvlMode = gSaveBlock2Ptr->frontier.lvlMode;
-        u8 battleMode = VarGet(VAR_FRONTIER_BATTLE_MODE);
     // By mistake Battle Tower's Level 50 challenge number is used to determine the IVs for Battle Factory.
     #ifdef BUGFIX
+        u8 lvlMode = gSaveBlock2Ptr->frontier.lvlMode;
+        u8 battleMode = VarGet(VAR_FRONTIER_BATTLE_MODE);
         u8 challengeNum = gSaveBlock2Ptr->frontier.factoryWinStreaks[battleMode][lvlMode] / FRONTIER_STAGES_PER_CHALLENGE;
     #else
+        u8 UNUSED lvlMode = gSaveBlock2Ptr->frontier.lvlMode;
+        u8 battleMode = VarGet(VAR_FRONTIER_BATTLE_MODE);
         u8 challengeNum = gSaveBlock2Ptr->frontier.towerWinStreaks[battleMode][FRONTIER_LVL_50] / FRONTIER_STAGES_PER_CHALLENGE;
     #endif
         if (gSaveBlock2Ptr->frontier.curChallengeBattleNum < FRONTIER_STAGES_PER_CHALLENGE - 1)
@@ -2238,7 +2239,7 @@ static void SaveTowerChallenge(void)
         SaveBattleTowerRecord();
 
     gSaveBlock2Ptr->frontier.challengeStatus = gSpecialVar_0x8005;
-    VarSet(VAR_TEMP_0, 0);
+    VarSet(VAR_TEMP_CHALLENGE_STATUS, 0);
     gSaveBlock2Ptr->frontier.challengePaused = TRUE;
     SaveGameFrontier();
 }
@@ -2316,7 +2317,7 @@ static void LoadMultiPartnerCandidatesData(void)
     u32 lvlMode, battleMode;
     s32 challengeNum;
     u32 species1, species2;
-    u32 level;
+    u32 UNUSED level;
     struct ObjectEventTemplate *objEventTemplates;
 
     objEventTemplates = gSaveBlock1Ptr->objectEventTemplates;
@@ -2499,7 +2500,7 @@ static void ShowPartnerCandidateMessage(void)
 {
     s32 i, j, partnerId;
     s32 monId;
-    s32 level = SetFacilityPtrsGetLevel();
+    s32 UNUSED level = SetFacilityPtrsGetLevel();
     u16 winStreak = GetCurrentFacilityWinStreak();
     s32 challengeNum = winStreak / FRONTIER_STAGES_PER_CHALLENGE;
     s32 k = gSpecialVar_LastTalked - 2;
@@ -2861,7 +2862,7 @@ static void AwardBattleTowerRibbons(void)
 
 // This is a leftover debugging function that is used to populate the E-Reader
 // trainer with the player's current data.
-static void FillEReaderTrainerWithPlayerData(void)
+static void UNUSED FillEReaderTrainerWithPlayerData(void)
 {
     #ifndef FREE_BATTLE_TOWER_E_READER
     struct BattleTowerEReaderTrainer *ereaderTrainer = &gSaveBlock2Ptr->frontier.ereaderTrainer;
@@ -3238,7 +3239,7 @@ void CalcApprenticeChecksum(struct Apprentice *apprentice)
     s32 i;
 
     apprentice->checksum = 0;
-    for (i = 0; i < (sizeof(struct Apprentice) - 4) / 4; i++)
+    for (i = 0; i < offsetof(struct Apprentice, checksum) / sizeof(u32); i++)
         apprentice->checksum += ((u32 *)apprentice)[i];
 }
 
@@ -3246,7 +3247,7 @@ static void ClearApprentice(struct Apprentice *apprentice)
 {
     s32 i;
 
-    for (i = 0; i < (sizeof(struct Apprentice)) / 4; i++)
+    for (i = 0; i < sizeof(struct Apprentice) / sizeof(u32); i++)
         ((u32 *)apprentice)[i] = 0;
     ResetApprenticeStruct(apprentice);
 }
@@ -3259,7 +3260,7 @@ static void ValidateApprenticesChecksums(void)
     {
         u32 *data = (u32 *) &gSaveBlock2Ptr->apprentices[i];
         u32 checksum = 0;
-        for (j = 0; j < (sizeof(struct Apprentice) - 4) / 4; j++)
+        for (j = 0; j < offsetof(struct Apprentice, checksum) / sizeof(u32); j++)
             checksum += data[j];
         if (gSaveBlock2Ptr->apprentices[i].checksum != checksum)
             ClearApprentice(&gSaveBlock2Ptr->apprentices[i]);
@@ -3569,7 +3570,7 @@ bool32 ValidateBattleTowerRecord(u8 recordId) // unused
     u32 *record = (u32 *)(&gSaveBlock2Ptr->frontier.towerRecords[recordId]);
     u32 checksum = 0;
     u32 hasData = 0;
-    for (i = 0; i < (sizeof(struct EmeraldBattleTowerRecord) - 4) / 4; i++) // - 4, because of the last fjeld bejng the checksum jtself.
+    for (i = 0; i < offsetof(struct EmeraldBattleTowerRecord, checksum) / sizeof(u32); i++)
     {
         checksum += record[i];
         hasData |= record[i];

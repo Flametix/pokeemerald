@@ -535,7 +535,7 @@ BattleScript_EffectEvasionDown::
 	setstatchanger STAT_EVASION, 1, TRUE
 BattleScript_EffectStatDown::
 	attackcanceler
-	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailedAtkStringPpReduce
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_FailedFromAtkString
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
 	ppreduce
@@ -1218,7 +1218,7 @@ BattleScript_EffectPsywave::
 
 BattleScript_EffectCounter::
 	attackcanceler
-	counterdamagecalculator BattleScript_ButItFailedAtkStringPpReduce
+	counterdamagecalculator BattleScript_FailedFromAtkString
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
 	ppreduce
@@ -1545,7 +1545,7 @@ BattleScript_EffectEndure::
 
 BattleScript_EffectSpikes::
 	attackcanceler
-	trysetspikes BattleScript_ButItFailedAtkStringPpReduce
+	trysetspikes BattleScript_FailedFromAtkString
 	attackstring
 	ppreduce
 	attackanimation
@@ -1802,7 +1802,7 @@ BattleScript_EffectPsychUp::
 
 BattleScript_EffectMirrorCoat::
 	attackcanceler
-	mirrorcoatdamagecalculator BattleScript_ButItFailedAtkStringPpReduce
+	mirrorcoatdamagecalculator BattleScript_FailedFromAtkString
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
 	ppreduce
@@ -2049,13 +2049,13 @@ BattleScript_AlreadyAtFullHp::
 
 BattleScript_EffectFakeOut::
 	attackcanceler
-	jumpifnotfirstturn BattleScript_ButItFailedAtkStringPpReduce
+	jumpifnotfirstturn BattleScript_FailedFromAtkString
 	setmoveeffect MOVE_EFFECT_FLINCH | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
 
-BattleScript_ButItFailedAtkStringPpReduce::
+BattleScript_FailedFromAtkString::
 	attackstring
-BattleScript_ButItFailedPpReduce::
+BattleScript_FailedFromPpReduce::
 	ppreduce
 BattleScript_ButItFailed::
 	pause B_WAIT_TIME_SHORT
@@ -2369,7 +2369,7 @@ BattleScript_EffectWish::
 BattleScript_EffectAssist::
 	attackcanceler
 	attackstring
-	assistattackselect BattleScript_ButItFailedPpReduce
+	assistattackselect BattleScript_FailedFromPpReduce
 	attackanimation
 	waitanimation
 	setbyte sB_ANIM_TURN, 0
@@ -2393,7 +2393,7 @@ BattleScript_EffectSuperpower::
 
 BattleScript_EffectMagicCoat::
 	attackcanceler
-	trysetmagiccoat BattleScript_ButItFailedAtkStringPpReduce
+	trysetmagiccoat BattleScript_FailedFromAtkString
 	attackstring
 	ppreduce
 	attackanimation
@@ -2544,7 +2544,7 @@ BattleScript_EffectGrudge::
 
 BattleScript_EffectSnatch::
 	attackcanceler
-	trysetsnatch BattleScript_ButItFailedAtkStringPpReduce
+	trysetsnatch BattleScript_FailedFromAtkString
 	attackstring
 	ppreduce
 	attackanimation
