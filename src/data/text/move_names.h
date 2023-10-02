@@ -367,5 +367,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_MOONBLAST] = _("Moonblast"),
     [MOVE_DAZZLING_GLEAM] = _("ShiningGleam"),
     [MOVE_BABY_DOLL_EYES] = _("BabyDollEyes"),
+    [MOVE_PRECIPICE_BLADES] = _("PrecipBlades"),
+    [MOVE_GLACIER_GALE] = _("Glacier Gale"),
 
 };

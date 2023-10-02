@@ -1465,6 +1465,10 @@ static const u8 sBabyDollEyesDescription[] = _(
     "Stares with baby-doll eyes\n"
     "to lower foe's ATTACK.");
 
+static const u8 sPrecipiceBladesDescription[] = _(
+    "Fearsome blades of stone\n"
+    "attack both foes.");
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -1834,4 +1838,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MOONBLAST - 1] = sMoonblastDescription,
     [MOVE_DAZZLING_GLEAM - 1] = sDazzlingGleamDescription,
     [MOVE_BABY_DOLL_EYES - 1] = sBabyDollEyesDescription,
+    [MOVE_PRECIPICE_BLADES - 1] = sPrecipiceBladesDescription,
 };

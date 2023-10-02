@@ -368,7 +368,9 @@
 #define MOVE_MOONBLAST 364
 #define MOVE_DAZZLING_GLEAM 365 // SHINING_GLEAM
 #define MOVE_BABY_DOLL_EYES 366
-#define MOVES_COUNT 367
+#define MOVE_PRECIPICE_BLADES 367
+#define MOVE_GLACIER_GALE 368
+#define MOVES_COUNT 369
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

@@ -383,6 +383,8 @@ gBattleAnims_Moves::
 	.4byte Move_MOONBLAST
 	.4byte Move_DAZZLING_GLEAM
 	.4byte Move_BABY_DOLL_EYES
+	.4byte Move_PRECIPICE_BLADES
+	.4byte Move_GLACIER_GALE
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -11137,3 +11139,89 @@ Move_BABY_DOLL_EYES:
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end
+
+Move_PRECIPICE_BLADES::
+	loadspritegfx ANIM_TAG_LARGE_SPIKE
+	loadspritegfx ANIM_TAG_FIRE_PLUME
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_LARGE_SPIKE, 0, 10, 10, 0x159F     @Blood orange
+	monbg ANIM_DEF_PARTNER
+	splitbgprio ANIM_TARGET
+	setalpha 12, 8
+	fadetobg 0x15
+	waitbgfadeout
+	createvisualtask AnimTask_PositionFissureBgOnBattler, 5, ANIM_TARGET, 5, -1
+	createvisualtask AnimTask_HorizontalShake, 5, ANIM_PLAYER_RIGHT, 10, 0x5
+	createvisualtask AnimTask_HorizontalShake, 5, ANIM_PLAYER_LEFT, 10, 0x5
+	playsewithpan SE_M_EARTHQUAKE, 0x0
+	createvisualtask AnimTask_IsTargetPlayerSide, 0x2
+	jumpargeq 0x7, ANIM_TARGET, PrecipiceBladesOpponent
+PrecipiceBladesPlayer:
+	createsprite gPrecipiceBladesSpikeTemplate, ANIM_ATTACKER, 3, ANIM_ATTACKER, -45, 5, 145, 0x0
+	delay 10
+	createsprite gPrecipiceBladesSpikeTemplate, ANIM_ATTACKER, 3, ANIM_ATTACKER, 10, 7, 135, 0x0
+	delay 10
+	createsprite gPrecipiceBladesSpikeTemplate, ANIM_ATTACKER, 4, ANIM_ATTACKER, -30, 15, 125, 0x0
+	delay 5
+	createsprite gPrecipiceBladesSpikeTemplate, ANIM_ATTACKER, 5, ANIM_ATTACKER, -10, 17, 120, 0x0
+PrecipiceBladesContinue:
+	delay 0x10
+	createsprite gPrecipiceBladesPlumeTemplate, ANIM_TARGET, 2, -15, 18, ANIM_TARGET
+	createsprite gPrecipiceBladesPlumeTemplate, ANIM_TARGET, 2, -15, 18, ANIM_DEF_PARTNER
+	delay 0x20
+	createsprite gPrecipiceBladesPlumeTemplate, ANIM_TARGET, 2, 15, 18, ANIM_TARGET
+	createsprite gPrecipiceBladesPlumeTemplate, ANIM_TARGET, 2, 15, 18, ANIM_DEF_PARTNER
+	delay 0x20
+	stopsound
+	playsewithpan SE_M_STRENGTH, SOUND_PAN_TARGET
+	createsprite gPrecipiceBladesLargeSpikeTemplate, ANIM_TARGET, 2, ANIM_TARGET, 0, -25, 40, 0x0
+	createsprite gPrecipiceBladesLargeSpikeTemplate, ANIM_TARGET, 2, ANIM_DEF_PARTNER, 0, -25, 40, 0x0
+	delay 0x6
+	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_TARGET, 2, ANIM_TARGET, -20, 0, 0x6, 0x1
+	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_TARGET, 2, ANIM_DEF_PARTNER, -20, 0, 0x6, 0x1
+	delay 0x22
+	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_TARGET, 2, ANIM_TARGET, 0x0, 0x6
+	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_TARGET, 2, ANIM_DEF_PARTNER, 0x0, 0x6
+	waitforvisualfinish
+	call UnsetPsychicBackground
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
+PrecipiceBladesOpponent:
+	createsprite gPrecipiceBladesSpikeTemplate, ANIM_ATTACKER, 67, ANIM_ATTACKER, 35, -5, 145, 0x0
+	delay 10
+	createsprite gPrecipiceBladesSpikeTemplate, ANIM_ATTACKER, 67, ANIM_ATTACKER, -20, -7, 135, 0x0
+	delay 10
+	createsprite gPrecipiceBladesSpikeTemplate, ANIM_ATTACKER, 68, ANIM_ATTACKER, 20, -15, 125, 0x0
+	delay 5
+	createsprite gPrecipiceBladesSpikeTemplate, ANIM_ATTACKER, 69, ANIM_ATTACKER, 0, -17, 120, 0x0
+	goto PrecipiceBladesContinue
+
+Move_GLACIER_GALE::
+	@ loadspritegfx ANIM_TAG_ROCKS @Rocks
+	@ loadspritegfx ANIM_TAG_DRAGON_ASCENT_FOE @White Rock Colour
+	@ monbg ANIM_TARGET
+	@ call MountainGaleIceRock
+	@ delay 0x6
+	@ call MountainGaleIceRock
+	@ delay 0x6
+	@ call MountainGaleIceRock
+	@ createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 4, 24, 1
+	@ playsewithpan SE_M_STRENGTH, SOUND_PAN_TARGET
+	@ delay 0x6
+	@ call MountainGaleIceRock
+	@ playsewithpan SE_M_STRENGTH, SOUND_PAN_TARGET
+	@ delay 0x6
+	@ call MountainGaleIceRock
+	@ playsewithpan SE_M_STRENGTH, SOUND_PAN_TARGET
+	@ delay 0x6
+	@ playsewithpan SE_M_STRENGTH, SOUND_PAN_TARGET
+	@ delay 0x6
+	@ playsewithpan SE_M_STRENGTH, SOUND_PAN_TARGET
+	@ waitforvisualfinish
+	@ clearmonbg ANIM_TARGET
+	@ end
+
+MountainGaleIceRock:
+	@ playsewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER
+	@ createsprite gSpriteTemplate_MountainGaleRock, ANIM_ATTACKER, 2, 0x14, 0xfff8, 0xfff8, 0xfff8, 0x14, 0xffe0
+	@ return

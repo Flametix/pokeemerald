@@ -226,6 +226,13 @@ void AnimWaterPulseRing(struct Sprite *sprite);
 // battle_anim_flying.c
 void DestroyAnimSpriteAfterTimer(struct Sprite *sprite);
 
+// battle_anim_fight.c
+void AnimBrickBreakWall_Step(struct Sprite *);
+
+// battle_anim_dragon.c
+extern const union AnimCmd *const gAnims_DragonRageFirePlume[];
+
+
 // battle_anim_smokescreen.c
 u8 SmokescreenImpact(s16 x, s16 y, bool8 persist);
 
