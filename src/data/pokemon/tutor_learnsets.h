@@ -38,6 +38,8 @@ static const u32 sTutorLearnsets[] =
 {
     [SPECIES_NONE]             = (0),
 
+    [SPECIES_AVALUGG]          = (TUTOR(MOVE_MEGA_PUNCH)),
+
     [SPECIES_BULBASAUR]        = (TUTOR(MOVE_SWORDS_DANCE)
                                 | TUTOR(MOVE_BODY_SLAM)
                                 | TUTOR(MOVE_DOUBLE_EDGE)

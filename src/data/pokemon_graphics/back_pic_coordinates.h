@@ -468,6 +468,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_BIGDUCKUS] =     {        .size = MON_COORDS_SIZE(44, 36),         .y_offset = 10,    },
     [SPECIES_BUTTONBARI] =     {        .size = MON_COORDS_SIZE(44, 36),         .y_offset = 10,    },
     [SPECIES_DUCKROLL] =     {        .size = MON_COORDS_SIZE(44, 36),         .y_offset = 10,    },
+    [SPECIES_AVALUGG]     = { .size = MON_COORDS_SIZE(64, 40), .y_offset = 12 },
     [SPECIES_FARFETCHD_GALAR] =     {        .size = MON_COORDS_SIZE(64, 48),         .y_offset = 8,    },
     [SPECIES_SIRFETCHD] =     {        .size = MON_COORDS_SIZE(64, 48),         .y_offset = 8,    },
     [SPECIES_EGG]         = { .size = MON_COORDS_SIZE(24, 48), .y_offset = 10 },

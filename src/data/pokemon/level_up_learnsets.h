@@ -5673,6 +5673,11 @@ static const u16 sDuckrollLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
+static const u16 sAvaluggLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_SPLASH),
+    LEVEL_UP_END
+};
+
 static const u16 sBeeduckLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
     LEVEL_UP_MOVE(10, MOVE_FURY_ATTACK),

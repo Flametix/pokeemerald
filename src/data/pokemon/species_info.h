@@ -12352,6 +12352,36 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
+    [SPECIES_AVALUGG] =
+    {
+        .baseHP        = 95,
+        .baseAttack    = 117,
+        .baseDefense   = 184,
+        .baseSpeed     = 28,
+        .baseSpAttack  = 44,
+        .baseSpDefense = 46,
+        .types = { TYPE_ICE, TYPE_ICE },
+        .catchRate = 55,
+        .expYield = 180,
+        .evYield_HP        = 0,
+        .evYield_Attack    = 0,
+        .evYield_Defense   = 2,
+        .evYield_SpAttack  = 0,
+        .evYield_SpDefense = 0,
+        .evYield_Speed     = 0,
+        .itemCommon = ITEM_NONE,
+        .itemRare = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_MINERAL },
+        .abilities = { ABILITY_OWN_TEMPO, ABILITY_OWN_TEMPO },
+        .bodyColor = BODY_COLOR_BLUE,
+        .safariZoneFleeRate = 0,
+        .noFlip = FALSE,
+    },
+
     [SPECIES_FARFETCHD_GALAR] =
     {
         .baseHP        = 52,

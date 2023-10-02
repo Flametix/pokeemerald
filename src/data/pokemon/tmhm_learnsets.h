@@ -1,4 +1,5 @@
 #define TMHM_LEARNSET(moves) {(u32)(moves), ((u64)(moves) >> 32)}
+
 #define TMHM(tmhm) ((u64)1 << (ITEM_##tmhm - ITEM_TM01_FOCUS_PUNCH))
 
 // This table determines which TMs and HMs a species is capable of learning.
@@ -9404,5 +9405,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
+
+    [SPECIES_AVALUGG]     = TMHM_LEARNSET(TMHM(TM17_PROTECT)),
 
 };

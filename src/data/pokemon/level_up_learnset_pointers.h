@@ -436,6 +436,7 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_PENGUIDUCK] = sPlaceholderLevelUpLearnset,
     [SPECIES_DEADUCK] = sPlaceholderLevelUpLearnset,
     [SPECIES_DUCKROLL] = sDuckrollLevelUpLearnset,
+    [SPECIES_AVALUGG] = sAvaluggLevelUpLearnset,
     [SPECIES_DUCCAR] = sPlaceholderLevelUpLearnset,
     [SPECIES_BEEDUCK] = sBeeduckLevelUpLearnset,
     [SPECIES_GHOSTEDUCK] = sPlaceholderLevelUpLearnset,

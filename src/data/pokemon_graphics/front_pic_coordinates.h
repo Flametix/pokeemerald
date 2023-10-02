@@ -469,6 +469,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_BIGDUCKUS] =     {        .size = MON_COORDS_SIZE(42, 43),        .y_offset = 9,    },
     [SPECIES_BUTTONBARI] =     {        .size = MON_COORDS_SIZE(42, 43),        .y_offset = 9,    },
     [SPECIES_DUCKROLL] =     {        .size = MON_COORDS_SIZE(42, 43),        .y_offset = 13,    },
+    [SPECIES_AVALUGG]     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_FARFETCHD_GALAR] =     {        .size = MON_COORDS_SIZE(64, 48),        .y_offset = 9,    },
     [SPECIES_SIRFETCHD] =     {        .size = MON_COORDS_SIZE(64, 64),        .y_offset = 0,    },
     [SPECIES_EGG]         = { .size = MON_COORDS_SIZE(24, 24), .y_offset = 20 },

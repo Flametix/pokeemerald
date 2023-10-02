@@ -417,6 +417,7 @@ const struct CompressedSpriteSheet gMonStillFrontPicTable[] =
     SPECIES_SPRITE(CHIMECHO,      gMonStillFrontPic_Chimecho),
 //Pokemon Bubber
     SPECIES_SPRITE(LEAFDUCK,     gMonStillFrontPic_Leafduck),
+    SPECIES_SPRITE(AVALUGG,       gMonStillFrontPic_Avalugg),
 //Misc.
     SPECIES_SPRITE(EGG,           gMonStillFrontPic_Egg),
     SPECIES_SPRITE(UNOWN_B,       gMonStillFrontPic_UnownB),

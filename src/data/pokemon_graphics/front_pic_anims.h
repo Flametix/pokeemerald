@@ -6,6 +6,7 @@
     ANIMCMD_END,
 };
 
+
 static const union AnimCmd sAnim_Bulbasaur_1[] =
 {
     ANIMCMD_FRAME(0, 30),
@@ -5181,6 +5182,12 @@ static const union AnimCmd sAnim_UnownQMark_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_Avalugg_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 #define SINGLE_ANIMATION(name)                      \
 static const union AnimCmd *const sAnims_##name[] = \
 {                                                   \
@@ -5678,6 +5685,8 @@ SINGLE_ANIMATION(BUTTONBARI);
 SINGLE_ANIMATION(DUCKROLL);
 SINGLE_ANIMATION(FARFETCHD_GALAR);
 SINGLE_ANIMATION(SIRFETCHD);
+SINGLE_ANIMATION(Avalugg);
+
 const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
 {
     [SPECIES_NONE]        = sAnims_None,
@@ -6171,6 +6180,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_BIGDUCKUS] = sAnims_BIGDUCKUS,
     [SPECIES_BUTTONBARI] = sAnims_BUTTONBARI,
     [SPECIES_DUCKROLL] = sAnims_DUCKROLL,
+    [SPECIES_AVALUGG]     = sAnims_Avalugg,
     [SPECIES_FARFETCHD_GALAR] = sAnims_FARFETCHD_GALAR,
     [SPECIES_SIRFETCHD] = sAnims_SIRFETCHD,
 

@@ -5052,6 +5052,18 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
+    [NATIONAL_DEX_AVALUGG] =
+    {
+        .categoryName = _("Avalugg"),
+        .height = 20,
+        .weight = 5050,
+        .description = gAvaluggPokedexText,
+        .pokemonScale = 261,
+        .pokemonOffset = 1,
+        .trainerScale = 334,
+        .trainerOffset = 4,
+    },
+
     [NATIONAL_DEX_DUCCAR] = 
     {
         .categoryName = _("CAR"),

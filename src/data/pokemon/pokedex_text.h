@@ -4,6 +4,12 @@ const u8 gDummyPokedexText[] = _(
     "No detailed information is available\n"
     "at this time.");
 
+const u8 gAvaluggPokedexText[] = _(
+    "The way several Bergmite huddle on its\n"
+    "back make it look like an aircraft carrier\n"
+    "made of ice. Its cumbersome frame crushes\n"
+    "anything that stands in its way.");
+
 const u8 gBulbasaurPokedexText[] = _(
     "BULBASAUR can be seen napping in bright\n"
     "sunlight. There is a seed on its back.\n"

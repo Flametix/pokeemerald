@@ -488,6 +488,7 @@ const u8 *const gMonIconTable[] =
     [SPECIES_BIGDUCKUS] = gMonIcon_BigDuckus,
     [SPECIES_BUTTONBARI] = gMonIcon_ButtonBari,
     [SPECIES_DUCKROLL] = gMonIcon_Duckroll,
+    [SPECIES_AVALUGG] = gMonIcon_Avalugg,
     [SPECIES_FARFETCHD_GALAR] = gMonIcon_FarfetchdGalar,
     [SPECIES_SIRFETCHD] = gMonIcon_Sirfetchd,
 
@@ -986,6 +987,7 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_BIGDUCKUS] = 0,
     [SPECIES_BUTTONBARI] = 0,
     [SPECIES_DUCKROLL] = 0,
+    [SPECIES_AVALUGG] = 0,
     [SPECIES_FARFETCHD_GALAR] = 1,
     [SPECIES_SIRFETCHD] = 1,
 

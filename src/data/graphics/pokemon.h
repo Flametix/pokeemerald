@@ -3082,13 +3082,6 @@ const u32 gMonStillFrontPic_Bergmite[] = INCBIN_U32("graphics/pokemon/duck/front
 const u8 gMonIcon_Bergmite[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_Bergmite[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
 
-const u32 gMonPalette_Avalugg[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
-const u32 gMonBackPic_Avalugg[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
-const u32 gMonShinyPalette_Avalugg[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
-const u32 gMonStillFrontPic_Avalugg[] = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
-const u8 gMonIcon_Avalugg[] = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
-const u8 gMonFootprint_Avalugg[] = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
-
 const u32 gMonPalette_Eiscue[] = INCBIN_U32("graphics/pokemon/duck/normal.gbapal.lz");
 const u32 gMonBackPic_Eiscue[] = INCBIN_U32("graphics/pokemon/duck/back.4bpp.lz");
 const u32 gMonShinyPalette_Eiscue[] = INCBIN_U32("graphics/pokemon/duck/shiny.gbapal.lz");
@@ -3253,3 +3246,10 @@ const u32 gMonShinyPalette_Duckroll[]   = INCBIN_U32("graphics/pokemon/duckroll/
 const u32 gMonStillFrontPic_Duckroll[]  = INCBIN_U32("graphics/pokemon/duck/front.4bpp.lz");
 const u8 gMonIcon_Duckroll[]            = INCBIN_U8("graphics/pokemon/duck/icon.4bpp");
 const u8 gMonFootprint_Duckroll[]       = INCBIN_U8("graphics/pokemon/duck/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Avalugg[] = INCBIN_U32("graphics/pokemon/avalugg/front.4bpp.lz");
+const u32 gMonPalette_Avalugg[] = INCBIN_U32("graphics/pokemon/avalugg/normal.gbapal.lz");
+const u32 gMonBackPic_Avalugg[] = INCBIN_U32("graphics/pokemon/avalugg/back.4bpp.lz");
+const u32 gMonShinyPalette_Avalugg[] = INCBIN_U32("graphics/pokemon/avalugg/shiny.gbapal.lz");
+const u8 gMonIcon_Avalugg[] = INCBIN_U8("graphics/pokemon/avalugg/icon.4bpp");
+const u8 gMonFootprint_Avalugg[] = INCBIN_U8("graphics/pokemon/avalugg/footprint.1bpp");

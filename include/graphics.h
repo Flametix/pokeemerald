@@ -3228,6 +3228,13 @@ extern const u32 gMonShinyPalette_Duckroll[];
 extern const u32 gMonStillFrontPic_Duckroll[];
 extern const u8  gMonIcon_Duckroll[];
 extern const u8  gMonFootprint_Duckroll[];
+extern const u32 gMonFrontPic_Avalugg[];
+extern const u32 gMonPalette_Avalugg[];
+extern const u32 gMonBackPic_Avalugg[];
+extern const u32 gMonShinyPalette_Avalugg[];
+extern const u32 gMonStillFrontPic_Avalugg[];
+extern const u8 gMonIcon_Avalugg[];
+extern const u8 gMonFootprint_Avalugg[];
 
 extern const u32 gMonPic_Egg[];
 extern const u32 gMonPalette_Egg[];

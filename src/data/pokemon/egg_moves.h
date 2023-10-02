@@ -1316,5 +1316,8 @@ const u16 gEggMoves[] = {
               MOVE_GRASS_WHISTLE,
               MOVE_CURSE),
 
+    egg_moves(AVALUGG,
+              MOVE_DRAGON_CLAW),
+
     EGG_MOVES_TERMINATOR
 };
